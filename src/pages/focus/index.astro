@@ -1,0 +1,510 @@
+---
+// Landing "Focus Club Fitness Tacna" — migrada desde Next.js a Astro estático.
+// Contenido y diseño original preservados; solo cambian imports/rutas de assets.
+const whatsappUrl =
+  'https://wa.me/51930792693?text=Hola%20Focus%20Club%20Fitness%2C%20quiero%20informaci%C3%B3n%20sobre%20sus%20planes%20y%20promociones.';
+
+const mapUrl =
+  'https://www.google.com/maps/search/?api=1&query=Asc.%20de%20Vivienda%20San%20Francisco%20Mz.%2095%20Lt.%2026%2C%20Gregorio%20Albarrac%C3%ADn%2C%20Tacna';
+
+const services = [
+  {
+    number: '01',
+    title: 'Fuerza & musculación',
+    copy: 'Un espacio para construir fuerza, mejorar tu técnica y avanzar con constancia, sin importar desde dónde empiezas.',
+  },
+  {
+    number: '02',
+    title: 'Fitness & cardio',
+    copy: 'Sesiones dinámicas para activar tu energía, elevar tu resistencia y convertir el entrenamiento en parte de tu rutina.',
+  },
+  {
+    number: '03',
+    title: 'Entrenamiento funcional',
+    copy: 'Movimientos completos que retan fuerza, agilidad y coordinación para sentirte mejor dentro y fuera del gimnasio.',
+  },
+];
+
+const products = [
+  {
+    tag: 'FUERZA · RECUPERACIÓN',
+    title: 'Proteína Whey / Isolate',
+    copy: 'Opciones de proteína para complementar tu alimentación y recuperación después del entrenamiento.',
+    image: '/focus/product-whey-isolate.webp',
+    alt: 'Presentación referencial de proteína Whey Isolate',
+  },
+  {
+    tag: 'POTENCIA · RENDIMIENTO',
+    title: 'Creatina monohidratada',
+    copy: 'Uno de los suplementos más utilizados para acompañar objetivos de fuerza y desempeño físico.',
+    image: '/focus/product-creatine.webp',
+    alt: 'Presentación referencial de creatina monohidratada',
+  },
+  {
+    tag: 'ENERGÍA · ENFOQUE',
+    title: 'Preentreno y energía',
+    copy: 'Alternativas para quienes buscan llegar con mayor energía y concentración a cada sesión.',
+    image: '/focus/product-preworkout.webp',
+    alt: 'Presentación referencial de suplemento preentreno',
+  },
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>Focus Club Fitness Tacna</title>
+    <meta
+      name="description"
+      content="Entrena fuerza, fitness y funcional en Focus Club Fitness, Gregorio Albarracín, Tacna. Consulta planes y promociones por WhatsApp."
+    />
+    <meta property="og:title" content="Focus Club Fitness Tacna" />
+    <meta property="og:description" content="Tu energía. Tu disciplina. Tu enfoque." />
+    <meta property="og:image" content="/focus/focus-og.png" />
+    <link rel="icon" href="/focus/focus-logo-transparent.png" />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;0,900;1,700;1,800&family=Manrope:wght@400;500;600;700&display=swap');
+
+      :root { --ink:#080808; --charcoal:#121212; --paper:#f4f3ef; --yellow:#ffc400; --yellow-bright:#ffdb36; --line:rgba(255,255,255,.14); }
+      * { box-sizing:border-box; }
+      html { scroll-behavior:smooth; background:var(--ink); }
+      body { margin:0; background:var(--ink); color:#fff; font-family:"Manrope",Arial,sans-serif; overflow-x:hidden; }
+      a { color:inherit; text-decoration:none; }
+      svg { width:1.25em; height:1.25em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+      .skip-link { position:fixed; top:8px; left:8px; z-index:200; transform:translateY(-150%); background:var(--yellow); color:#050505; padding:10px 16px; font-weight:800; }
+      .skip-link:focus { transform:translateY(0); }
+
+      .site-header { position:absolute; z-index:50; inset:0 0 auto; height:92px; display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:32px; padding:0 clamp(24px,5vw,84px); border-bottom:1px solid var(--line); }
+      .brand { width:168px; display:block; }
+      .brand img,.footer-brand img { display:block; width:100%; height:auto; }
+      .desktop-nav { display:flex; align-items:center; gap:36px; }
+      .desktop-nav a { color:rgba(255,255,255,.76); font-size:12px; letter-spacing:.09em; text-transform:uppercase; transition:color .25s ease; }
+      .desktop-nav a:hover { color:var(--yellow); }
+      .header-cta { justify-self:end; display:inline-flex; align-items:center; gap:10px; font:800 17px "Barlow Condensed",Arial,sans-serif; letter-spacing:.06em; text-transform:uppercase; }
+      .header-cta svg { color:var(--yellow); transition:transform .25s ease; }
+      .header-cta:hover svg { transform:translateX(5px); }
+
+      .hero { min-height:780px; height:100svh; max-height:980px; position:relative; isolation:isolate; display:flex; align-items:center; overflow:hidden; background:#090909; }
+      .hero-media { position:absolute; z-index:-4; inset:0; }
+      .hero-media img { width:100%; height:100%; object-fit:cover; object-position:center; transform:scale(1.03); animation:hero-breathe 12s ease-in-out infinite alternate; }
+      @keyframes hero-breathe { to { transform:scale(1.08); } }
+      .hero::before { content:""; position:absolute; z-index:-3; inset:0; background:linear-gradient(90deg,rgba(5,5,5,.98) 0%,rgba(5,5,5,.88) 35%,rgba(5,5,5,.22) 68%,rgba(5,5,5,.55) 100%),linear-gradient(0deg,rgba(5,5,5,.8) 0%,transparent 38%,rgba(5,5,5,.25) 100%); }
+      .hero::after { content:""; position:absolute; z-index:-2; inset:0; background:radial-gradient(circle at 69% 44%,rgba(255,196,0,.2),transparent 24%); mix-blend-mode:screen; }
+      .hero-grain { position:absolute; z-index:-1; inset:0; opacity:.13; pointer-events:none; background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.65'/%3E%3C/svg%3E"); }
+      .bolt { position:absolute; z-index:1; width:2px; height:210px; background:linear-gradient(transparent,var(--yellow),transparent); filter:drop-shadow(0 0 9px var(--yellow)); opacity:.42; transform:rotate(21deg); animation:electric 3.8s ease-in-out infinite; }
+      .bolt::after { content:""; position:absolute; left:-7px; top:48%; width:16px; height:2px; background:var(--yellow); transform:rotate(-43deg); }
+      .bolt-one { right:19%; top:16%; }
+      .bolt-two { right:11%; top:54%; height:110px; animation-delay:1.1s; }
+      @keyframes electric { 0%,83%,100% { opacity:.12; } 86% { opacity:.65; } 89% { opacity:.22; } 92% { opacity:.72; } }
+      .hero-content { width:min(760px,58vw); margin-left:clamp(24px,8.5vw,150px); padding-top:70px; position:relative; z-index:3; }
+      .eyebrow { display:flex; align-items:center; gap:13px; margin:0 0 25px; color:rgba(255,255,255,.72); font-size:11px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; }
+      .eyebrow span { width:46px; height:2px; background:var(--yellow); box-shadow:0 0 12px rgba(255,196,0,.6); }
+      .hero h1,.intro h2,.section-heading h2,.statement h2,.location h2,.final-cta h2 { font-family:"Barlow Condensed",Impact,sans-serif; text-transform:uppercase; letter-spacing:-.035em; line-height:.82; }
+      .hero h1 { margin:0; max-width:680px; font-size:clamp(78px,9.8vw,154px); font-weight:900; }
+      .hero h1 span { display:block; color:var(--yellow); font-style:italic; }
+      .hero-copy { max-width:530px; margin:31px 0 0; color:rgba(255,255,255,.68); font-size:clamp(15px,1.3vw,18px); line-height:1.75; }
+      .hero-actions { margin-top:36px; display:flex; align-items:center; gap:29px; }
+      .primary-button { min-height:56px; display:inline-flex; align-items:center; justify-content:center; gap:14px; padding:0 27px; background:var(--yellow); color:#080808; border:1px solid var(--yellow); font:800 17px "Barlow Condensed",Arial,sans-serif; letter-spacing:.05em; text-transform:uppercase; clip-path:polygon(0 0,93% 0,100% 28%,100% 100%,7% 100%,0 72%); transition:background .25s ease,color .25s ease,transform .25s ease; }
+      .primary-button:hover { background:var(--yellow-bright); transform:translateY(-2px); }
+      .primary-button.dark { background:var(--ink); color:white; border-color:var(--ink); }
+      .primary-button.dark:hover { background:#222; }
+      .text-link { font-size:12px; text-transform:uppercase; letter-spacing:.12em; border-bottom:1px solid rgba(255,255,255,.4); padding-bottom:7px; }
+      .text-link:hover { border-color:var(--yellow); color:var(--yellow); }
+      .hero-side-note { position:absolute; right:clamp(18px,3vw,55px); top:50%; transform:rotate(90deg) translateX(50%); transform-origin:right center; z-index:2; color:rgba(255,255,255,.36); font-size:9px; letter-spacing:.33em; }
+      .scroll-cue { position:absolute; bottom:30px; left:clamp(24px,8.5vw,150px); z-index:3; display:flex; align-items:center; gap:12px; font-size:9px; letter-spacing:.2em; text-transform:uppercase; color:rgba(255,255,255,.5); }
+      .scroll-cue span { display:block; width:28px; height:28px; border:1px solid rgba(255,255,255,.4); border-radius:50%; position:relative; }
+      .scroll-cue span::after { content:""; position:absolute; left:50%; top:7px; width:1px; height:8px; background:var(--yellow); animation:scroll-dot 1.5s infinite; }
+      @keyframes scroll-dot { to { transform:translateY(7px); opacity:0; } }
+      .reveal { opacity:0; transform:translateY(18px); animation:reveal .7s cubic-bezier(.2,.7,.2,1) forwards; }
+      .reveal-1 { animation-delay:.15s; } .reveal-2 { animation-delay:.25s; } .reveal-3 { animation-delay:.4s; } .reveal-4 { animation-delay:.55s; }
+      @keyframes reveal { to { opacity:1; transform:none; } }
+
+      .ticker { height:66px; background:var(--yellow); color:var(--ink); overflow:hidden; display:flex; align-items:center; }
+      .ticker-track { display:flex; align-items:center; gap:29px; white-space:nowrap; min-width:max-content; font:italic 900 25px "Barlow Condensed",sans-serif; letter-spacing:.07em; animation:ticker 18s linear infinite; }
+      .ticker i { font-size:15px; font-style:normal; }
+      @keyframes ticker { to { transform:translateX(-50%); } }
+
+      .section-pad { padding:clamp(90px,10vw,150px) clamp(24px,8.5vw,150px); }
+      .intro { background:var(--paper); color:var(--ink); }
+      .section-kicker { display:flex; align-items:center; gap:17px; margin-bottom:50px; }
+      .section-kicker span { display:grid; place-items:center; width:37px; height:24px; background:var(--yellow); font:800 13px "Barlow Condensed",sans-serif; }
+      .section-kicker p { margin:0; font-size:10px; font-weight:800; text-transform:uppercase; letter-spacing:.17em; }
+      .section-kicker.light span { color:var(--ink); }
+      .section-kicker.light p { color:rgba(255,255,255,.55); }
+      .intro-grid { display:grid; grid-template-columns:minmax(0,1.25fr) minmax(300px,.75fr); gap:clamp(50px,9vw,140px); align-items:end; }
+      .intro h2 { margin:0; font-size:clamp(60px,7.4vw,112px); font-weight:900; }
+      .intro h2 span { display:block; color:transparent; -webkit-text-stroke:1.5px var(--ink); }
+      .intro-copy { border-left:1px solid rgba(0,0,0,.2); padding-left:clamp(24px,4vw,55px); }
+      .intro-copy p { margin:0 0 18px; font-size:15px; line-height:1.75; color:#555; }
+      .line-link { margin-top:18px; padding-bottom:8px; border-bottom:1px solid #222; display:inline-flex; align-items:center; gap:24px; font:800 16px "Barlow Condensed",sans-serif; text-transform:uppercase; }
+      .line-link svg { transition:transform .25s ease; }
+      .line-link:hover svg { transform:translateX(5px); }
+      .proof-grid { margin-top:clamp(75px,10vw,130px); border-top:1px solid rgba(0,0,0,.16); display:grid; grid-template-columns:repeat(3,1fr); }
+      .proof-grid article { padding:35px 25px 8px 0; border-right:1px solid rgba(0,0,0,.16); }
+      .proof-grid article + article { padding-left:36px; }
+      .proof-grid article:last-child { border:0; }
+      .proof-grid strong { display:block; color:var(--yellow); font:900 clamp(48px,5vw,75px)/1 "Barlow Condensed",sans-serif; }
+      .proof-grid span { display:block; margin-top:8px; font:800 18px "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.04em; }
+      .proof-grid p { margin:9px 0 0; color:#777; font-size:12px; }
+
+      .training { background:var(--ink); position:relative; overflow:hidden; }
+      .training::before { content:"FOCUS"; position:absolute; right:-2vw; top:20px; color:rgba(255,255,255,.025); font:900 28vw/.8 "Barlow Condensed",sans-serif; }
+      .section-heading { position:relative; z-index:1; display:grid; grid-template-columns:.7fr 1.25fr .65fr; align-items:end; gap:40px; }
+      .section-heading .section-kicker { margin:0; align-self:start; }
+      .section-heading h2 { margin:0; font-size:clamp(58px,7vw,108px); }
+      .section-heading>p { margin:0 0 8px; color:#8c8c8c; font-size:13px; line-height:1.7; }
+      .service-grid { position:relative; z-index:1; margin-top:72px; display:grid; grid-template-columns:repeat(3,1fr); border-top:1px solid var(--line); border-left:1px solid var(--line); }
+      .service-card { min-height:425px; padding:clamp(28px,3vw,44px); border-right:1px solid var(--line); border-bottom:1px solid var(--line); transition:background .3s ease,transform .3s ease; }
+      .service-card:hover { background:#171717; transform:translateY(-6px); }
+      .service-top { display:flex; justify-content:space-between; align-items:start; }
+      .service-top>span { color:#666; font:700 12px "Barlow Condensed",sans-serif; }
+      .service-icon { width:72px; height:72px; display:grid; place-items:center; border:1px solid rgba(255,196,0,.32); color:var(--yellow); border-radius:50%; }
+      .service-icon svg { width:40px; height:40px; stroke-width:1.4; }
+      .service-card h3 { margin:75px 0 18px; max-width:240px; font:800 clamp(29px,2.5vw,39px)/.95 "Barlow Condensed",sans-serif; text-transform:uppercase; }
+      .service-card p { min-height:72px; margin:0; max-width:320px; color:#8f8f8f; font-size:12px; line-height:1.7; }
+      .service-card a { margin-top:30px; color:var(--yellow); display:inline-flex; align-items:center; gap:14px; font:800 14px "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.07em; }
+      .service-card a svg { transition:transform .25s ease; }
+      .service-card a:hover svg { transform:translateX(5px); }
+
+      .products { background:var(--paper); color:var(--ink); }
+      .products-heading { display:grid; grid-template-columns:minmax(0,1.2fr) minmax(320px,.65fr); align-items:end; gap:clamp(55px,9vw,145px); }
+      .products-heading .section-kicker { margin-bottom:35px; }
+      .products h2 { margin:0; font:900 clamp(62px,7.5vw,116px)/.83 "Barlow Condensed",Impact,sans-serif; letter-spacing:-.035em; text-transform:uppercase; }
+      .products h2 span { display:block; color:var(--yellow); font-style:italic; }
+      .products-intro { border-left:1px solid rgba(0,0,0,.18); padding-left:clamp(25px,4vw,56px); }
+      .products-intro p { margin:0; color:#555; font-size:15px; line-height:1.75; }
+      .products-intro span { display:block; margin-top:22px; color:#8b8b8b; font-size:9px; font-weight:800; letter-spacing:.14em; text-transform:uppercase; }
+      .product-grid { margin-top:72px; display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+      .product-card { min-width:0; overflow:hidden; background:#0b0b0b; color:#fff; border:1px solid #202020; transition:transform .3s ease,box-shadow .3s ease; }
+      .product-card:hover { transform:translateY(-7px); box-shadow:0 30px 55px rgba(0,0,0,.2); }
+      .product-media { position:relative; aspect-ratio:1/1; overflow:hidden; background:#131313; }
+      .product-media::after { content:""; position:absolute; inset:auto 0 0; height:38%; background:linear-gradient(transparent,rgba(0,0,0,.68)); pointer-events:none; }
+      .product-media img { display:block; width:100%; height:100%; object-fit:cover; transition:transform .55s ease; }
+      .product-card:hover .product-media img { transform:scale(1.035); }
+      .product-index { position:absolute; z-index:2; right:18px; top:18px; width:42px; height:42px; display:grid; place-items:center; border:1px solid rgba(255,196,0,.5); color:var(--yellow); background:rgba(5,5,5,.7); backdrop-filter:blur(8px); font:800 13px "Barlow Condensed",sans-serif; }
+      .product-body { padding:30px 30px 34px; }
+      .product-body>p { margin:0 0 16px; color:var(--yellow); font-size:9px; font-weight:800; letter-spacing:.14em; }
+      .product-body h3 { margin:0; min-height:62px; font:800 clamp(28px,2.3vw,37px)/.92 "Barlow Condensed",sans-serif; text-transform:uppercase; }
+      .product-body>span { display:block; min-height:74px; margin-top:18px; color:#8e8e8e; font-size:12px; line-height:1.65; }
+      .product-body a { margin-top:25px; padding-top:20px; border-top:1px solid #292929; display:flex; align-items:center; justify-content:space-between; gap:16px; color:#fff; font:800 14px "Barlow Condensed",sans-serif; letter-spacing:.05em; text-transform:uppercase; }
+      .product-body a svg { color:var(--yellow); width:22px; height:22px; transition:transform .25s ease; }
+      .product-body a:hover { color:var(--yellow); }.product-body a:hover svg { transform:scale(1.1); }
+
+      .statement { position:relative; min-height:700px; display:flex; align-items:center; justify-content:flex-end; text-align:left; overflow:hidden; }
+      .statement-image { position:absolute; inset:0; }
+      .statement-image img { display:block; width:100%; height:100%; object-fit:cover; object-position:center center; }
+      .statement-overlay { position:absolute; inset:0; background:linear-gradient(90deg,rgba(4,4,4,.06) 0%,rgba(4,4,4,.22) 31%,rgba(4,4,4,.78) 58%,rgba(4,4,4,.98) 100%),linear-gradient(0deg,rgba(4,4,4,.62),transparent 48%); }
+      .statement-copy { width:56%; position:relative; z-index:1; padding:90px clamp(24px,8.5vw,150px) 90px 5vw; }
+      .statement-copy>p { color:var(--yellow); font-size:10px; font-weight:800; letter-spacing:.23em; }
+      .statement h2 { margin:18px 0 42px; font-size:clamp(72px,9vw,142px); font-weight:900; }
+      .statement h2 em { color:var(--yellow); }
+      .statement h2 span { display:block; }
+
+      .location { background:var(--yellow); color:var(--ink); }
+      .location .section-kicker span { background:var(--ink); color:var(--yellow); }
+      .location-grid { display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(50px,8vw,120px); align-items:stretch; }
+      .location-label { margin:0 0 25px; font:800 12px "Barlow Condensed",sans-serif; letter-spacing:.14em; }
+      .location h2 { margin:0 0 35px; font-size:clamp(55px,6vw,91px); max-width:680px; }
+      .location address { font-style:normal; font-size:16px; font-weight:700; line-height:1.7; }
+      .reference { margin:7px 0 0; font-size:12px; }
+      .location-actions { display:flex; align-items:center; gap:28px; margin-top:35px; }
+      .phone-link { font:800 19px "Barlow Condensed",sans-serif; letter-spacing:.08em; border-bottom:1px solid var(--ink); }
+      .map-card { min-height:440px; position:relative; background:#171717; color:#fff; overflow:hidden; clip-path:polygon(0 0,96% 0,100% 7%,100% 100%,4% 100%,0 93%); }
+      .map-grid { position:absolute; inset:0; opacity:.85; background-color:#171717; background-image:linear-gradient(rgba(255,255,255,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px); background-size:38px 38px; }
+      .road { position:absolute; display:block; background:#3b3b3b; box-shadow:0 0 0 1px #111,0 0 0 3px rgba(255,255,255,.05); }
+      .road-a { width:130%; height:18px; left:-10%; top:35%; transform:rotate(-13deg); }
+      .road-b { width:18px; height:130%; left:61%; top:-15%; transform:rotate(13deg); }
+      .road-c { width:90%; height:9px; left:0; top:72%; transform:rotate(8deg); }
+      .pin { position:absolute; left:57%; top:43%; width:56px; height:56px; background:var(--yellow); border-radius:50% 50% 50% 0; transform:rotate(-45deg); box-shadow:0 0 35px rgba(255,196,0,.45); }
+      .pin i { position:absolute; width:17px; height:17px; border-radius:50%; background:#171717; left:19px; top:19px; }
+      .map-caption { position:absolute; inset:auto 26px 22px; padding:20px 22px; background:rgba(5,5,5,.83); backdrop-filter:blur(10px); display:flex; align-items:center; justify-content:space-between; gap:20px; }
+      .map-caption span { color:#858585; font-size:11px; text-transform:uppercase; letter-spacing:.1em; }
+      .map-caption strong { display:flex; align-items:center; gap:10px; color:var(--yellow); font:800 14px "Barlow Condensed",sans-serif; text-transform:uppercase; }
+
+      .final-cta { padding:86px clamp(24px,8.5vw,150px); display:flex; align-items:center; justify-content:space-between; gap:40px; background:#131313; border-bottom:1px solid var(--line); }
+      .final-cta p { margin:0 0 10px; color:#777; font-size:13px; text-transform:uppercase; letter-spacing:.12em; }
+      .final-cta h2 { margin:0; font-size:clamp(54px,6vw,92px); color:var(--yellow); }
+      footer { padding:54px clamp(24px,8.5vw,150px) 35px; display:grid; grid-template-columns:1fr 1fr auto; align-items:center; gap:38px; background:#090909; }
+      .footer-brand { width:155px; }
+      footer>p { color:#666; font-size:11px; text-transform:uppercase; letter-spacing:.13em; }
+      .social-links { display:flex; align-items:center; gap:10px; }
+      .social-links a { width:44px; height:44px; display:grid; place-items:center; border:1px solid #2a2a2a; color:#a2a2a2; transition:color .25s ease,border-color .25s ease,transform .25s ease; }
+      .social-links a:hover { color:var(--yellow); border-color:rgba(255,196,0,.55); transform:translateY(-3px); }
+      .social-links svg { width:21px; height:21px; }.social-links a:first-child svg { fill:currentColor; stroke:none; }
+      footer small { grid-column:1/-1; padding-top:30px; border-top:1px solid var(--line); color:#4d4d4d; font-size:10px; }
+      .floating-whatsapp { position:fixed; right:24px; bottom:23px; z-index:80; height:52px; padding:0 18px; display:flex; align-items:center; gap:9px; background:var(--yellow); color:var(--ink); border:1px solid rgba(0,0,0,.2); box-shadow:0 12px 32px rgba(0,0,0,.35); font:800 14px "Barlow Condensed",sans-serif; text-transform:uppercase; letter-spacing:.05em; }
+      .floating-whatsapp svg { width:20px; height:20px; }
+
+      @media (max-width:900px) {
+        .site-header { grid-template-columns:1fr auto; padding:0 24px; height:78px; }
+        .brand { width:140px; } .desktop-nav { display:none; } .header-cta { font-size:15px; }
+        .hero { min-height:720px; max-height:900px; }
+        .hero-content { width:calc(100% - 48px); margin-left:24px; padding-top:60px; }
+        .hero h1 { font-size:clamp(74px,20vw,116px); }
+        .hero::before { background:linear-gradient(90deg,rgba(5,5,5,.96),rgba(5,5,5,.53)),linear-gradient(0deg,rgba(5,5,5,.9),transparent 60%); }
+        .hero-media img { object-position:62% center; opacity:.76; }
+        .scroll-cue { left:24px; } .hero-side-note { display:none; }
+        .intro-grid,.location-grid { grid-template-columns:1fr; }
+        .intro-copy { border-left:0; border-top:1px solid rgba(0,0,0,.2); padding:30px 0 0; }
+        .section-heading { grid-template-columns:1fr; gap:30px; }
+        .section-heading>p { max-width:450px; }
+        .service-grid { grid-template-columns:1fr; }
+        .service-card { min-height:360px; } .service-card h3 { margin-top:40px; }
+        .products-heading { grid-template-columns:1fr; gap:38px; }
+        .products-intro { border-left:0; border-top:1px solid rgba(0,0,0,.18); padding:28px 0 0; }
+        .product-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+        .product-card:last-child { grid-column:1/-1; width:calc(50% - 9px); justify-self:center; }
+        .statement-copy { width:60%; padding-left:35px; }
+        .proof-grid { grid-template-columns:1fr; }
+        .proof-grid article,.proof-grid article+article { padding:28px 0; border-right:0; border-bottom:1px solid rgba(0,0,0,.16); }
+        .proof-grid article:last-child { border-bottom:0; }
+        .final-cta { align-items:flex-start; flex-direction:column; }
+        footer { grid-template-columns:1fr auto; } footer>p { grid-column:1/-1; grid-row:2; }
+      }
+
+      @media (max-width:560px) {
+        .header-cta { font-size:0; gap:0; } .header-cta::before { content:"WHATSAPP"; font-size:14px; } .header-cta svg { margin-left:8px; }
+        .hero { min-height:700px; height:100svh; } .hero h1 { font-size:clamp(68px,22vw,94px); }
+        .hero-copy { font-size:14px; max-width:92%; } .hero-actions { align-items:flex-start; flex-direction:column; gap:20px; }
+        .primary-button { width:100%; } .bolt-two { display:none; }
+        .ticker { height:56px; } .ticker-track { font-size:21px; }
+        .section-pad { padding-left:24px; padding-right:24px; }
+        .intro h2,.section-heading h2,.location h2 { font-size:56px; }
+        .service-card { padding:28px; } .statement { min-height:570px; } .statement h2 { font-size:76px; }
+        .products h2 { font-size:62px; }.product-grid { grid-template-columns:1fr; gap:14px; }.product-card:last-child { grid-column:auto; width:100%; }.product-body h3,.product-body>span { min-height:0; }
+        .statement { min-height:760px; align-items:flex-end; }.statement-image img { object-position:33% top; }.statement-overlay { background:linear-gradient(0deg,rgba(4,4,4,.99) 5%,rgba(4,4,4,.82) 44%,rgba(4,4,4,.05) 78%); }.statement-copy { width:100%; padding:310px 24px 70px; }.statement h2 { max-width:520px; }
+        .location-actions { align-items:stretch; flex-direction:column; } .location .primary-button { width:max-content; }
+        .map-card { min-height:355px; } .map-caption { align-items:flex-start; flex-direction:column; }
+        .final-cta { padding-left:24px; padding-right:24px; }
+        footer { grid-template-columns:1fr; padding-bottom:100px; } .social-links { grid-row:auto; } footer>p { grid-column:auto; grid-row:auto; }
+        .floating-whatsapp { left:16px; right:16px; bottom:15px; justify-content:center; }
+      }
+
+      @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation-duration:.01ms!important; animation-iteration-count:1!important; scroll-behavior:auto!important; } }
+      :focus-visible { outline:3px solid var(--yellow-bright); outline-offset:4px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <a class="skip-link" href="#contenido">Ir al contenido</a>
+
+      <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="Focus Club Fitness, inicio">
+          <img src="/focus/focus-logo-transparent.png" alt="Focus Club Fitness" />
+        </a>
+        <nav class="desktop-nav" aria-label="Navegación principal">
+          <a href="#experiencia">Experiencia</a>
+          <a href="#entrenamiento">Entrenamiento</a>
+          <a href="#productos">Productos</a>
+          <a href="#ubicacion">Ubicación</a>
+        </nav>
+        <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Quiero entrenar
+          <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+        </a>
+      </header>
+
+      <section class="hero" id="inicio">
+        <div class="hero-media" aria-hidden="true"><img src="/focus/focus-hero.webp" alt="" /></div>
+        <div class="hero-grain" aria-hidden="true"></div>
+        <div class="bolt bolt-one" aria-hidden="true"></div>
+        <div class="bolt bolt-two" aria-hidden="true"></div>
+        <div class="hero-content" id="contenido">
+          <p class="eyebrow reveal reveal-1"><span></span> Gimnasio en Gregorio Albarracín · Tacna</p>
+          <h1 class="reveal reveal-2">Entrena con<span>propósito.</span></h1>
+          <p class="hero-copy reveal reveal-3">Tu energía cambia cuando encuentras el lugar correcto. Entrena fuerza, fitness y funcional en una comunidad que va por más.</p>
+          <div class="hero-actions reveal reveal-4">
+            <a class="primary-button" href={whatsappUrl} target="_blank" rel="noreferrer">
+              Conocer promociones
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.5Z"></path>
+                <path d="M8.2 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.2.7l-.5.6c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.7.6-1.6.8-2.5.6-1.1-.2-2.5-.8-4.2-2.3-2-1.8-3.2-4-3.3-5.4 0-.7.2-1.1.5-1.4Z"></path>
+              </svg>
+            </a>
+            <a class="text-link" href="#entrenamiento">Ver entrenamientos</a>
+          </div>
+        </div>
+        <div class="hero-side-note" aria-hidden="true">FOCUS / DISCIPLINA / ENERGÍA</div>
+        <a class="scroll-cue" href="#experiencia" aria-label="Explorar la página"><span></span> Descubre Focus</a>
+      </section>
+
+      <section class="ticker" aria-label="Valores de Focus">
+        <div class="ticker-track">
+          <span>FUERZA</span><i>✦</i><span>DISCIPLINA</span><i>✦</i><span>ENERGÍA</span><i>✦</i><span>RESULTADOS</span><i>✦</i><span>FOCUS</span><i>✦</i>
+          <span>FUERZA</span><i>✦</i><span>DISCIPLINA</span><i>✦</i><span>ENERGÍA</span><i>✦</i><span>RESULTADOS</span><i>✦</i><span>FOCUS</span><i>✦</i>
+        </div>
+      </section>
+
+      <section class="intro section-pad" id="experiencia">
+        <div class="section-kicker"><span>01</span><p>La experiencia Focus</p></div>
+        <div class="intro-grid">
+          <h2>Tu meta merece<span>todo tu enfoque.</span></h2>
+          <div class="intro-copy">
+            <p>No se trata solo de venir al gimnasio. Se trata de encontrar el ritmo, la motivación y la disciplina para seguir avanzando.</p>
+            <p>En Focus encuentras entrenamiento para distintos objetivos en una sede cercana, directa y lista para ayudarte a dar el siguiente paso.</p>
+            <a class="line-link" href={whatsappUrl} target="_blank" rel="noreferrer">
+              Cuéntanos cuál es tu objetivo
+              <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+            </a>
+          </div>
+        </div>
+        <div class="proof-grid">
+          <article><strong>01</strong><span>Una sola sede</span><p>Atención cercana en Gregorio Albarracín.</p></article>
+          <article><strong>03</strong><span>Formas de entrenar</span><p>Fuerza, fitness y entrenamiento funcional.</p></article>
+          <article><strong>100%</strong><span>Enfoque en tu avance</span><p>Empieza a tu ritmo y construye constancia.</p></article>
+        </div>
+      </section>
+
+      <section class="training section-pad" id="entrenamiento">
+        <div class="section-heading">
+          <div class="section-kicker light"><span>02</span><p>Elige tu entrenamiento</p></div>
+          <h2>Muévete. Supérate. Repite.</h2>
+          <p>Entrena de acuerdo con tu objetivo y haz que cada sesión cuente.</p>
+        </div>
+        <div class="service-grid">
+          {services.map((service) => (
+            <article class="service-card">
+              <div class="service-top">
+                <span>{service.number}</span>
+                <div class="service-icon">
+                  <svg viewBox="0 0 48 48" aria-hidden="true"><path d="M7 20v8M12 16v16M36 16v16M41 20v8M12 24h24"></path></svg>
+                </div>
+              </div>
+              <h3>{service.title}</h3>
+              <p>{service.copy}</p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Consultar por ${service.title}`}>
+                Consultar
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+              </a>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="products section-pad" id="productos">
+        <div class="products-heading">
+          <div>
+            <div class="section-kicker"><span>03</span><p>Suplementación disponible</p></div>
+            <h2>Complementa tu<span>progreso.</span></h2>
+          </div>
+          <div class="products-intro">
+            <p>Encuentra opciones para acompañar tus objetivos de entrenamiento. Consulta las presentaciones, marcas y stock disponibles directamente con Focus.</p>
+            <span>Imágenes referenciales · Venta sujeta a disponibilidad</span>
+          </div>
+        </div>
+        <div class="product-grid">
+          {products.map((product, index) => (
+            <article class="product-card">
+              <div class="product-media">
+                <img src={product.image} alt={product.alt} loading="lazy" />
+                <span class="product-index">0{index + 1}</span>
+              </div>
+              <div class="product-body">
+                <p>{product.tag}</p>
+                <h3>{product.title}</h3>
+                <span>{product.copy}</span>
+                <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label={`Consultar disponibilidad de ${product.title}`}>
+                  Consultar disponibilidad
+                  <svg viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.5Z"></path>
+                    <path d="M8.2 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.2.7l-.5.6c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.7.6-1.6.8-2.5.6-1.1-.2-2.5-.8-4.2-2.3-2-1.8-3.2-4-3.3-5.4 0-.7.2-1.1.5-1.4Z"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section class="statement" aria-label="Motivación">
+        <div class="statement-image" aria-hidden="true"><img src="/focus/focus-statement-v2.webp" alt="" loading="lazy" /></div>
+        <div class="statement-overlay"></div>
+        <div class="statement-copy">
+          <p>NO ESPERES EL MOMENTO PERFECTO.</p>
+          <h2>Haz que <em>hoy</em><span>cuente.</span></h2>
+          <a class="primary-button" href={whatsappUrl} target="_blank" rel="noreferrer">
+            Empieza en Focus
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="location section-pad" id="ubicacion">
+        <div class="section-kicker"><span>04</span><p>Encuéntranos</p></div>
+        <div class="location-grid">
+          <div class="location-copy">
+            <p class="location-label">ÚNICA SEDE · TACNA</p>
+            <h2>Tu próxima sesión está más cerca de lo que crees.</h2>
+            <address>Asc. de Vivienda San Francisco<br />Mz. 95 Lt. 26<br />Gregorio Albarracín Lanchipa, Tacna</address>
+            <p class="reference">Frente al Mercado Santa Rosa, 3.er piso.</p>
+            <div class="location-actions">
+              <a class="primary-button dark" href={mapUrl} target="_blank" rel="noreferrer">
+                Cómo llegar
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+              </a>
+              <a class="phone-link" href="tel:+51930792693">930 792 693</a>
+            </div>
+          </div>
+          <a class="map-card" href={mapUrl} target="_blank" rel="noreferrer" aria-label="Abrir ubicación de Focus en Google Maps">
+            <div class="map-grid" aria-hidden="true">
+              <span class="road road-a"></span><span class="road road-b"></span><span class="road road-c"></span>
+              <span class="pin"><i></i></span>
+            </div>
+            <div class="map-caption">
+              <span>Gregorio Albarracín</span>
+              <strong>
+                Abrir en Google Maps
+                <svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11M10.5 5.5 15 10l-4.5 4.5"></path></svg>
+              </strong>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <div><p>Tu mejor versión no se encuentra.</p><h2>Se construye.</h2></div>
+        <a class="primary-button" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Hablar con Focus
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.5Z"></path>
+            <path d="M8.2 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.2.7l-.5.6c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.7.6-1.6.8-2.5.6-1.1-.2-2.5-.8-4.2-2.3-2-1.8-3.2-4-3.3-5.4 0-.7.2-1.1.5-1.4Z"></path>
+          </svg>
+        </a>
+      </section>
+
+      <footer>
+        <a class="footer-brand" href="#inicio"><img src="/focus/focus-logo-transparent.png" alt="Focus Club Fitness" /></a>
+        <p>Una sede. Una comunidad. Tu enfoque.</p>
+        <div class="social-links" aria-label="Canales de Focus Club Fitness">
+          <a href="https://www.facebook.com/FOCUSclubfitness/" target="_blank" rel="noreferrer" aria-label="Facebook de Focus Club Fitness">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4.5c-.7-.1-1.9-.3-3.2-.3-3.1 0-5.2 1.9-5.2 5.4V12H5v4h3.6v7H13v-7h3.5l.6-4H13V10c0-1.2.3-2 1-2Z"></path></svg>
+          </a>
+          <a href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="WhatsApp de Focus Club Fitness">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.5Z"></path>
+              <path d="M8.2 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.2.7l-.5.6c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.7.6-1.6.8-2.5.6-1.1-.2-2.5-.8-4.2-2.3-2-1.8-3.2-4-3.3-5.4 0-.7.2-1.1.5-1.4Z"></path>
+            </svg>
+          </a>
+          <a href={mapUrl} target="_blank" rel="noreferrer" aria-label="Ubicación en Google Maps">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M20 10c0 5.5-8 11-8 11S4 15.5 4 10a8 8 0 1 1 16 0Z"></path>
+              <circle cx="12" cy="10" r="2.5"></circle>
+            </svg>
+          </a>
+        </div>
+        <small>© 2026 Focus Club Fitness Tacna</small>
+      </footer>
+
+      <a class="floating-whatsapp" href={whatsappUrl} target="_blank" rel="noreferrer" aria-label="Consultar por WhatsApp">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M20.5 11.7a8.5 8.5 0 0 1-12.6 7.5L3.5 20.5l1.3-4.3a8.5 8.5 0 1 1 15.7-4.5Z"></path>
+          <path d="M8.2 7.6c.2-.4.4-.4.7-.4h.5c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.2.7l-.5.6c-.2.2-.1.4 0 .6.6 1.1 1.5 2 2.6 2.6.2.1.4.2.6 0l.8-1c.2-.2.4-.3.7-.2l1.8.9c.3.1.4.3.4.5 0 .3-.1 1.4-.8 2-.7.6-1.6.8-2.5.6-1.1-.2-2.5-.8-4.2-2.3-2-1.8-3.2-4-3.3-5.4 0-.7.2-1.1.5-1.4Z"></path>
+        </svg>
+        <span>Escríbenos</span>
+      </a>
+    </main>
+  </body>
+</html>

@@ -1,17 +1,171 @@
 ---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import WorkGrid, { type WorkItem } from '../components/WorkGrid.astro';
 
+const trabajos: WorkItem[] = [
+  {
+    id: 'focus',
+    image: '/focus/focus-og.png',
+    title: 'Focus Club Fitness Tacna',
+    description: 'Landing page para gimnasio con información de servicios, suplementos, ubicación y atención por WhatsApp.',
+    href: '/focus',
+    isLive: true,
+  },
+  {
+    id: 'tlock',
+    image: '/tlock/og.png',
+    title: 'TLOC Cookies Tacna',
+    description: 'Landing page para marca de galletas rellenas con catálogo de sabores y pedidos por WhatsApp.',
+    href: '/tlock',
+    isLive: true,
+  },
+  {
+    id: 'work-01',
+    image: '/work/work-01.webp',
+    title: 'Proyecto E-Commerce',
+  },
+  {
+    id: 'work-02',
+    image: '/work/work-02.webp',
+    title: 'Estudio de Producción',
+  },
+  {
+    id: 'work-03',
+    image: '/work/work-03.webp',
+    title: 'Catálogo Industrial',
+  },
+  {
+    id: 'work-04',
+    image: '/work/work-04.webp',
+    title: 'Landing de Telecomunicaciones',
+  },
+  {
+    id: 'work-05',
+    image: '/work/work-05.webp',
+    title: 'Catálogo Retail',
+  },
+  {
+    id: 'work-06',
+    image: '/work/work-06.webp',
+    title: 'Sitio Web Corporativo',
+  },
+  {
+    id: 'work-07',
+    image: '/work/work-07.webp',
+    title: 'Panel de Control & Interfaz',
+  },
+  {
+    id: 'work-08',
+    image: '/work/work-08.webp',
+    title: 'Landing Promocional',
+  },
+];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<BaseLayout title="Jose Pizarro — Portafolio & Demos">
+  <main class="relative min-h-screen bg-white text-slate-900">
+    <section class="mx-auto flex max-w-4xl flex-col items-center px-6 pt-16 pb-12 text-center sm:pt-24 sm:pb-16">
+      <p
+        data-reveal
+        class="mt-4 text-sm font-semibold tracking-wide text-slate-900 opacity-0 translate-y-4 transition-all duration-500"
+      >
+        Jose Pizarro
+      </p>
+
+      <span
+        data-reveal
+        class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-xs font-medium text-slate-600 opacity-0 translate-y-4 transition-all duration-500"
+      >
+        Portafolio
+      </span>
+
+      <h1
+        data-reveal
+        class="mt-5 text-4xl font-bold tracking-tight text-slate-900 opacity-0 translate-y-4 transition-all duration-500 sm:text-5xl"
+      >
+        Diseños web & <span class="text-cyan-600">landings</span>
+      </h1>
+
+      <p
+        data-reveal
+        class="mt-4 max-w-xl text-base text-slate-600 opacity-0 translate-y-4 transition-all duration-500"
+      >
+        Muestra de sitios web, landings interactivas y proyectos de diseño UI.
+      </p>
+
+      <div
+        data-reveal
+        class="mt-6 flex flex-wrap items-center justify-center gap-3 opacity-0 translate-y-4 transition-all duration-500"
+      >
+        <a
+          href="https://wa.me/51945770325"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-emerald-600">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-1.746-.874-2.891-1.559-4.042-3.534-.305-.526.305-.487.87-1.622.099-.198.05-.372-.05-.521-.099-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.148.198 2.055 3.144 4.977 4.283 2.923 1.14 2.923.76 3.472.71.549-.049 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+            <path d="M12.004 2c-5.514 0-9.997 4.484-9.997 9.997 0 1.776.464 3.443 1.276 4.891L2 22l5.264-1.36a9.96 9.96 0 0 0 4.74 1.2h.004c5.514 0 9.997-4.483 9.997-9.996C22.005 6.484 17.522 2 12.004 2zm0 18.185h-.003a8.16 8.16 0 0 1-4.157-1.14l-.298-.177-3.116.806.833-3.037-.194-.312a8.148 8.148 0 0 1-1.263-4.328c0-4.507 3.678-8.185 8.2-8.185 2.189 0 4.246.854 5.792 2.401a8.15 8.15 0 0 1 2.401 5.796c0 4.508-3.679 8.176-8.195 8.176z"/>
+          </svg>
+          +51 945 770 325
+        </a>
+
+        <a
+          href="mailto:jose.pizarro.tech@gmail.com"
+          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900 transition-colors"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-4 text-cyan-600">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75h19.5v10.5a1.5 1.5 0 0 1-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75Z"/>
+            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 6.75 9.75 6.75 9.75-6.75"/>
+          </svg>
+          jose.pizarro.tech@gmail.com
+        </a>
+      </div>
+    </section>
+
+    <!-- Works Grid -->
+    <section class="mx-auto max-w-6xl px-6 pb-24">
+      <div
+        data-reveal
+        class="mb-8 text-center opacity-0 translate-y-4 transition-all duration-500"
+      >
+        <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">
+          Trabajos realizados
+        </h2>
+      </div>
+
+      <WorkGrid items={trabajos} />
+    </section>
+
+    <!-- Footer -->
+    <footer
+      data-reveal
+      class="border-t border-slate-200 py-8 text-center text-xs text-slate-500 opacity-0 translate-y-4 transition-all duration-500"
+    >
+      <p>
+        Jose Pizarro — Tacna, Perú
+      </p>
+    </footer>
+  </main>
+</BaseLayout>
+
+<script>
+  const elementos = document.querySelectorAll('[data-reveal]');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          entry.target.classList.remove('opacity-0', 'translate-y-4');
+          observer.unobserve(entry.target);
+        }
+      }
+    },
+    { threshold: 0.15 }
+  );
+
+  elementos.forEach((el, i) => {
+    (el as HTMLElement).style.transitionDelay = `${i * 60}ms`;
+    observer.observe(el);
+  });
+</script>

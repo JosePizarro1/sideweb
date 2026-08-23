@@ -1,0 +1,771 @@
+---
+const whatsappUrl =
+  "https://wa.me/51961714497?text=Hola%20TLOC%20%F0%9F%8D%AA%20Quiero%20conocer%20los%20sabores%20disponibles%20de%20hoy";
+
+const favorites = [
+  {
+    image: "/tlock/tloc-franuji.webp",
+    name: "Franuji",
+    note: "Suave, frutal y con una sorpresa en el centro.",
+    tag: "TLOC original",
+  },
+  {
+    image: "/tlock/tloc-classic.webp",
+    name: "La clásica",
+    note: "Doradita por fuera, suave por dentro y cargada de chocolate.",
+    tag: "Favorita",
+  },
+  {
+    image: "/tlock/tloc-full-chocolate-v2.webp",
+    name: "Full chocolate",
+    note: "Para quienes creen que nunca existe demasiado chocolate.",
+    tag: "Intensa",
+  },
+  {
+    image: "/tlock/tloc-share.webp",
+    name: "TLOC para compartir",
+    note: "El antojo convertido en una celebración inolvidable.",
+    tag: "Edición especial",
+  },
+];
+
+const tickerRounds = [0, 1];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content={Astro.generator} />
+    <title>TLOC Cookies Tacna</title>
+    <meta
+      name="description"
+      content="Cookies rellenas, momentos felices y mucho sabor en Tacna. Descubre los favoritos y pide por WhatsApp."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Manrope:wght@400..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <a class="brand" href="#inicio" aria-label="TLOC Cookies, volver al inicio">
+          <span class="brand-mark">T</span><span>TLOC<span class="brand-dot">.</span>COOKIES</span>
+        </a>
+        <nav aria-label="Navegación principal">
+          <a href="#favoritas">Favoritas</a>
+          <a href="#experiencia">La experiencia</a>
+          <a href="#visitanos">Visítanos</a>
+        </nav>
+        <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
+          Pedir ahora
+          <svg viewBox="0 0 20 20" aria-hidden="true">
+            <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+          </svg>
+        </a>
+      </header>
+
+      <section class="hero" id="inicio">
+        <div class="hero-copy">
+          <p class="eyebrow"><span></span> Hechas en Tacna, para alegrarte el día</p>
+          <h1>Horneamos<br /><em>felicidad.</em></h1>
+          <p class="hero-lead">
+            Cookies rellenas, sabores que sorprenden y ese primer mordisco que te hace cerrar los ojos. Bienvenido a TLOC.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.3a8.5 8.5 0 1 1 15.8-4.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+                <path d="M8.3 7.8c.3-.5.5-.5.8-.5h.4c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.5 1 1.2 1.7 2.2 2.2.3.2.5.2.7 0l.9-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .4-.2 1.2-.7 1.7-.6.6-1.4.9-2.4.7-1.1-.2-2.6-.8-4.2-2.2-1.8-1.6-2.9-3.6-3-4.8 0-.7.1-1.2.4-1.6Z" fill="currentColor"></path>
+              </svg>
+              Pedir por WhatsApp
+            </a>
+            <a class="button button-ghost" href="#favoritas">
+              Ver sabores
+              <svg viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </a>
+          </div>
+          <div class="trust-row" aria-label="Beneficios de TLOC Cookies">
+            <span>Horneadas cada día</span>
+            <span>Relleno generoso</span>
+            <span>100% espíritu TLOC</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="Cookies y mascota oficial de TLOC">
+          <div class="hero-photo">
+            <img
+              src="/tlock/tloc-hero-v2.webp"
+              alt="Cookies TLOC recién horneadas con centro de chocolate y caja azul"
+            />
+          </div>
+          <div class="hero-mascot-shot">
+            <img
+              src="/tlock/tloc-mascot-scene.webp"
+              alt="Mascota oficial de TLOC sosteniendo una cookie"
+            />
+          </div>
+        </div>
+      </section>
+
+      <div class="ticker" aria-label="Características de las cookies">
+        <div class="ticker-track">
+          {tickerRounds.map((round) => (
+            <div class="ticker-group" aria-hidden={round === 1}>
+              <span>CRUJIENTES POR FUERA</span><b>✦</b><span>SUAVES POR DENTRO</span><b>✦</b><span>RELLENAS DE FELICIDAD</span><b>✦</b>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      <section class="favorites section" id="favoritas">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow"><span></span> Elige tu próximo antojo</p>
+            <h2>Las que hacen<br />volver por otra.</h2>
+          </div>
+          <p>
+            Una selección de la familia TLOC. La carta cambia y siempre hay algo nuevo esperándote.
+          </p>
+        </div>
+        <div class="favorite-grid">
+          {favorites.map((item, index) => (
+            <article class={`favorite-card card-${index + 1}`}>
+              <div class="favorite-image">
+                <img src={item.image} alt={item.name} />
+                <span class="card-tag">{item.tag}</span>
+              </div>
+              <div class="favorite-copy">
+                <h3>{item.name}</h3>
+                <p>{item.note}</p>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Consultar disponibilidad de ${item.name}`}
+                >
+                  Quiero probarla
+                  <svg viewBox="0 0 20 20" aria-hidden="true">
+                    <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+        <p class="availability-note">
+          Los sabores y presentaciones pueden variar según disponibilidad. Escríbenos y te contamos qué salió del horno hoy.
+        </p>
+      </section>
+
+      <section class="bite-section" aria-labelledby="bite-title">
+        <div class="bite-media reveal">
+          <img
+            src="/tlock/tloc-cookie-macro.webp"
+            alt="Cookie TLOC partida con centro suave y chocolate fundido"
+          />
+          <span class="bite-label">Así se ve<br />la felicidad</span>
+        </div>
+        <div class="bite-copy reveal">
+          <p class="eyebrow eyebrow-light"><span></span> El momento TLOC</p>
+          <h2 id="bite-title">Muerde.<br /><em>Sonríe.</em><br />Repite.</h2>
+          <p>
+            El borde doradito da paso a un centro suave, generoso y lleno de sabor. No es solo una cookie: es esa pausa que mejora el día.
+          </p>
+          <div class="bite-proof">
+            <span><strong>01</strong> Horneado diario</span>
+            <span><strong>02</strong> Centro irresistible</span>
+            <span><strong>03</strong> Sabor con actitud</span>
+          </div>
+          <a class="button button-cream" href={whatsappUrl} target="_blank" rel="noreferrer">
+            Pedir por WhatsApp
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="experience-wrap" id="experiencia">
+        <div class="experience section">
+          <div class="experience-copy">
+            <p class="eyebrow eyebrow-light"><span></span> Sabor con personalidad</p>
+            <h2>Más que cookies.<br /><em>Una pausa feliz.</em></h2>
+            <p class="experience-lead">
+              TLOC nació para convertir un antojo simple en un momento que quieras compartir. Aquí cada detalle —del relleno a la caja— tiene un poquito de nuestra forma de ver la vida.
+            </p>
+            <div class="experience-points">
+              <div><strong>01</strong><span>Cookies con centro suave y combinaciones que sorprenden.</span></div>
+              <div><strong>02</strong><span>Una marca cercana, alegre y orgullosamente tacneña.</span></div>
+              <div><strong>03</strong><span>Ediciones, regalos y experiencias para celebrar diferente.</span></div>
+            </div>
+          </div>
+          <div class="experience-gallery">
+            <div class="gallery-main">
+              <img
+                src="/tlock/tloc-community.webp"
+                alt="Amigos compartiendo cookies TLOC en Tacna"
+              />
+            </div>
+            <div class="gallery-community">
+              <img
+                src="/tlock/tloc-community-v2.webp"
+                alt="Jóvenes compartiendo cookies TLOC"
+              />
+            </div>
+            <div class="gallery-product">
+              <img
+                src="/tlock/indulgence.webp"
+                alt="Tortas cookie y postres TLOC para compartir"
+              />
+            </div>
+            <div class="community-badge">
+              <strong>6.9K+</strong><span>cookie lovers<br />en Instagram</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="how section" aria-labelledby="how-title">
+        <div class="how-title">
+          <div>
+            <p class="eyebrow"><span></span> Fácil, rápido y muy TLOC</p>
+            <h2 id="how-title">Tres formas de<br />disfrutarlo.</h2>
+          </div>
+          <p>
+            Elige tu momento TLOC: ven por el antojo, recógelo listo o conviértelo en un regalo que sí sorprende.
+          </p>
+        </div>
+        <div class="how-grid">
+          <article>
+            <div class="how-media">
+              <img
+                src="/tlock/tloc-how-store.webp"
+                alt="Vitrina de cookies en una tienda cálida con identidad azul"
+              />
+              <span class="how-number">01</span>
+            </div>
+            <div class="how-copy">
+              <h3>Ven a la tienda</h3>
+              <p>Elige con calma, mira los sabores del día y vive la experiencia completa.</p>
+              <a href="#visitanos">
+                Ver ubicación
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+          <article>
+            <div class="how-media">
+              <img
+                src="/tlock/tloc-how-pickup-v2.webp"
+                alt="Cliente recibiendo una caja azul de cookies TLOC para llevar"
+              />
+              <span class="how-number">02</span>
+            </div>
+            <div class="how-copy">
+              <h3>Pide para llevar</h3>
+              <p>Escríbenos antes de salir y encuentra tu pedido listo para recoger.</p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Hacer mi pedido
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+          <article>
+            <div class="how-media">
+              <img
+                src="/tlock/tloc-how-gift.webp"
+                alt="Caja de regalo azul con cookies y cinta rosa"
+              />
+              <span class="how-number">03</span>
+            </div>
+            <div class="how-copy">
+              <h3>Regala TLOC</h3>
+              <p>Pregunta por boxes y opciones para convertir cualquier fecha en algo especial.</p>
+              <a href={whatsappUrl} target="_blank" rel="noreferrer">
+                Quiero sorprender
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="visit section" id="visitanos">
+        <div class="visit-card">
+          <div class="visit-copy">
+            <p class="eyebrow eyebrow-light"><span></span> Tu próxima parada feliz</p>
+            <h2>Nos vemos<br />en TLOC.</h2>
+            <div class="visit-details">
+              <div><span>Dirección principal</span><strong>Calle Sir Jones 25, Tacna</strong></div>
+              <div><span>Horario</span><strong>Lun–Sáb · 11:00 a.m.–9:00 p.m.<br />Dom · 4:00 p.m.–9:00 p.m.</strong></div>
+            </div>
+            <div class="visit-actions">
+              <a class="button button-cream" href="https://www.google.com/maps/search/?api=1&query=Calle+Sir+Jones+25+Tacna+Peru" target="_blank" rel="noreferrer">
+                Cómo llegar
+                <svg viewBox="0 0 20 20" aria-hidden="true">
+                  <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </a>
+              <a class="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">
+                Consultar el punto más cercano
+              </a>
+            </div>
+          </div>
+          <div class="visit-visual">
+            <img
+              src="/tlock/tloc-mascot-scene.webp"
+              alt="Mascota TLOC invitando a visitar la tienda"
+            />
+            <div class="pin-label">
+              <span>●</span><strong>SIR JONES 25</strong><small>TACNA, PERÚ</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="social-section">
+        <div class="social-intro">
+          <p class="eyebrow"><span></span> Síguenos la pista</p>
+          <h2>El antojo sigue en<br />nuestras redes.</h2>
+          <p class="social-copy">
+            Nuevos sabores, ediciones especiales y todo lo que sale del horno, primero en redes.
+          </p>
+          <div class="social-proof" aria-label="Más de 6.9 mil seguidores en Instagram">
+            <span class="social-mascot-img">
+              <img
+                src="/tlock/tloc-mascot-scene.webp"
+                alt="Mascota TLOC"
+              />
+            </span>
+            <span class="social-proof-copy">
+              <strong>6.9K+</strong><small>cookie lovers<br />en Instagram</small>
+            </span>
+          </div>
+        </div>
+        <div class="social-links">
+          <a
+            class="social-instagram"
+            href="https://instagram.com/tloc.cookies"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir Instagram de TLOC"
+          >
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 1em; height: 1em; fill: currentColor;">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4.162 4.162 0 1 1 0-8.324 4.162 4.162 0 0 1 0 8.324ZM18.406 4.155a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"></path>
+              </svg>
+            </span>
+            <span><small>Instagram</small><strong>@tloc.cookies</strong></span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a
+            class="social-tiktok"
+            href="https://tiktok.com/@tloc.cookies"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir TikTok de TLOC"
+          >
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 1em; height: 1em; fill: currentColor;">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.39h.03V9.07a6.32 6.32 0 0 0-.96-.07 6.34 6.34 0 1 0 6.34 6.34V8.56a8.27 8.27 0 0 0 4.7 1.47V6.59a4.85 4.85 0 0 1-.05.1Z"></path>
+              </svg>
+            </span>
+            <span><small>TikTok</small><strong>@tloc.cookies</strong></span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+          <a
+            class="social-facebook"
+            href="https://www.facebook.com/tloc.cookies"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Abrir Facebook de TLOC"
+          >
+            <span class="social-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 1em; height: 1em; fill: currentColor;">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </span>
+            <span><small>Facebook</small><strong>Tloc.cookies</strong></span>
+            <svg viewBox="0 0 20 20" aria-hidden="true">
+              <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <footer>
+        <div class="footer-brand">
+          <span class="brand-mark">T</span><strong>TLOC.COOKIES</strong>
+        </div>
+        <p>Horneamos felicidad en Tacna.</p>
+        <div>
+          <span class="footer-socials">
+            <a href="https://instagram.com/tloc.cookies" target="_blank" rel="noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 13px; height: 13px; fill: currentColor;">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069ZM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0Zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324ZM12 16a4.162 4.162 0 1 1 0-8.324 4.162 4.162 0 0 1 0 8.324ZM18.406 4.155a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88Z"></path>
+              </svg>
+            </a>
+            <a href="https://tiktok.com/@tloc.cookies" target="_blank" rel="noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 13px; height: 13px; fill: currentColor;">
+                <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 1 1-5.2-1.74 2.89 2.89 0 0 1 2.31-1.39h.03V9.07a6.32 6.32 0 0 0-.96-.07 6.34 6.34 0 1 0 6.34 6.34V8.56a8.27 8.27 0 0 0 4.7 1.47V6.59a4.85 4.85 0 0 1-.05.1Z"></path>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/tloc.cookies" target="_blank" rel="noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 13px; height: 13px; fill: currentColor;">
+                <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path>
+              </svg>
+            </a>
+          </span>
+          <a href="#inicio">Volver arriba ↑</a>
+          <span>© 2026 TLOC Cookies</span>
+        </div>
+      </footer>
+
+      <a
+        class="whatsapp-float"
+        href={whatsappUrl}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Pedir TLOC Cookies por WhatsApp"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round;">
+          <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.3a8.5 8.5 0 1 1 15.8-4.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
+          <path d="M8.3 7.8c.3-.5.5-.5.8-.5h.4c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.5 1 1.2 1.7 2.2 2.2.3.2.5.2.7 0l.9-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .4-.2 1.2-.7 1.7-.6.6-1.4.9-2.4.7-1.1-.2-2.6-.8-4.2-2.2-1.8-1.6-2.9-3.6-3-4.8 0-.7.1-1.2.4-1.6Z" fill="currentColor"></path>
+        </svg>
+        <span>Pide por WhatsApp</span>
+      </a>
+    </main>
+
+    <style is:global>
+      :root {
+        --blue: #1268d5;
+        --blue-dark: #084eaa;
+        --cream: #fffce7;
+        --sky: #dceeff;
+        --ink: #112039;
+        --muted: #59647a;
+        --pink: #ff9fbd;
+        --white: #ffffff;
+        --line: rgba(17, 32, 57, 0.16);
+        --font-body: "Manrope", "Segoe UI Variable", Arial, sans-serif;
+        --font-display: "Archivo Black", "Arial Black", Arial, sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+      html { scroll-behavior: smooth; overflow-x: clip; }
+      body { margin: 0; overflow-x: clip; background: var(--cream); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; letter-spacing: -.008em; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; }
+      img { display: block; max-width: 100%; width: 100%; height: 100%; object-fit: cover; }
+      a { color: inherit; text-decoration: none; }
+      svg { width: 1.15em; height: 1.15em; flex: 0 0 auto; }
+
+      .site-header { width: min(1180px, calc(100% - 40px)); height: 78px; margin: 18px auto 0; padding: 0 18px 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 252, 231, 0.88); backdrop-filter: blur(16px); position: relative; z-index: 10; }
+      .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -0.04em; font-size: 1.04rem; }
+      .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: var(--cream); background: var(--blue); transform: rotate(-8deg); font: 900 1.25rem/1 Arial, sans-serif; }
+      .brand-dot { color: var(--blue); }
+      .site-header nav { display: flex; gap: 30px; font-size: 0.9rem; font-weight: 700; }
+      .site-header nav a { position: relative; }
+      .site-header nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -7px; height: 2px; background: var(--blue); transition: right .25s ease; }
+      .site-header nav a:hover::after { right: 0; }
+      .header-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; font-weight: 800; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
+      .header-cta { padding: 13px 18px; color: white; background: var(--blue); font-size: 0.9rem; }
+      .header-cta:hover, .button:hover { transform: translateY(-2px); }
+
+      .hero { width: min(1240px, calc(100% - 40px)); min-height: 700px; margin: 0 auto; padding: 62px 22px 58px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 46px; overflow: visible; }
+      .eyebrow { margin: 0 0 22px; display: flex; align-items: center; gap: 10px; color: var(--blue-dark); font-size: .78rem; line-height: 1; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+      .eyebrow > span { width: 28px; height: 2px; background: currentColor; }
+      .hero h1, .section-heading h2 { margin: 0; font-family: var(--font-display); font-weight: 900; letter-spacing: -.068em; line-height: .9; text-transform: uppercase; }
+      .hero h1 { font-size: clamp(4.15rem, 6.2vw, 6.35rem); }
+      .hero h1 em { color: var(--blue); font-style: normal; position: relative; }
+      .hero h1 em::after { content: ""; position: absolute; left: 3%; right: 0; bottom: -8px; height: 12px; border-bottom: 4px solid var(--pink); border-radius: 50%; transform: rotate(-2deg); }
+      .hero-lead { max-width: 570px; margin: 34px 0 28px; color: var(--muted); font-size: 1.13rem; line-height: 1.7; }
+      .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
+      .button { min-height: 54px; padding: 0 22px; border: 1px solid var(--ink); }
+      .button-primary { color: white; background: var(--blue); border-color: var(--blue); box-shadow: 0 10px 25px rgba(18,104,213,.18); }
+      .button-primary:hover { background: var(--blue-dark); box-shadow: 0 14px 30px rgba(18,104,213,.25); }
+      .button-ghost { background: transparent; }
+      .button-ghost:hover { background: white; }
+      .trust-row { margin-top: 38px; padding-top: 23px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 24px; color: #455168; font-size: .79rem; font-weight: 800; }
+      .trust-row span::before { content: "●"; margin-right: 8px; color: var(--blue); font-size: .65rem; }
+
+      .hero-visual { min-height: 570px; position: relative; isolation: isolate; }
+      .hero-photo { width: 100%; height: 550px; position: absolute; right: 0; top: 8px; overflow: hidden; border: 7px solid white; border-radius: 34px; box-shadow: 0 30px 70px rgba(17,32,57,.16); background: #f8e8dc; }
+      .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.17), transparent 42%, rgba(8,78,170,.08)); pointer-events: none; }
+      .hero-photo img { object-fit: cover; object-position: center 57%; transition: transform .9s cubic-bezier(.2,.75,.2,1); }
+      .hero-visual:hover .hero-photo img { transform: scale(1.045); }
+      .hero-mascot-shot { width: 150px; height: 150px; position: absolute; left: -24px; top: -20px; z-index: 4; overflow: hidden; border: 6px solid white; border-radius: 50%; box-shadow: 0 16px 38px rgba(17,32,57,.18); animation: float 6.5s ease-in-out infinite; }
+      .hero-mascot-shot img { object-fit: cover; }
+
+      .ticker { overflow: hidden; color: white; background: var(--blue); border-block: 1px solid rgba(17,32,57,.55); }
+      .ticker-track { width: max-content; display: flex; align-items: center; animation: ticker 26s linear infinite; font: 900 .82rem/1 var(--font-display); letter-spacing: .04em; will-change: transform; }
+      .ticker-group { width: 100vw; flex: none; padding: 14px 34px; display: flex; align-items: center; justify-content: space-around; gap: clamp(20px, 3.2vw, 58px); white-space: nowrap; }
+      .ticker b { color: var(--pink); font-size: 1.2rem; }
+
+      .section { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 90px 0; }
+      .favorites.section { padding-top: 86px; padding-bottom: 82px; }
+      .section-heading { margin-bottom: 38px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: end; gap: 46px; }
+      .section-heading h2 { max-width: 720px; font-size: clamp(2.9rem, 4.25vw, 4.45rem); }
+      .section-heading > p { max-width: 360px; margin: 0 0 6px; color: var(--muted); line-height: 1.7; }
+      .favorite-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
+      .favorite-card { min-width: 0; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: white; transition: transform .28s ease, box-shadow .28s ease; }
+      .favorite-card:hover { transform: translateY(-8px); box-shadow: 0 22px 55px rgba(17,32,57,.12); }
+      .favorite-image { aspect-ratio: 1.02; position: relative; overflow: hidden; background: var(--sky); }
+      .favorite-image img { object-fit: cover; transition: transform .5s ease; }
+      .favorite-card:hover .favorite-image img { transform: scale(1.04); }
+      .card-tag { position: absolute; top: 14px; left: 14px; padding: 8px 11px; border-radius: 999px; color: var(--ink); background: rgba(255,252,231,.92); backdrop-filter: blur(10px); font-size: .67rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+      .favorite-copy { padding: 19px 20px 20px; }
+      .favorite-copy h3 { margin: 0; font: 900 1.2rem/1.12 var(--font-display); letter-spacing: -.035em; }
+      .favorite-copy p { min-height: 58px; margin: 10px 0 16px; color: var(--muted); font-size: .82rem; line-height: 1.55; }
+      .favorite-copy a { display: flex; align-items: center; justify-content: space-between; color: var(--blue-dark); font-size: .82rem; font-weight: 900; }
+      .availability-note { max-width: 670px; margin: 24px auto 0; color: #657086; text-align: center; font-size: .75rem; line-height: 1.6; }
+
+      .bite-section { width: min(1320px, calc(100% - 40px)); min-height: 650px; margin: 0 auto 88px; display: grid; grid-template-columns: 1.05fr .95fr; overflow: hidden; color: white; background: var(--blue-dark); border-radius: 32px; box-shadow: 0 35px 90px rgba(8,78,170,.2); }
+      .bite-media { min-height: 650px; position: relative; overflow: hidden; }
+      .bite-media::after { content: ""; position: absolute; inset: 0; background: linear-gradient(90deg, transparent 62%, rgba(8,78,170,.35)); }
+      .bite-media img { object-fit: cover; transition: transform 1s cubic-bezier(.2,.75,.2,1); }
+      .bite-section:hover .bite-media img { transform: scale(1.035); }
+      .bite-label { width: 140px; height: 140px; position: absolute; left: 34px; bottom: 34px; z-index: 2; display: grid; place-items: center; align-content: center; color: var(--ink); background: var(--pink); border: 5px solid var(--cream); border-radius: 50%; text-align: center; font: 900 1.05rem/1.05 var(--font-display); text-transform: uppercase; transform: rotate(-7deg); }
+      .bite-copy { padding: clamp(50px, 7vw, 105px); align-self: center; }
+      .bite-copy h2 { margin: 0; font: 900 clamp(3.6rem, 5.2vw, 5.6rem)/.88 var(--font-display); letter-spacing: -.06em; text-transform: uppercase; }
+      .bite-copy h2 em { color: var(--pink); font-style: normal; }
+      .bite-copy > p:not(.eyebrow) { max-width: 500px; margin: 32px 0; color: rgba(255,255,255,.78); font-size: 1rem; line-height: 1.75; }
+      .bite-proof { margin-bottom: 34px; display: grid; border-top: 1px solid rgba(255,255,255,.22); }
+      .bite-proof span { padding: 14px 0; display: flex; gap: 18px; border-bottom: 1px solid rgba(255,255,255,.22); font-size: .79rem; font-weight: 850; text-transform: uppercase; letter-spacing: .04em; }
+      .bite-proof strong { color: var(--pink); }
+      .bite-copy .button { width: fit-content; }
+
+      .experience-wrap { overflow: hidden; color: white; background: var(--blue); }
+      .experience { display: grid; grid-template-columns: .9fr 1.1fr; align-items: center; gap: 70px; }
+      .eyebrow-light { color: var(--sky); }
+      .experience h2, .how h2, .visit h2, .social-intro h2 { margin: 0; font: 900 clamp(3.15rem, 4.65vw, 5rem)/.92 var(--font-display); letter-spacing: -.052em; text-transform: uppercase; }
+      .experience h2 em { color: var(--pink); font-style: normal; }
+      .experience-lead { max-width: 570px; margin: 30px 0 42px; color: rgba(255,255,255,.8); font-size: 1.04rem; line-height: 1.72; }
+      .experience-points { display: grid; gap: 18px; }
+      .experience-points div { padding-top: 18px; display: grid; grid-template-columns: 48px 1fr; gap: 15px; border-top: 1px solid rgba(255,255,255,.22); }
+      .experience-points strong { color: var(--pink); font-size: .76rem; letter-spacing: .1em; }
+      .experience-points span { max-width: 420px; font-size: .9rem; line-height: 1.55; }
+      .experience-gallery { min-height: 620px; position: relative; }
+      .gallery-main, .gallery-community, .gallery-product { position: absolute; overflow: hidden; border: 7px solid white; box-shadow: 0 25px 50px rgba(0,0,0,.15); }
+      .gallery-main { width: 76%; aspect-ratio: 1; top: 0; right: 0; border-radius: 46% 46% 24px 24px; transform: rotate(2deg); }
+      .gallery-community { width: 56%; aspect-ratio: 1.3; bottom: 15px; left: 0; border-radius: 25px; transform: rotate(-3deg); }
+      .gallery-product { width: 155px; height: 155px; top: 32px; left: -8px; z-index: 2; border-radius: 50%; transform: rotate(-6deg); }
+      .gallery-main img, .gallery-community img, .gallery-product img { object-fit: cover; }
+      .community-badge { width: 155px; height: 155px; padding: 20px; position: absolute; right: -15px; bottom: 8px; display: grid; place-items: center; align-content: center; text-align: center; color: var(--ink); background: var(--pink); border-radius: 50%; transform: rotate(7deg); box-shadow: 0 0 0 7px var(--blue); }
+      .community-badge strong { font: 900 2rem/1 var(--font-display); }
+      .community-badge span { margin-top: 8px; font-size: .69rem; font-weight: 900; line-height: 1.2; text-transform: uppercase; }
+
+      .how { display: block; width: min(1240px, calc(100% - 40px)); margin-block: 72px 62px; padding: 68px 30px 72px; background: #edf6ff; border: 1px solid rgba(18,104,213,.12); border-radius: 32px; }
+      .how-title { margin-bottom: 38px; display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 50px; }
+      .how-title > p { max-width: 430px; margin: 0 0 7px; color: var(--muted); font-size: .98rem; line-height: 1.7; }
+      .how h2 { color: var(--ink); font-size: clamp(3rem, 4.1vw, 4.35rem); }
+      .how-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 17px; }
+      .how-grid article { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 22px; background: rgba(255,255,255,.9); transition: transform .28s ease, box-shadow .28s ease, background .28s ease; }
+      .how-grid article:hover { background: white; transform: translateY(-7px); box-shadow: 0 22px 48px rgba(17,32,57,.12); }
+      .how-media { aspect-ratio: 4 / 3; position: relative; overflow: hidden; background: var(--sky); }
+      .how-media::after { content: ""; position: absolute; inset: 55% 0 0; background: linear-gradient(transparent, rgba(17,32,57,.18)); pointer-events: none; }
+      .how-media img { object-fit: cover; transition: transform .7s cubic-bezier(.2,.75,.2,1); }
+      .how-grid article:hover .how-media img { transform: scale(1.045); }
+      .how-number { width: 52px; height: 52px; position: absolute; left: 17px; bottom: 17px; z-index: 2; display: grid; place-items: center; border: 4px solid white; border-radius: 50%; color: white; background: var(--blue); font: 900 .73rem/1 var(--font-display); box-shadow: 0 8px 22px rgba(17,32,57,.18); }
+      .how-copy { padding: 24px 24px 26px; }
+      .how-grid h3 { margin: 0; font: 900 1.45rem/1.05 var(--font-display); letter-spacing: -.04em; }
+      .how-grid p { min-height: 70px; margin: 13px 0 20px; color: var(--muted); font-size: .87rem; line-height: 1.62; }
+      .how-grid a { display: flex; align-items: center; justify-content: space-between; gap: 8px; color: var(--blue-dark); font-size: .8rem; font-weight: 900; }
+
+      .visit { padding-top: 0; padding-bottom: 26px; }
+      .visit-card { min-height: 540px; display: grid; grid-template-columns: 1.12fr .88fr; overflow: hidden; color: white; background: var(--blue); border-radius: 32px; box-shadow: 0 30px 75px rgba(18,104,213,.18); }
+      .visit-copy { padding: clamp(45px, 7vw, 85px); }
+      .visit h2 { margin-bottom: 36px; font-size: clamp(3.35rem, 5vw, 5.2rem); }
+      .visit-details { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.26); }
+      .visit-details div { display: grid; gap: 9px; }
+      .visit-details span { color: var(--sky); font-size: .68rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
+      .visit-details strong { font-size: .9rem; line-height: 1.55; }
+      .visit-actions { margin-top: 38px; display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
+      .button-cream { color: var(--ink); background: var(--cream); border-color: var(--cream); }
+      .text-link { padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.5); font-size: .78rem; font-weight: 900; }
+      .visit-visual { position: relative; display: grid; place-items: center; overflow: hidden; background: var(--cream); }
+      .visit-visual::before { content: ""; position: absolute; width: 420px; height: 420px; border: 1px solid rgba(18,104,213,.22); border-radius: 50%; box-shadow: 0 0 0 75px rgba(220,238,255,.34), 0 0 0 140px rgba(255,159,189,.1); }
+      .visit-visual img { width: min(350px, 76%); height: auto; position: relative; z-index: 1; mix-blend-mode: multiply; animation: float 7s ease-in-out infinite; }
+      .pin-label { min-width: 190px; padding: 14px 18px; position: absolute; left: 30px; bottom: 30px; z-index: 2; display: grid; grid-template-columns: 18px 1fr; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 15px 30px rgba(17,32,57,.1); }
+      .pin-label > span { grid-row: 1 / 3; color: var(--pink); }
+      .pin-label strong { font-size: .78rem; }
+      .pin-label small { margin-top: 3px; color: var(--muted); font-size: .58rem; font-weight: 900; letter-spacing: .1em; }
+
+      .social-section { width: min(1180px, calc(100% - 40px)); margin: 24px auto 64px; padding: 50px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(500px, 1.1fr); gap: clamp(38px, 5vw, 70px); align-items: center; background: linear-gradient(135deg, #edf6ff, #fff6df); border: 1px solid var(--line); border-radius: 32px; box-shadow: 0 26px 70px rgba(17,32,57,.08); }
+      .social-intro h2 { max-width: 520px; font-size: clamp(2.75rem, 3.65vw, 3.9rem); line-height: .94; }
+      .social-copy { max-width: 480px; margin: 24px 0 26px; color: var(--muted); font-size: .93rem; line-height: 1.65; }
+      .social-proof { width: fit-content; min-width: 300px; padding: 11px 22px 11px 11px; display: flex; align-items: center; gap: 16px; border: 1px solid rgba(18,104,213,.2); border-radius: 22px; background: rgba(255,255,255,.88); box-shadow: 0 14px 34px rgba(17,32,57,.08); }
+      .social-mascot-img { width: 76px; height: 76px; position: relative; overflow: hidden; border-radius: 18px; background: var(--cream); }
+      .social-mascot-img img { object-fit: cover; }
+      .social-proof-copy { display: flex; align-items: center; gap: 13px; }
+      .social-proof strong { color: var(--blue); font: 900 2rem/1 var(--font-display); letter-spacing: -.045em; }
+      .social-proof small { color: var(--muted); font-size: .68rem; font-weight: 900; line-height: 1.3; text-transform: uppercase; letter-spacing: .04em; }
+      .social-links { display: grid; gap: 12px; }
+      .social-links a { min-height: 100px; padding: 0 18px; display: grid; grid-template-columns: 58px 1fr 26px; align-items: center; gap: 17px; color: var(--ink); background: rgba(255,255,255,.92); border: 1px solid var(--line); border-radius: 20px; transition: transform .22s ease, box-shadow .22s ease, border-color .22s ease; }
+      .social-links a:hover { transform: translateX(6px); border-color: rgba(18,104,213,.4); box-shadow: 0 14px 28px rgba(17,32,57,.08); }
+      .social-links a > span:nth-child(2) { display: grid; gap: 3px; }
+      .social-links small { color: var(--muted); font-size: .65rem; font-weight: 800; }
+      .social-links strong { font-size: 1.13rem; }
+      .social-icon { width: 52px; height: 52px; display: grid; place-items: center; color: white; border-radius: 16px; font-size: 1.45rem; }
+      .social-icon svg { width: 1em; height: 1em; }
+      .social-instagram .social-icon { background: linear-gradient(135deg, #6d3dda, #e1306c 55%, #f6a428); }
+      .social-tiktok .social-icon { background: #111827; box-shadow: inset 3px 0 #25f4ee, inset -3px 0 #fe2c55; }
+      .social-facebook .social-icon { background: #1877f2; }
+
+      footer { padding: 38px max(24px, calc((100% - 1180px) / 2)); display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 25px; color: white; background: var(--ink); }
+      .footer-brand { display: flex; align-items: center; gap: 10px; font-size: .9rem; letter-spacing: -.03em; }
+      footer p { color: var(--sky); font-size: .78rem; }
+      footer > div:last-child { display: flex; align-items: center; justify-self: end; gap: 22px; color: rgba(255,255,255,.68); font-size: .68rem; font-weight: 700; }
+      .footer-socials { display: flex; gap: 7px; }
+      .footer-socials a { width: 30px; height: 30px; display: grid; place-items: center; color: white; background: rgba(255,255,255,.1); border-radius: 50%; transition: background .2s ease, transform .2s ease; }
+      .footer-socials a:hover { background: var(--blue); transform: translateY(-2px); }
+      .footer-socials svg { width: 13px; height: 13px; }
+      .whatsapp-float { width: 62px; height: 62px; position: fixed; right: 24px; bottom: 24px; z-index: 30; display: grid; place-items: center; color: white; background: #20b55f; border: 3px solid white; border-radius: 50%; box-shadow: 0 15px 34px rgba(17,32,57,.28); font-size: 1.85rem; transition: transform .22s ease, box-shadow .22s ease, background .22s ease; }
+      .whatsapp-float:hover { transform: translateY(-4px) scale(1.04); background: #16a654; box-shadow: 0 20px 40px rgba(17,32,57,.34); }
+      .whatsapp-float svg { width: 1em; height: 1em; }
+      .whatsapp-float span { width: max-content; padding: 8px 12px; position: absolute; right: 70px; opacity: 0; pointer-events: none; color: white; background: var(--ink); border-radius: 99px; font-size: .7rem; font-weight: 900; transform: translateX(8px); transition: opacity .2s ease, transform .2s ease; }
+      .whatsapp-float:hover span { opacity: 1; transform: translateX(0); }
+
+      @keyframes float { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-15px) rotate(1deg); } }
+      @keyframes ticker { to { transform: translateX(-50%); } }
+
+      @media (max-width: 960px) {
+        .site-header nav { display: none; }
+        .hero { min-height: auto; grid-template-columns: 1fr; padding-top: 70px; }
+        .hero-copy { text-align: center; }
+        .eyebrow, .hero-actions, .trust-row { justify-content: center; }
+        .hero-lead { margin-inline: auto; }
+        .hero-visual { min-height: 565px; }
+        .hero-photo { width: min(620px, 92%); height: 540px; left: 50%; right: auto; transform: translateX(-50%); }
+        .hero-visual:hover .hero-photo img { transform: none; }
+        .hero-mascot-shot { left: max(0px, calc(50% - 330px)); }
+        .favorite-grid { grid-template-columns: repeat(2, 1fr); gap: 18px; }
+        .bite-section { grid-template-columns: 1fr; }
+        .bite-media { min-height: 650px; }
+        .experience { grid-template-columns: 1fr; }
+        .experience-gallery { max-width: 700px; width: 100%; margin: 0 auto; }
+        .how-title { grid-template-columns: 1fr; gap: 20px; }
+        .how { width: min(900px, calc(100% - 32px)); padding-inline: 24px; }
+        .how-grid { grid-template-columns: repeat(2, 1fr); }
+        .how-grid article:last-child { grid-column: 1 / -1; }
+        .how-grid article:last-child .how-media { aspect-ratio: 2 / 1; }
+        .visit-card { grid-template-columns: 1fr; }
+        .visit-visual { min-height: 500px; }
+        .social-section { grid-template-columns: 1fr; gap: 30px; padding: 42px; }
+        footer { grid-template-columns: 1fr 1fr; }
+        footer p { display: none; }
+      }
+
+      @media (max-width: 620px) {
+        body { font-size: 15px; }
+        main { width: 100%; overflow: clip; }
+        .site-header { width: calc(100% - 20px); height: 62px; margin-top: 8px; padding: 0 7px 0 10px; gap: 8px; border-radius: 16px; position: sticky; top: max(8px, env(safe-area-inset-top)); box-shadow: 0 8px 24px rgba(17,32,57,.08); }
+        .brand { min-width: 0; gap: 7px; font-size: .78rem; letter-spacing: -.045em; }
+        .brand-mark { width: 32px; height: 32px; font-size: 1.05rem; }
+        .header-cta { min-height: 44px; padding: 0 13px; font-size: .72rem; white-space: nowrap; }
+        .header-cta svg { display: none; }
+        .hero { width: calc(100% - 20px); padding: 38px 2px 36px; gap: 24px; }
+        .hero-copy .eyebrow { max-width: 100%; line-height: 1.35; white-space: normal; }
+        .eyebrow { margin-bottom: 17px; font-size: .68rem; letter-spacing: .1em; }
+        .hero h1 { font-size: clamp(2.85rem, 15vw, 3.85rem); line-height: .93; }
+        .hero-lead { max-width: 34rem; margin: 24px auto 21px; font-size: .94rem; line-height: 1.58; }
+        .hero-actions { flex-direction: column; }
+        .button { width: 100%; min-height: 52px; padding-inline: 18px; }
+        .trust-row { margin-top: 24px; padding-top: 18px; display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; gap: 9px 12px; font-size: .67rem; text-align: left; }
+        .trust-row span:last-child { grid-column: 1 / -1; text-align: center; }
+        .hero-visual { min-height: 0; aspect-ratio: 4 / 4.45; }
+        .hero-photo { width: 100%; height: 100%; top: 0; left: 50%; border-width: 5px; border-radius: 24px; transform: translateX(-50%); }
+        .hero-photo img { object-position: center 58%; }
+        .hero-mascot-shot { width: 88px; height: 88px; left: -1px; top: -10px; border-width: 4px; }
+        .section { width: calc(100% - 24px); padding: 54px 0; }
+        .favorites.section { padding-top: 54px; padding-bottom: 52px; }
+        .section-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 28px; }
+        .section-heading h2 { font-size: clamp(2.55rem, 12.8vw, 3.15rem); line-height: .94; }
+        .section-heading > p { font-size: .88rem; line-height: 1.58; }
+        .favorite-grid { grid-template-columns: 1fr; }
+        .favorite-card { border-radius: 20px; }
+        .favorite-image { aspect-ratio: 1.28; }
+        .favorite-copy { padding: 18px; }
+        .favorite-copy p { min-height: auto; }
+        .favorite-copy a, .how-grid a { min-height: 44px; }
+        .availability-note { margin-top: 20px; font-size: .7rem; }
+        .bite-section { width: calc(100% - 20px); min-height: 0; margin-bottom: 54px; border-radius: 24px; }
+        .bite-media { min-height: 0; aspect-ratio: 1.06; }
+        .bite-label { width: 92px; height: 92px; left: 16px; bottom: 16px; border-width: 4px; font-size: .7rem; }
+        .bite-copy { padding: 40px 20px 44px; }
+        .bite-copy h2 { font-size: clamp(2.8rem, 14vw, 3.15rem); line-height: .9; }
+        .bite-copy > p:not(.eyebrow) { margin: 25px 0; font-size: .92rem; line-height: 1.65; }
+        .bite-proof { margin-bottom: 26px; }
+        .bite-copy .button { width: 100%; }
+        .experience h2, .how h2, .visit h2, .social-intro h2 { font-size: clamp(2.5rem, 12.7vw, 3.1rem); line-height: .94; }
+        .experience { gap: 32px; padding-block: 52px 58px; }
+        .experience-lead { margin: 24px 0 30px; font-size: .93rem; }
+        .experience-points { gap: 14px; }
+        .experience-gallery { min-height: 360px; }
+        .gallery-main { width: 88%; border-width: 5px; border-radius: 36% 36% 20px 20px; }
+        .gallery-community { width: 64%; bottom: 4px; border-width: 5px; }
+        .gallery-product { display: none; }
+        .community-badge { width: 96px; height: 96px; right: 0; bottom: 3px; padding: 12px; box-shadow: 0 0 0 5px var(--blue); }
+        .community-badge strong { font-size: 1.35rem; }
+        .community-badge span { font-size: .55rem; }
+        .how { width: calc(100% - 20px); margin-block: 44px 34px; padding: 40px 12px 14px; border-radius: 24px; }
+        .how-title { margin-bottom: 26px; gap: 16px; }
+        .how-title > p { font-size: .88rem; line-height: 1.58; }
+        .how-grid { grid-template-columns: 1fr; gap: 14px; }
+        .how-grid article:last-child { grid-column: auto; }
+        .how-grid article:last-child .how-media { aspect-ratio: 1.34; }
+        .how-grid article { border-radius: 20px; }
+        .how-media { aspect-ratio: 1.34; }
+        .how-number { width: 46px; height: 46px; left: 14px; bottom: 14px; border-width: 3px; }
+        .how-copy { padding: 19px 19px 21px; }
+        .how-grid h3 { font-size: 1.25rem; }
+        .how-grid p { min-height: auto; margin: 10px 0 16px; }
+        .visit { padding-top: 8px; padding-bottom: 24px; }
+        .visit-card { min-height: 0; border-radius: 24px; }
+        .visit-copy { padding: 38px 20px; }
+        .visit h2 { margin-bottom: 28px; }
+        .visit-details { grid-template-columns: 1fr; }
+        .visit-actions { margin-top: 30px; align-items: stretch; flex-direction: column; gap: 16px; }
+        .text-link { min-height: 44px; display: grid; place-items: center; align-self: stretch; text-align: center; }
+        .visit-visual { min-height: 280px; }
+        .visit-visual::before { width: 230px; height: 230px; }
+        .visit-visual img { width: min(215px, 66%); }
+        .pin-label { min-width: 166px; left: 12px; bottom: 12px; padding: 12px 14px; }
+        .ticker-track { animation-duration: 24s; }
+        .ticker-group { width: max-content; min-width: 190vw; padding: 12px 18px; gap: 22px; font-size: .68rem; }
+        .social-section { width: calc(100% - 20px); margin: 16px auto 56px; padding: 28px 16px 20px; gap: 22px; border-radius: 24px; }
+        .social-intro h2 { font-size: clamp(2.65rem, 13vw, 3.25rem); }
+        .social-copy { margin: 18px 0 20px; font-size: .86rem; }
+        .social-proof { width: 100%; min-width: 0; padding: 9px 14px 9px 9px; gap: 12px; border-radius: 18px; }
+        .social-mascot-img { width: 64px; height: 64px; border-radius: 15px; }
+        .social-proof-copy { gap: 9px; }
+        .social-proof strong { font-size: 1.65rem; }
+        .social-proof small { font-size: .6rem; }
+        .social-links { gap: 9px; }
+        .social-links a { min-height: 76px; padding-inline: 11px; grid-template-columns: 45px minmax(0, 1fr) 18px; gap: 10px; border-radius: 16px; }
+        .social-icon { width: 42px; height: 42px; border-radius: 13px; font-size: 1.18rem; }
+        .social-links strong { font-size: 1rem; }
+        footer { padding: 30px 18px calc(92px + env(safe-area-inset-bottom)); grid-template-columns: 1fr; gap: 20px; }
+        footer > div:last-child { justify-self: start; flex-wrap: wrap; }
+        .footer-socials { flex-basis: 100%; }
+        .whatsapp-float { width: 58px; height: 58px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); border-width: 3px; font-size: 1.65rem; }
+        .whatsapp-float span { display: none; }
+      }
+    </style>
+  </body>
+</html>
