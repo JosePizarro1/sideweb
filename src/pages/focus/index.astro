@@ -70,7 +70,8 @@ const products = [
 
       :root { --ink:#080808; --charcoal:#121212; --paper:#f4f3ef; --yellow:#ffc400; --yellow-bright:#ffdb36; --line:rgba(255,255,255,.14); }
       * { box-sizing:border-box; }
-      html { scroll-behavior:smooth; background:var(--ink); }
+      html { scroll-behavior:smooth; scroll-padding-top:80px; background:var(--ink); }
+      section[id] { scroll-margin-top:70px; }
       body { margin:0; background:var(--ink); color:#fff; font-family:"Manrope",Arial,sans-serif; overflow-x:hidden; }
       a { color:inherit; text-decoration:none; }
       svg { width:1.25em; height:1.25em; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
@@ -506,5 +507,23 @@ const products = [
         <span>Escríbenos</span>
       </a>
     </main>
+
+    <script>
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener('click', (e) => {
+          const href = anchor.getAttribute('href');
+          if (href && href.startsWith('#') && href.length > 1) {
+            const target = document.querySelector(href);
+            if (target) {
+              e.preventDefault();
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
