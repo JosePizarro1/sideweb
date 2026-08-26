@@ -1,171 +1,180 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
-import WorkGrid, { type WorkItem } from '../components/WorkGrid.astro';
+import "../styles/global.css";
 
-const trabajos: WorkItem[] = [
+const featured = [
   {
-    id: 'focus',
-    image: '/focus/focus-og.png',
-    title: 'Focus Club Fitness Tacna',
-    description: 'Landing page para gimnasio con información de servicios, suplementos, ubicación y atención por WhatsApp.',
-    href: '/focus',
-    isLive: true,
+    number: "01",
+    category: "Landing page · Fitness",
+    name: "Focus Club Fitness",
+    description: "Una experiencia intensa y directa para presentar el gimnasio, sus productos y convertir visitas en nuevos miembros.",
+    image: "/projects/focus.jpg",
+    href: "/focus",
+    accent: "yellow",
   },
   {
-    id: 'tlock',
-    image: '/tlock/og.png',
-    title: 'TLOC Cookies Tacna',
-    description: 'Landing page para marca de galletas rellenas con catálogo de sabores y pedidos por WhatsApp.',
-    href: '/tlock',
-    isLive: true,
-  },
-  {
-    id: 'work-01',
-    image: '/work/work-01.webp',
-    title: 'Proyecto E-Commerce',
-  },
-  {
-    id: 'work-02',
-    image: '/work/work-02.webp',
-    title: 'Estudio de Producción',
-  },
-  {
-    id: 'work-03',
-    image: '/work/work-03.webp',
-    title: 'Catálogo Industrial',
-  },
-  {
-    id: 'work-04',
-    image: '/work/work-04.webp',
-    title: 'Landing de Telecomunicaciones',
-  },
-  {
-    id: 'work-05',
-    image: '/work/work-05.webp',
-    title: 'Catálogo Retail',
-  },
-  {
-    id: 'work-06',
-    image: '/work/work-06.webp',
-    title: 'Sitio Web Corporativo',
-  },
-  {
-    id: 'work-07',
-    image: '/work/work-07.webp',
-    title: 'Panel de Control & Interfaz',
-  },
-  {
-    id: 'work-08',
-    image: '/work/work-08.webp',
-    title: 'Landing Promocional',
+    number: "02",
+    category: "Landing page · Gastronomía",
+    name: "TLOC Cookies",
+    description: "Identidad divertida, producto protagonista y un recorrido sencillo que termina directamente en el pedido por WhatsApp.",
+    image: "/projects/tloc.jpg",
+    href: "/tlock",
+    accent: "blue",
   },
 ];
+
+const archive = [
+  { name: "Proyecto e-commerce", tag: "E-commerce", image: "/projects/ecommerce.webp" },
+  { name: "Estudio de producción", tag: "Web corporativa", image: "/projects/produccion.webp" },
+  { name: "Catálogo industrial", tag: "Catálogo digital", image: "/projects/industrial.webp" },
+  { name: "Telecomunicaciones", tag: "Landing comercial", image: "/projects/telecom.webp" },
+  { name: "Catálogo retail", tag: "E-commerce", image: "/projects/retail.webp" },
+  { name: "Panel de control", tag: "UI / Dashboard", image: "/projects/dashboard.webp" },
+];
+
+const arrowPath = "M4 10h11M11 5l5 5-5 5";
 ---
 
-<BaseLayout title="Jose Pizarro — Portafolio & Demos">
-  <main class="relative min-h-screen bg-white text-slate-900">
-    <section class="mx-auto flex max-w-4xl flex-col items-center px-6 pt-16 pb-12 text-center sm:pt-24 sm:pb-16">
-      <p
-        data-reveal
-        class="mt-4 text-sm font-semibold tracking-wide text-slate-900 opacity-0 translate-y-4 transition-all duration-500"
-      >
-        Jose Pizarro
-      </p>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="Portafolio de Jose Pizarro: landing pages, páginas corporativas, sistemas web y soluciones digitales." />
+    <meta property="og:title" content="Jose Pizarro — Diseño web & sistemas" />
+    <meta property="og:description" content="Landing pages, sistemas web y experiencias digitales que funcionan de verdad." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Jose Pizarro — Diseño web & sistemas" />
+    <meta name="twitter:description" content="Landing pages, sistemas web y experiencias digitales." />
+    <meta name="twitter:image" content="/og.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>Jose Pizarro — Diseño web & sistemas</title>
+  </head>
+  <body>
+    <main>
+      <header class="site-header">
+        <a class="wordmark" href="#inicio" aria-label="Jose Pizarro, inicio"><span>JP</span><b>Jose Pizarro</b></a>
+        <nav aria-label="Navegación principal"><a href="#proyectos">Proyectos</a><a href="#servicios">Servicios</a><a href="#contacto">Contacto</a></nav>
+        <a class="availability" href="#contacto"><i></i> Disponible para proyectos <svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg></a>
+      </header>
 
-      <span
-        data-reveal
-        class="mt-3 inline-flex items-center rounded-full border border-slate-200 bg-slate-50 px-4 py-1 text-xs font-medium text-slate-600 opacity-0 translate-y-4 transition-all duration-500"
-      >
-        Portafolio
-      </span>
+      <section class="hero" id="inicio">
+        <div class="hero-grid" aria-hidden="true"></div>
+        <div class="hero-topline"><span>Diseño & desarrollo web</span></div>
+        <div class="hero-main">
+          <h1 aria-label="Páginas que se ven profesionales y funcionan de verdad.">Páginas que<br />se ven <span class="rotating-shell"><span class="rotating-word" aria-hidden="true">profesionales</span></span><br />y funcionan de verdad.</h1>
+          <div class="hero-aside">
+            <div class="hero-mascot" aria-label="Jota, la mascota digital de Jose Pizarro">
+              <span class="mascot-orbit" aria-hidden="true"></span>
+              <img src="/brand/jota-mascot.png" alt="Jota, una mascota azul con forma de letra J que señala el titular" />
+            </div>
+            <div class="hero-aside-copy">
+              <p>Diseño landings y sistemas con una idea clara: hacer que cada negocio se vea mejor y trabaje más fácil.</p>
+              <a class="primary-button" href="#proyectos">Explorar proyectos <svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg></a>
+            </div>
+          </div>
+        </div>
+        <div class="hero-bottom">
+          <div class="hero-number">01<span>/02</span></div>
+          <p>Landing pages · Sistemas web<br />UI/UX · Automatización</p>
+          <div class="scroll-note"><span>↓</span> Desliza para ver mi trabajo</div>
+        </div>
+      </section>
 
-      <h1
-        data-reveal
-        class="mt-5 text-4xl font-bold tracking-tight text-slate-900 opacity-0 translate-y-4 transition-all duration-500 sm:text-5xl"
-      >
-        Diseños web & <span class="text-cyan-600">landings</span>
-      </h1>
+      <div class="ticker" aria-label="Especialidades"><span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b></div>
 
-      <p
-        data-reveal
-        class="mt-4 max-w-xl text-base text-slate-600 opacity-0 translate-y-4 transition-all duration-500"
-      >
-        Muestra de sitios web, landings interactivas y proyectos de diseño UI.
-      </p>
+      <section class="work section" id="proyectos">
+        <div class="section-head">
+          <div><p class="kicker">Proyectos seleccionados</p><h2>Trabajo real.<br />Resultados visibles.</h2></div>
+          <p class="section-intro">Cada proyecto tiene una identidad distinta porque cada negocio también la tiene. Estas son dos experiencias creadas para marcas reales.</p>
+        </div>
 
-      <div
-        data-reveal
-        class="mt-6 flex flex-wrap items-center justify-center gap-3 opacity-0 translate-y-4 transition-all duration-500"
-      >
-        <a
-          href="https://wa.me/51945770325"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900 transition-colors"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4 text-emerald-600">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-1.746-.874-2.891-1.559-4.042-3.534-.305-.526.305-.487.87-1.622.099-.198.05-.372-.05-.521-.099-.148-.669-1.611-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479s1.065 2.876 1.213 3.074c.148.198 2.055 3.144 4.977 4.283 2.923 1.14 2.923.76 3.472.71.549-.049 1.758-.719 2.006-1.413.248-.694.248-1.288.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12.004 2c-5.514 0-9.997 4.484-9.997 9.997 0 1.776.464 3.443 1.276 4.891L2 22l5.264-1.36a9.96 9.96 0 0 0 4.74 1.2h.004c5.514 0 9.997-4.483 9.997-9.996C22.005 6.484 17.522 2 12.004 2zm0 18.185h-.003a8.16 8.16 0 0 1-4.157-1.14l-.298-.177-3.116.806.833-3.037-.194-.312a8.148 8.148 0 0 1-1.263-4.328c0-4.507 3.678-8.185 8.2-8.185 2.189 0 4.246.854 5.792 2.401a8.15 8.15 0 0 1 2.401 5.796c0 4.508-3.679 8.176-8.195 8.176z"/>
-          </svg>
-          +51 945 770 325
-        </a>
+        <div class="featured-grid">
+          {featured.map((project) => (
+            <article class:list={["case-card", project.accent]}>
+              <a class="case-image" href={project.href} aria-label={`Abrir ${project.name}`}>
+                <img src={project.image} alt={`Captura real del proyecto ${project.name}`} loading="lazy" />
+                <span class="case-number">{project.number}</span>
+                <span class="live-pill"><i></i> Proyecto activo</span>
+                <span class="open-circle"><svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg></span>
+              </a>
+              <div class="case-info">
+                <div><p>{project.category}</p><h3>{project.name}</h3></div>
+                <p>{project.description}</p>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-        <a
-          href="mailto:jose.pizarro.tech@gmail.com"
-          class="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-xs font-medium text-slate-700 hover:border-slate-400 hover:text-slate-900 transition-colors"
-        >
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" class="size-4 text-cyan-600">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75h19.5v10.5a1.5 1.5 0 0 1-1.5 1.5H3.75a1.5 1.5 0 0 1-1.5-1.5V6.75Z"/>
-            <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 6.75 9.75 6.75 9.75-6.75"/>
-          </svg>
-          jose.pizarro.tech@gmail.com
-        </a>
-      </div>
-    </section>
+      <section class="archive section" aria-labelledby="archivo-title">
+        <div class="archive-title"><p class="kicker">Más exploraciones</p><h2 id="archivo-title">Otros trabajos</h2><span>Una selección de interfaces, catálogos y páginas comerciales.</span></div>
+        <div class="archive-grid">
+          {archive.map((item, index) => (
+            <article class="archive-card">
+              <div class="archive-image"><img src={item.image} alt={`Diseño de ${item.name}`} loading="lazy" /><span>{String(index + 3).padStart(2, "0")}</span></div>
+              <div><h3>{item.name}</h3><p>{item.tag}</p></div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-    <!-- Works Grid -->
-    <section class="mx-auto max-w-6xl px-6 pb-24">
-      <div
-        data-reveal
-        class="mb-8 text-center opacity-0 translate-y-4 transition-all duration-500"
-      >
-        <h2 class="text-2xl font-bold text-slate-900 sm:text-3xl">
-          Trabajos realizados
-        </h2>
-      </div>
+      <section class="services section" id="servicios">
+        <div class="services-heading"><p class="kicker">Cómo puedo ayudarte</p><h2>De la idea<br />a una web lista.</h2><p>Una solución completa, cuidando tanto lo que el usuario ve como lo que necesita hacer.</p></div>
+        <div class="services-list">
+          <article><span>01</span><div><h3>Landing pages</h3><p>Páginas enfocadas en vender, presentar un servicio o captar nuevos clientes.</p></div><b>↗</b></article>
+          <article><span>02</span><div><h3>Sistemas web</h3><p>Herramientas a medida para ordenar procesos, información y tareas diarias.</p></div><b>↗</b></article>
+          <article><span>03</span><div><h3>UI / UX</h3><p>Interfaces simples, coherentes y cómodas tanto en computadora como en celular.</p></div><b>↗</b></article>
+          <article><span>04</span><div><h3>Automatización e IA</h3><p>Soluciones para ahorrar tiempo, responder mejor y reducir trabajo repetitivo.</p></div><b>↗</b></article>
+        </div>
+      </section>
 
-      <WorkGrid items={trabajos} />
-    </section>
+      <section class="contact section" id="contacto">
+        <p class="kicker">¿Tienes una idea?</p>
+        <h2>Hablemos de tu<br /><em>próximo proyecto.</em></h2>
+        <div class="contact-row">
+          <p>Cuéntame qué necesitas y conversemos sobre la mejor forma de hacerlo realidad.</p>
+          <a class="whatsapp-button" href="https://wa.me/51945770325?text=Hola%20Jose%2C%20quiero%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noreferrer">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.012 2c-5.506 0-9.989 4.478-9.989 9.984 0 1.758.459 3.474 1.33 4.982L2 22l5.176-1.338c1.45.79 3.097 1.206 4.836 1.206h.005c5.507 0 9.99-4.478 9.99-9.984 0-2.667-1.039-5.174-2.927-7.06A9.919 9.919 0 0 0 12.012 2zm.005 1.666c2.22 0 4.309.865 5.88 2.433a8.272 8.272 0 0 1 2.436 5.869c0 4.587-3.732 8.318-8.316 8.318h-.004a8.316 8.316 0 0 1-4.223-1.156l-.303-.18-3.07.794.811-2.992-.197-.314a8.28 8.28 0 0 1-1.272-4.47c0-4.588 3.733-8.318 8.258-8.318zm-3.56 4.148c-.206 0-.539.077-.822.385-.282.308-1.077 1.053-1.077 2.567 0 1.514 1.103 2.977 1.257 3.183.154.205 2.128 3.328 5.228 4.542 2.584 1.013 2.584.676 3.047.625.462-.051 1.488-.607 1.693-1.194.205-.587.205-1.09.144-1.194-.062-.104-.231-.167-.487-.295s-1.514-.744-1.745-.828c-.231-.084-.398-.126-.564.126-.167.252-.642.809-.787.973-.145.165-.29.186-.546.058-.256-.128-1.082-.399-2.062-1.273-.762-.68-1.277-1.52-1.427-1.777-.15-.257-.016-.396.112-.524.116-.115.257-.308.385-.462.128-.154.171-.26.257-.432.085-.171.043-.321-.021-.449-.064-.128-.564-1.36-.773-1.862-.204-.49-.412-.423-.564-.431h-.482z"></path></svg>
+            Escribir por WhatsApp
+            <svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg>
+          </a>
+        </div>
+      </section>
 
-    <!-- Footer -->
-    <footer
-      data-reveal
-      class="border-t border-slate-200 py-8 text-center text-xs text-slate-500 opacity-0 translate-y-4 transition-all duration-500"
-    >
-      <p>
-        Jose Pizarro — Tacna, Perú
-      </p>
-    </footer>
-  </main>
-</BaseLayout>
+      <footer>
+        <a class="footer-name" href="#inicio">Jose Pizarro</a>
+        <a href="mailto:jose.pizarro.tech@gmail.com">jose.pizarro.tech@gmail.com</a>
+        <p>Diseño y desarrollo web · 2026</p>
+      </footer>
+    </main>
 
-<script>
-  const elementos = document.querySelectorAll('[data-reveal]');
+    <script is:inline>
+      const words = ["profesionales", "amigables", "intuitivas", "modernas", "rápidas", "memorables"];
+      let wordIndex = 0;
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      for (const entry of entries) {
-        if (entry.isIntersecting) {
-          entry.target.classList.remove('opacity-0', 'translate-y-4');
-          observer.unobserve(entry.target);
-        }
+      function startRotation() {
+        const rotatingWord = document.querySelector(".rotating-word");
+        if (!rotatingWord) return;
+
+        // Iniciar con la clase activa
+        rotatingWord.classList.add("vhs-active");
+
+        setInterval(() => {
+          wordIndex = (wordIndex + 1) % words.length;
+          rotatingWord.textContent = words[wordIndex];
+          rotatingWord.classList.remove("vhs-active");
+          void rotatingWord.offsetWidth; // Forzar reflow en el navegador
+          rotatingWord.classList.add("vhs-active");
+        }, 2200);
       }
-    },
-    { threshold: 0.15 }
-  );
 
-  elementos.forEach((el, i) => {
-    (el as HTMLElement).style.transitionDelay = `${i * 60}ms`;
-    observer.observe(el);
-  });
-</script>
+      if (document.readyState === "loading") {
+        document.addEventListener("DOMContentLoaded", startRotation);
+      } else {
+        startRotation();
+      }
+    </script>
+  </body>
+</html>

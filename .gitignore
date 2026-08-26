@@ -23,3 +23,9 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 .vercel
+
+# local reference folders
+TLOC-Cookies-Landing-Final/
+focus-club-fitness-tacna-final-v4/
+jose-pizarro-astro/
+
