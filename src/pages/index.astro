@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import { IconBrandWhatsapp } from "@tabler/icons-astro";
 
 const featured = [
   {
@@ -17,7 +18,7 @@ const featured = [
     name: "TLOC Cookies",
     description: "Identidad divertida, producto protagonista y un recorrido sencillo que termina directamente en el pedido por WhatsApp.",
     image: "/projects/tloc.jpg",
-    href: "/tlock",
+    href: "/tloc",
     accent: "blue",
   },
 ];
@@ -82,34 +83,25 @@ const arrowPath = "M4 10h11M11 5l5 5-5 5";
         </div>
       </section>
 
-      <div class="ticker" aria-label="Especialidades"><span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b></div>
-
-      <section class="work section" id="proyectos">
-        <div class="section-head">
-          <div><p class="kicker">Proyectos seleccionados</p><h2>Trabajo real.<br />Resultados visibles.</h2></div>
-          <p class="section-intro">Cada proyecto tiene una identidad distinta porque cada negocio también la tiene. Estas son dos experiencias creadas para marcas reales.</p>
+      <div class="ticker" aria-label="Especialidades">
+        <div class="ticker-track">
+          <div class="ticker-group">
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+          </div>
+          <div class="ticker-group">
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+            <span>LANDING PAGES</span><b>✦</b><span>SISTEMAS WEB</span><b>✦</b><span>UI / UX</span><b>✦</b><span>AUTOMATIZACIÓN</span><b>✦</b>
+          </div>
         </div>
+      </div>
 
-        <div class="featured-grid">
-          {featured.map((project) => (
-            <article class:list={["case-card", project.accent]}>
-              <a class="case-image" href={project.href} aria-label={`Abrir ${project.name}`}>
-                <img src={project.image} alt={`Captura real del proyecto ${project.name}`} loading="lazy" />
-                <span class="case-number">{project.number}</span>
-                <span class="live-pill"><i></i> Proyecto activo</span>
-                <span class="open-circle"><svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg></span>
-              </a>
-              <div class="case-info">
-                <div><p>{project.category}</p><h3>{project.name}</h3></div>
-                <p>{project.description}</p>
-              </div>
-            </article>
-          ))}
-        </div>
-      </section>
-
-      <section class="archive section" aria-labelledby="archivo-title">
-        <div class="archive-title"><p class="kicker">Más exploraciones</p><h2 id="archivo-title">Otros trabajos</h2><span>Una selección de interfaces, catálogos y páginas comerciales.</span></div>
+      <section class="archive section" id="proyectos" aria-labelledby="archivo-title">
+        <div class="archive-title"><p class="kicker">Portafolio & Exploraciones</p><h2 id="archivo-title">Proyectos & Trabajos</h2><span>Una selección de interfaces, catálogos y páginas comerciales.</span></div>
         <div class="archive-grid">
           {archive.map((item, index) => (
             <article class="archive-card">
@@ -136,7 +128,7 @@ const arrowPath = "M4 10h11M11 5l5 5-5 5";
         <div class="contact-row">
           <p>Cuéntame qué necesitas y conversemos sobre la mejor forma de hacerlo realidad.</p>
           <a class="whatsapp-button" href="https://wa.me/51945770325?text=Hola%20Jose%2C%20quiero%20conversar%20sobre%20un%20proyecto" target="_blank" rel="noreferrer">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12.012 2c-5.506 0-9.989 4.478-9.989 9.984 0 1.758.459 3.474 1.33 4.982L2 22l5.176-1.338c1.45.79 3.097 1.206 4.836 1.206h.005c5.507 0 9.99-4.478 9.99-9.984 0-2.667-1.039-5.174-2.927-7.06A9.919 9.919 0 0 0 12.012 2zm.005 1.666c2.22 0 4.309.865 5.88 2.433a8.272 8.272 0 0 1 2.436 5.869c0 4.587-3.732 8.318-8.316 8.318h-.004a8.316 8.316 0 0 1-4.223-1.156l-.303-.18-3.07.794.811-2.992-.197-.314a8.28 8.28 0 0 1-1.272-4.47c0-4.588 3.733-8.318 8.258-8.318zm-3.56 4.148c-.206 0-.539.077-.822.385-.282.308-1.077 1.053-1.077 2.567 0 1.514 1.103 2.977 1.257 3.183.154.205 2.128 3.328 5.228 4.542 2.584 1.013 2.584.676 3.047.625.462-.051 1.488-.607 1.693-1.194.205-.587.205-1.09.144-1.194-.062-.104-.231-.167-.487-.295s-1.514-.744-1.745-.828c-.231-.084-.398-.126-.564.126-.167.252-.642.809-.787.973-.145.165-.29.186-.546.058-.256-.128-1.082-.399-2.062-1.273-.762-.68-1.277-1.52-1.427-1.777-.15-.257-.016-.396.112-.524.116-.115.257-.308.385-.462.128-.154.171-.26.257-.432.085-.171.043-.321-.021-.449-.064-.128-.564-1.36-.773-1.862-.204-.49-.412-.423-.564-.431h-.482z"></path></svg>
+            <IconBrandWhatsapp size={22} stroke={1.8} />
             Escribir por WhatsApp
             <svg viewBox="0 0 20 20" aria-hidden="true"><path d={arrowPath}></path></svg>
           </a>

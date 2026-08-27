@@ -1,6 +1,11 @@
 ---
+import { IconBrandWhatsapp, IconMapPin, IconStarFilled, IconBrandGoogle, IconClock } from '@tabler/icons-astro';
+
+const whatsappNumber = "932427567";
 const whatsappUrl =
-  "https://wa.me/51961714497?text=Hola%20TLOC%20%F0%9F%8D%AA%20Quiero%20conocer%20los%20sabores%20disponibles%20de%20hoy";
+  `https://wa.me/51${whatsappNumber}?text=Hola%20TLOC%20%F0%9F%8D%AA%20Quiero%20conocer%20los%20sabores%20disponibles%20de%20hoy`;
+const mapsUrl =
+  "https://www.google.com/maps/place/TLOC+Cookies/data=!4m2!3m1!1s0x0:0x7918796787d907b1?sa=X&ved=1t:2428&ictx=111";
 
 const favorites = [
   {
@@ -91,17 +96,31 @@ const tickerRounds = [0, 1];
               </svg>
             </a>
           </div>
-          <div class="trust-row" aria-label="Beneficios de TLOC Cookies">
-            <span>Horneadas cada día</span>
-            <span>Relleno generoso</span>
-            <span>100% espíritu TLOC</span>
+          <div class="hero-bottom-proof">
+            <div class="trust-row" aria-label="Beneficios de TLOC Cookies">
+              <span>Horneadas cada día</span>
+              <span>Relleno generoso</span>
+              <span>100% espíritu TLOC</span>
+            </div>
+            <a class="rating-badge" href={mapsUrl} target="_blank" rel="noreferrer" title="Ver opiniones en Google Maps">
+              <span class="rating-google-icon"><IconBrandGoogle size={15} /></span>
+              <div class="rating-stars">
+                <IconStarFilled size={12} />
+                <IconStarFilled size={12} />
+                <IconStarFilled size={12} />
+                <IconStarFilled size={12} />
+                <IconStarFilled size={12} />
+              </div>
+              <strong>4.3</strong>
+              <span>en Google Reviews</span>
+            </a>
           </div>
         </div>
 
         <div class="hero-visual" aria-label="Cookies y mascota oficial de TLOC">
           <div class="hero-photo">
             <img
-              src="/tlock/tloc-hero-v2.webp"
+              src="/tlock/tloc-hero.webp"
               alt="Cookies TLOC recién horneadas con centro de chocolate y caja azul"
             />
           </div>
@@ -309,29 +328,30 @@ const tickerRounds = [0, 1];
             <p class="eyebrow eyebrow-light"><span></span> Tu próxima parada feliz</p>
             <h2>Nos vemos<br />en TLOC.</h2>
             <div class="visit-details">
-              <div><span>Dirección principal</span><strong>Calle Sir Jones 25, Tacna</strong></div>
-              <div><span>Horario</span><strong>Lun–Sáb · 11:00 a.m.–9:00 p.m.<br />Dom · 4:00 p.m.–9:00 p.m.</strong></div>
+              <div>
+                <span><IconMapPin size={15} style="display:inline-block; vertical-align:text-bottom; margin-right:4px;" /> Dirección principal</span>
+                <strong>Calle Sir Jones 25, Tacna</strong>
+              </div>
+              <div>
+                <span><IconClock size={15} style="display:inline-block; vertical-align:text-bottom; margin-right:4px;" /> Horario de atención</span>
+                <strong>Lun–Sáb · 11:00 a.m.–9:00 p.m.<br />Dom · 4:00 p.m.–9:00 p.m.</strong>
+              </div>
             </div>
             <div class="visit-actions">
-              <a class="button button-cream" href="https://www.google.com/maps/search/?api=1&query=Calle+Sir+Jones+25+Tacna+Peru" target="_blank" rel="noreferrer">
-                Cómo llegar
-                <svg viewBox="0 0 20 20" aria-hidden="true">
-                  <path d="M4 10h11M11 5l5 5-5 5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
-                </svg>
+              <a class="button button-cream" href={mapsUrl} target="_blank" rel="noreferrer">
+                <IconMapPin size={19} stroke={2} />
+                Ver en Google Maps
               </a>
               <a class="text-link" href={whatsappUrl} target="_blank" rel="noreferrer">
-                Consultar el punto más cercano
+                Escribir al WhatsApp: {whatsappNumber}
               </a>
             </div>
           </div>
           <div class="visit-visual">
             <img
-              src="/tlock/tloc-mascot-scene.webp"
+              src="/tlock/tloc-store-visit.webp"
               alt="Mascota TLOC invitando a visitar la tienda"
             />
-            <div class="pin-label">
-              <span>●</span><strong>SIR JONES 25</strong><small>TACNA, PERÚ</small>
-            </div>
           </div>
         </div>
       </section>
@@ -445,10 +465,7 @@ const tickerRounds = [0, 1];
         rel="noreferrer"
         aria-label="Pedir TLOC Cookies por WhatsApp"
       >
-        <svg viewBox="0 0 24 24" aria-hidden="true" style="width: 1em; height: 1em; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linejoin: round;">
-          <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.3a8.5 8.5 0 1 1 15.8-4.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
-          <path d="M8.3 7.8c.3-.5.5-.5.8-.5h.4c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.5 1 1.2 1.7 2.2 2.2.3.2.5.2.7 0l.9-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .4-.2 1.2-.7 1.7-.6.6-1.4.9-2.4.7-1.1-.2-2.6-.8-4.2-2.2-1.8-1.6-2.9-3.6-3-4.8 0-.7.1-1.2.4-1.6Z" fill="currentColor"></path>
-        </svg>
+        <IconBrandWhatsapp size={28} stroke={1.8} />
         <span>Pide por WhatsApp</span>
       </a>
     </main>
@@ -501,8 +518,9 @@ const tickerRounds = [0, 1];
       .button-primary:hover { background: var(--blue-dark); box-shadow: 0 14px 30px rgba(18,104,213,.25); }
       .button-ghost { background: transparent; }
       .button-ghost:hover { background: white; }
-      .trust-row { margin-top: 38px; padding-top: 23px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; gap: 10px 24px; color: #455168; font-size: .79rem; font-weight: 800; }
-      .trust-row span::before { content: "●"; margin-right: 8px; color: var(--blue); font-size: .65rem; }
+      .hero-bottom-proof { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 24px; }
+      .trust-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; color: #455168; font-size: .82rem; font-weight: 800; }
+      .trust-row span::before { content: "●"; margin-right: 8px; color: var(--blue); font-size: .68rem; }
 
       .hero-visual { min-height: 570px; position: relative; isolation: isolate; }
       .hero-photo { width: 100%; height: 550px; position: absolute; right: 0; top: 8px; overflow: hidden; border: 7px solid white; border-radius: 34px; box-shadow: 0 30px 70px rgba(17,32,57,.16); background: #f8e8dc; }
@@ -593,6 +611,14 @@ const tickerRounds = [0, 1];
       .visit h2 { margin-bottom: 36px; font-size: clamp(3.35rem, 5vw, 5.2rem); }
       .visit-details { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.26); }
       .visit-details div { display: grid; gap: 9px; }
+      .rating-badge { width: fit-content; display: inline-flex; align-items: center; gap: 10px; padding: 9px 18px; background: rgba(255,255,255,.96); border: 1px solid rgba(18,104,213,.2); border-radius: 99px; box-shadow: 0 4px 16px rgba(17,32,57,.06); color: var(--ink); font-size: .83rem; font-weight: 800; transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+      .rating-badge:hover { transform: translateY(-2px); border-color: rgba(18,104,213,.4); box-shadow: 0 8px 24px rgba(17,32,57,.12); }
+      .rating-google-icon { color: #4285f4; display: flex; align-items: center; }
+      .rating-stars { display: flex; align-items: center; gap: 2.5px; color: #fbbc04; }
+      .rating-badge strong { color: var(--ink); font-weight: 900; font-size: .92rem; }
+      .rating-badge span { color: var(--muted); font-size: .75rem; font-weight: 700; }
+      .visit-phone { color: white; text-decoration: underline; text-underline-offset: 3px; }
+      .visit-phone:hover { color: var(--sky); }
       .visit-details span { color: var(--sky); font-size: .68rem; font-weight: 900; letter-spacing: .11em; text-transform: uppercase; }
       .visit-details strong { font-size: .9rem; line-height: 1.55; }
       .visit-actions { margin-top: 38px; display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
@@ -600,11 +626,7 @@ const tickerRounds = [0, 1];
       .text-link { padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.5); font-size: .78rem; font-weight: 900; }
       .visit-visual { position: relative; display: grid; place-items: center; overflow: hidden; background: var(--cream); }
       .visit-visual::before { content: ""; position: absolute; width: 420px; height: 420px; border: 1px solid rgba(18,104,213,.22); border-radius: 50%; box-shadow: 0 0 0 75px rgba(220,238,255,.34), 0 0 0 140px rgba(255,159,189,.1); }
-      .visit-visual img { width: min(350px, 76%); height: auto; position: relative; z-index: 1; mix-blend-mode: multiply; animation: float 7s ease-in-out infinite; }
-      .pin-label { min-width: 190px; padding: 14px 18px; position: absolute; left: 30px; bottom: 30px; z-index: 2; display: grid; grid-template-columns: 18px 1fr; color: var(--ink); background: white; border: 1px solid var(--line); border-radius: 16px; box-shadow: 0 15px 30px rgba(17,32,57,.1); }
-      .pin-label > span { grid-row: 1 / 3; color: var(--pink); }
-      .pin-label strong { font-size: .78rem; }
-      .pin-label small { margin-top: 3px; color: var(--muted); font-size: .58rem; font-weight: 900; letter-spacing: .1em; }
+      .visit-visual img { width: min(360px, 78%); height: auto; position: relative; z-index: 1; animation: float 7s ease-in-out infinite; }
 
       .social-section { width: min(1180px, calc(100% - 40px)); margin: 24px auto 64px; padding: 50px; display: grid; grid-template-columns: minmax(0, .9fr) minmax(500px, 1.1fr); gap: clamp(38px, 5vw, 70px); align-items: center; background: linear-gradient(135deg, #edf6ff, #fff6df); border: 1px solid var(--line); border-radius: 32px; box-shadow: 0 26px 70px rgba(17,32,57,.08); }
       .social-intro h2 { max-width: 520px; font-size: clamp(2.75rem, 3.65vw, 3.9rem); line-height: .94; }
@@ -671,99 +693,101 @@ const tickerRounds = [0, 1];
         footer p { display: none; }
       }
 
-      @media (max-width: 620px) {
+      @media (max-width: 768px) {
         body { font-size: 15px; }
         main { width: 100%; overflow: clip; }
-        .site-header { width: calc(100% - 20px); height: 62px; margin-top: 8px; padding: 0 7px 0 10px; gap: 8px; border-radius: 16px; position: sticky; top: max(8px, env(safe-area-inset-top)); box-shadow: 0 8px 24px rgba(17,32,57,.08); }
+        .site-header { width: calc(100% - 20px); height: 60px; margin-top: 8px; padding: 0 8px 0 10px; gap: 8px; border-radius: 16px; position: sticky; top: max(8px, env(safe-area-inset-top)); box-shadow: 0 8px 24px rgba(17,32,57,.08); }
         .brand { min-width: 0; gap: 7px; font-size: .78rem; letter-spacing: -.045em; }
         .brand-mark { width: 32px; height: 32px; font-size: 1.05rem; }
-        .header-cta { min-height: 44px; padding: 0 13px; font-size: .72rem; white-space: nowrap; }
+        .header-cta { min-height: 42px; padding: 0 13px; font-size: .72rem; white-space: nowrap; }
         .header-cta svg { display: none; }
-        .hero { width: calc(100% - 20px); padding: 38px 2px 36px; gap: 24px; }
-        .hero-copy .eyebrow { max-width: 100%; line-height: 1.35; white-space: normal; }
-        .eyebrow { margin-bottom: 17px; font-size: .68rem; letter-spacing: .1em; }
-        .hero h1 { font-size: clamp(2.85rem, 15vw, 3.85rem); line-height: .93; }
-        .hero-lead { max-width: 34rem; margin: 24px auto 21px; font-size: .94rem; line-height: 1.58; }
-        .hero-actions { flex-direction: column; }
-        .button { width: 100%; min-height: 52px; padding-inline: 18px; }
-        .trust-row { margin-top: 24px; padding-top: 18px; display: grid; grid-template-columns: 1fr 1fr; justify-content: stretch; gap: 9px 12px; font-size: .67rem; text-align: left; }
-        .trust-row span:last-child { grid-column: 1 / -1; text-align: center; }
-        .hero-visual { min-height: 0; aspect-ratio: 4 / 4.45; }
-        .hero-photo { width: 100%; height: 100%; top: 0; left: 50%; border-width: 5px; border-radius: 24px; transform: translateX(-50%); }
+        .hero { width: calc(100% - 24px); padding: 24px 10px 28px; display: flex; flex-direction: column; gap: 0; box-sizing: border-box; }
+        .hero-copy { display: contents; }
+        .hero-copy .eyebrow { order: 1; margin-bottom: 12px; font-size: .67rem; letter-spacing: .1em; line-height: 1.35; }
+        .hero h1 { order: 2; font-size: clamp(2.35rem, 11vw, 3.1rem); line-height: .98; letter-spacing: -.04em; }
+        .hero h1 em::after { bottom: -4px; height: 8px; border-bottom-width: 3px; }
+        .hero-lead { order: 3; max-width: 100%; margin: 14px 0 16px; font-size: .92rem; line-height: 1.5; }
+        .hero-visual { order: 4; margin: 4px 0 20px; width: 100%; min-height: 0; aspect-ratio: 4 / 3.3; position: relative; }
+        .hero-photo { width: 100%; height: 100%; top: 0; left: 50%; border-width: 4px; border-radius: 20px; transform: translateX(-50%); }
         .hero-photo img { object-position: center 58%; }
-        .hero-mascot-shot { width: 88px; height: 88px; left: -1px; top: -10px; border-width: 4px; }
-        .section { width: calc(100% - 24px); padding: 54px 0; }
-        .favorites.section { padding-top: 54px; padding-bottom: 52px; }
-        .section-heading { grid-template-columns: 1fr; gap: 18px; margin-bottom: 28px; }
-        .section-heading h2 { font-size: clamp(2.55rem, 12.8vw, 3.15rem); line-height: .94; }
-        .section-heading > p { font-size: .88rem; line-height: 1.58; }
+        .hero-mascot-shot { width: 72px; height: 72px; left: 6px; top: -14px; border-width: 3px; }
+        .hero-actions { order: 5; flex-direction: column; width: 100%; gap: 10px; }
+        .button { width: 100%; min-height: 48px; padding-inline: 16px; font-size: .88rem; }
+        .hero-bottom-proof { order: 6; margin-top: 18px; padding-top: 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
+        .trust-row { margin-top: 0; padding-top: 0; border-top: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; font-size: .72rem; text-align: center; }
+        .rating-badge { width: fit-content; max-width: 100%; margin: 0 auto; justify-content: center; padding: 7px 14px; font-size: .76rem; box-sizing: border-box; }
+        .section { width: calc(100% - 24px); padding: 48px 0; }
+        .favorites.section { padding-top: 48px; padding-bottom: 46px; }
+        .section-heading { grid-template-columns: 1fr; gap: 14px; margin-bottom: 24px; }
+        .section-heading h2 { font-size: clamp(2.2rem, 10.5vw, 2.75rem); line-height: .98; letter-spacing: -.04em; }
+        .section-heading > p { font-size: .86rem; line-height: 1.55; }
         .favorite-grid { grid-template-columns: 1fr; }
-        .favorite-card { border-radius: 20px; }
+        .favorite-card { border-radius: 18px; }
         .favorite-image { aspect-ratio: 1.28; }
-        .favorite-copy { padding: 18px; }
+        .favorite-copy { padding: 16px; }
         .favorite-copy p { min-height: auto; }
-        .favorite-copy a, .how-grid a { min-height: 44px; }
-        .availability-note { margin-top: 20px; font-size: .7rem; }
-        .bite-section { width: calc(100% - 20px); min-height: 0; margin-bottom: 54px; border-radius: 24px; }
+        .favorite-copy a, .how-grid a { min-height: 42px; }
+        .availability-note { margin-top: 18px; font-size: .7rem; }
+        .bite-section { width: calc(100% - 20px); min-height: 0; margin-bottom: 48px; border-radius: 20px; }
         .bite-media { min-height: 0; aspect-ratio: 1.06; }
-        .bite-label { width: 92px; height: 92px; left: 16px; bottom: 16px; border-width: 4px; font-size: .7rem; }
-        .bite-copy { padding: 40px 20px 44px; }
-        .bite-copy h2 { font-size: clamp(2.8rem, 14vw, 3.15rem); line-height: .9; }
-        .bite-copy > p:not(.eyebrow) { margin: 25px 0; font-size: .92rem; line-height: 1.65; }
-        .bite-proof { margin-bottom: 26px; }
+        .bite-label { width: 84px; height: 84px; left: 14px; bottom: 14px; border-width: 3px; font-size: .66rem; }
+        .bite-copy { padding: 34px 18px 38px; }
+        .bite-copy h2 { font-size: clamp(2.35rem, 11vw, 2.9rem); line-height: .98; letter-spacing: -.04em; }
+        .bite-copy > p:not(.eyebrow) { margin: 20px 0; font-size: .88rem; line-height: 1.6; }
+        .bite-proof { margin-bottom: 22px; }
         .bite-copy .button { width: 100%; }
-        .experience h2, .how h2, .visit h2, .social-intro h2 { font-size: clamp(2.5rem, 12.7vw, 3.1rem); line-height: .94; }
-        .experience { gap: 32px; padding-block: 52px 58px; }
-        .experience-lead { margin: 24px 0 30px; font-size: .93rem; }
-        .experience-points { gap: 14px; }
-        .experience-gallery { min-height: 360px; }
-        .gallery-main { width: 88%; border-width: 5px; border-radius: 36% 36% 20px 20px; }
-        .gallery-community { width: 64%; bottom: 4px; border-width: 5px; }
+        .experience h2, .how h2, .visit h2, .social-intro h2 { font-size: clamp(2.2rem, 10vw, 2.75rem); line-height: 1.02; letter-spacing: -.035em; }
+        .experience { gap: 28px; padding-block: 46px 50px; }
+        .experience-lead { margin: 20px 0 24px; font-size: .9rem; }
+        .experience-points { gap: 12px; }
+        .experience-gallery { min-height: 330px; }
+        .gallery-main { width: 88%; border-width: 4px; border-radius: 36% 36% 18px 18px; }
+        .gallery-community { width: 64%; bottom: 4px; border-width: 4px; }
         .gallery-product { display: none; }
-        .community-badge { width: 96px; height: 96px; right: 0; bottom: 3px; padding: 12px; box-shadow: 0 0 0 5px var(--blue); }
-        .community-badge strong { font-size: 1.35rem; }
-        .community-badge span { font-size: .55rem; }
-        .how { width: calc(100% - 20px); margin-block: 44px 34px; padding: 40px 12px 14px; border-radius: 24px; }
-        .how-title { margin-bottom: 26px; gap: 16px; }
-        .how-title > p { font-size: .88rem; line-height: 1.58; }
+        .community-badge { width: 86px; height: 86px; right: 0; bottom: 3px; padding: 10px; box-shadow: 0 0 0 4px var(--blue); }
+        .community-badge strong { font-size: 1.2rem; }
+        .community-badge span { font-size: .52rem; }
+        .how { width: calc(100% - 20px); margin-block: 38px 28px; padding: 34px 16px 14px; border-radius: 22px; }
+        .how-title { margin-bottom: 22px; gap: 14px; }
+        .how-title > p { font-size: .86rem; line-height: 1.55; }
         .how-grid { grid-template-columns: 1fr; gap: 14px; }
         .how-grid article:last-child { grid-column: auto; }
         .how-grid article:last-child .how-media { aspect-ratio: 1.34; }
-        .how-grid article { border-radius: 20px; }
+        .how-grid article { border-radius: 18px; }
         .how-media { aspect-ratio: 1.34; }
-        .how-number { width: 46px; height: 46px; left: 14px; bottom: 14px; border-width: 3px; }
-        .how-copy { padding: 19px 19px 21px; }
-        .how-grid h3 { font-size: 1.25rem; }
-        .how-grid p { min-height: auto; margin: 10px 0 16px; }
-        .visit { padding-top: 8px; padding-bottom: 24px; }
-        .visit-card { min-height: 0; border-radius: 24px; }
-        .visit-copy { padding: 38px 20px; }
-        .visit h2 { margin-bottom: 28px; }
+        .how-number { width: 42px; height: 42px; left: 12px; bottom: 12px; border-width: 3px; }
+        .how-copy { padding: 18px 16px 20px; }
+        .how-grid h3 { font-size: 1.2rem; }
+        .how-grid p { min-height: auto; margin: 8px 0 14px; }
+        .visit { padding-top: 6px; padding-bottom: 20px; }
+        .visit-card { min-height: 0; border-radius: 22px; }
+        .visit-copy { padding: 32px 18px; }
+        .visit h2 { margin-bottom: 24px; }
         .visit-details { grid-template-columns: 1fr; }
-        .visit-actions { margin-top: 30px; align-items: stretch; flex-direction: column; gap: 16px; }
-        .text-link { min-height: 44px; display: grid; place-items: center; align-self: stretch; text-align: center; }
-        .visit-visual { min-height: 280px; }
-        .visit-visual::before { width: 230px; height: 230px; }
-        .visit-visual img { width: min(215px, 66%); }
-        .pin-label { min-width: 166px; left: 12px; bottom: 12px; padding: 12px 14px; }
+        .visit-actions { margin-top: 26px; align-items: stretch; flex-direction: column; gap: 14px; }
+        .text-link { min-height: 42px; display: grid; place-items: center; align-self: stretch; text-align: center; }
+        .visit-visual { min-height: 260px; }
+        .visit-visual::before { width: 210px; height: 210px; }
+        .visit-visual img { width: min(200px, 64%); }
+        .pin-label { min-width: 160px; left: 10px; bottom: 10px; padding: 10px 12px; }
         .ticker-track { animation-duration: 24s; }
         .ticker-group { width: max-content; min-width: 190vw; padding: 12px 18px; gap: 22px; font-size: .68rem; }
-        .social-section { width: calc(100% - 20px); margin: 16px auto 56px; padding: 28px 16px 20px; gap: 22px; border-radius: 24px; }
-        .social-intro h2 { font-size: clamp(2.65rem, 13vw, 3.25rem); }
-        .social-copy { margin: 18px 0 20px; font-size: .86rem; }
-        .social-proof { width: 100%; min-width: 0; padding: 9px 14px 9px 9px; gap: 12px; border-radius: 18px; }
-        .social-mascot-img { width: 64px; height: 64px; border-radius: 15px; }
-        .social-proof-copy { gap: 9px; }
-        .social-proof strong { font-size: 1.65rem; }
-        .social-proof small { font-size: .6rem; }
-        .social-links { gap: 9px; }
-        .social-links a { min-height: 76px; padding-inline: 11px; grid-template-columns: 45px minmax(0, 1fr) 18px; gap: 10px; border-radius: 16px; }
-        .social-icon { width: 42px; height: 42px; border-radius: 13px; font-size: 1.18rem; }
-        .social-links strong { font-size: 1rem; }
-        footer { padding: 30px 18px calc(92px + env(safe-area-inset-bottom)); grid-template-columns: 1fr; gap: 20px; }
+        .social-section { width: calc(100% - 20px); margin: 14px auto 48px; padding: 24px 14px 18px; gap: 20px; border-radius: 22px; }
+        .social-intro h2 { font-size: clamp(2.35rem, 11vw, 2.9rem); }
+        .social-copy { margin: 16px 0 18px; font-size: .84rem; }
+        .social-proof { width: 100%; min-width: 0; padding: 8px 12px 8px 8px; gap: 10px; border-radius: 16px; }
+        .social-mascot-img { width: 58px; height: 58px; border-radius: 13px; }
+        .social-proof-copy { gap: 8px; }
+        .social-proof strong { font-size: 1.5rem; }
+        .social-proof small { font-size: .58rem; }
+        .social-links { gap: 8px; }
+        .social-links a { min-height: 70px; padding-inline: 10px; grid-template-columns: 42px minmax(0, 1fr) 16px; gap: 10px; border-radius: 15px; }
+        .social-icon { width: 38px; height: 38px; border-radius: 11px; font-size: 1.1rem; }
+        .social-links strong { font-size: .95rem; }
+        footer { padding: 28px 16px calc(86px + env(safe-area-inset-bottom)); grid-template-columns: 1fr; gap: 18px; }
         footer > div:last-child { justify-self: start; flex-wrap: wrap; }
         .footer-socials { flex-basis: 100%; }
-        .whatsapp-float { width: 58px; height: 58px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); border-width: 3px; font-size: 1.65rem; }
+        .whatsapp-float { width: 52px; height: 52px; right: 14px; bottom: max(16px, env(safe-area-inset-bottom)); border-width: 2.5px; font-size: 1.45rem; z-index: 40; }
         .whatsapp-float span { display: none; }
       }
     </style>
