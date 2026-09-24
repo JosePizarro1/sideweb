@@ -1,0 +1,20 @@
+---
+import { ArrowRight, UserRound, Mail, Phone, MapPin } from 'lucide-astro';
+interface Props { id: string; compact?: boolean }
+const { id, compact = false } = Astro.props;
+const projects = ['Villa Florencia 2', 'Villa Florencia', 'Residencial Humboldt', 'Villa Humboldt'];
+---
+<form id={id} class:list={['contact-form', { compact }]} data-contact-form>
+  <p class="form-kicker">CONVERSEMOS</p>
+  <h3>Da el primer paso.<br/><span>Nosotros te acompañamos.</span></h3>
+  <div class="form-fields">
+    <div class="form-field"><label for={`${id}-name`}>Nombres y apellidos</label><div class="input-wrap"><UserRound size={18}/><input id={`${id}-name`} name="name" autocomplete="name" placeholder="Tu nombre completo" required maxlength="100"/></div></div>
+    <div class="form-field"><label for={`${id}-email`}>Correo electrónico <span>(opcional)</span></label><div class="input-wrap"><Mail size={18}/><input id={`${id}-email`} type="email" name="email" autocomplete="email" placeholder={compact ? 'Tu correo' : 'tu@correo.com'} maxlength="160"/></div></div>
+    <div class="form-field"><label for={`${id}-phone`}>Celular <span>(opcional)</span></label><div class="input-wrap"><Phone size={18}/><input id={`${id}-phone`} type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder={compact ? 'Tu celular' : 'Tu número de contacto'} pattern="[+]?[0-9 ]{7,20}" title="Ingresa un teléfono de 7 a 20 caracteres." maxlength="20"/></div></div>
+    <div class="form-field"><label for={`${id}-project`}>¿Qué proyecto te interesa?</label><div class="input-wrap"><MapPin size={18}/><select id={`${id}-project`} name="project" required><option value="">Elige tu próximo lugar</option>{projects.map(p=><option>{p}</option>)}<option>Quiero que me asesoren</option></select></div></div>
+  </div>
+  <div class="form-privacy"><input id={`${id}-privacy`} type="checkbox" name="privacy" required/><label for={`${id}-privacy`}>He leído la <button type="button" data-open="privacy-dialog">información de privacidad</button> de esta consulta.</label></div>
+  <button type="submit" class="button gold">Hablar con un asesor <ArrowRight size={21}/></button>
+  <p class="form-note">Abriremos WhatsApp con tu consulta. El mensaje se envía solo cuando tú lo confirmas allí.</p>
+  <p class="form-feedback" role="status" hidden>Si WhatsApp no se abrió, <a data-whatsapp-fallback target="_blank" rel="noopener noreferrer">continúa tu consulta aquí</a>.</p>
+</form>

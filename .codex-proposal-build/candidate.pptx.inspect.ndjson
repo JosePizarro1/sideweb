@@ -1,0 +1,134 @@
+{"kind":"deck","id":"pr/468kdf","name":"Deck"}
+{"kind":"layout","layoutId":"da96e4b6-2fed-44e5-82b1-e53ee369a2ac","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"e9f97f3d-b3d5-47cd-aee3-2f6f5b0336ac","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/yz2ybq","slide":1,"title":"TLOC / PROPUESTA WEB","textShapes":6}
+{"kind":"textbox","id":"sh/3adsr2l0","slide":1,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/4b69072l","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/qdor2hkb","slide":1,"text":"tloc","textPreview":"tloc","textChars":4,"textLines":1,"bbox":[64,128,630,110]}
+{"kind":"textbox","id":"sh/rexsvmlw","slide":1,"text":"Propuesta de\nlanding page","textPreview":"Propuesta de | landing page","textChars":25,"textLines":2,"bbox":[64,275,650,158]}
+{"kind":"textbox","id":"sh/sf6t4r2h","slide":1,"text":"Una web para conocer la marca\ny consultar pedidos por WhatsApp.","textPreview":"Una web para conocer la marca | y consultar pedidos por WhatsApp.","textChars":63,"textLines":2,"bbox":[68,467,610,90]}
+{"kind":"textbox","id":"sh/dgfaxw32","slide":1,"text":"Septiembre de 2026","textPreview":"Septiembre de 2026","textChars":18,"textLines":1,"bbox":[68,638,580,30]}
+{"kind":"image","id":"im/83qxsn2h","slide":1,"name":"","alt":"Referencia visual de la marca TLOC","bbox":[738,0,542,720]}
+{"kind":"notes","id":"nt/yz2ybq","slide":1,"text":"Diseño y alcance propuestos para la landing de TLOC. Imagen de referencia del archivo existente public/tlock/01-hero-principal-menu.webp. Validar fotografías y productos con el cliente antes de publicar."}
+{"kind":"slide","id":"sl/ti39a7","slide":2,"title":"TLOC / PROPUESTA WEB","textShapes":13}
+{"kind":"textbox","id":"sh/nud0b2ps","slide":2,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/ovmh47qd","slide":2,"text":"Una página para elegir y contactar","textPreview":"Una página para elegir y contactar","textChars":34,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/9wvidc7y","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/axoz6x8j","slide":2,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,228,50,32]}
+{"kind":"textbox","id":"sh/byx0f2po","slide":2,"text":"Productos que se entienden","textPreview":"Productos que se entienden","textChars":26,"textLines":1,"bbox":[122,228,612,42]}
+{"kind":"textbox","id":"sh/wz6h87q9","slide":2,"text":"Sabores, presentaciones y fotografías\norganizados en un solo lugar.","textPreview":"Sabores, presentaciones y fotografías | organizados en un solo lugar.","textChars":67,"textLines":2,"bbox":[122,276,612,90]}
+{"kind":"textbox","id":"sh/xkfihc7u","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,375,50,32]}
+{"kind":"textbox","id":"sh/ylozah8f","slide":2,"text":"Pedido directo por WhatsApp","textPreview":"Pedido directo por WhatsApp","textChars":27,"textLines":1,"bbox":[122,375,612,42]}
+{"kind":"textbox","id":"sh/jmx0jmp0","slide":2,"text":"Accesos visibles para consultar\ndisponibilidad y coordinar un pedido.","textPreview":"Accesos visibles para consultar | disponibilidad y coordinar un pedido.","textChars":69,"textLines":2,"bbox":[122,423,612,90]}
+{"kind":"textbox","id":"sh/f6t4fql4","slide":2,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,522,50,32]}
+{"kind":"textbox","id":"sh/e5k36l4j","slide":2,"text":"Información útil para la visita","textPreview":"Información útil para la visita","textChars":31,"textLines":1,"bbox":[122,522,612,42]}
+{"kind":"textbox","id":"sh/18bmh03a","slide":2,"text":"Ubicación, horarios y enlaces\na las redes de TLOC.","textPreview":"Ubicación, horarios y enlaces | a las redes de TLOC.","textChars":50,"textLines":2,"bbox":[122,570,612,90]}
+{"kind":"textbox","id":"sh/r2t4b65s","slide":2,"text":"Referencia de contenido TLOC","textPreview":"Referencia de contenido TLOC","textChars":28,"textLines":1,"bbox":[850,630,360,24]}
+{"kind":"image","id":"im/3ahsfy5s","slide":2,"name":"","alt":"Referencia visual de la marca TLOC","bbox":[850,213,366,402]}
+{"kind":"notes","id":"nt/ti39a7","slide":2,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}
+{"kind":"slide","id":"sl/weccwc","slide":3,"title":"TLOC / PROPUESTA WEB","textShapes":21}
+{"kind":"textbox","id":"sh/u58vapcf","slide":3,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/h8zelkb6","slide":3,"text":"Alcance de la landing","textPreview":"Alcance de la landing","textChars":21,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/w7qdczul","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/ju1wnutc","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,221,50,32]}
+{"kind":"textbox","id":"sh/itsvepcr","slide":3,"text":"Portada de marca","textPreview":"Portada de marca","textChars":16,"textLines":1,"bbox":[122,221,472,42]}
+{"kind":"textbox","id":"sh/5wjep4b2","slide":3,"text":"Mensaje principal y acceso al pedido.","textPreview":"Mensaje principal y acceso al pedido.","textChars":37,"textLines":1,"bbox":[122,269,472,90]}
+{"kind":"textbox","id":"sh/4vadgzux","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,365,50,32]}
+{"kind":"textbox","id":"sh/zyxcbats","slide":3,"text":"Sabores y presentaciones","textPreview":"Sabores y presentaciones","textChars":24,"textLines":1,"bbox":[122,365,472,42]}
+{"kind":"textbox","id":"sh/yxov25cn","slide":3,"text":"Productos con fotos y descripciones.","textPreview":"Productos con fotos y descripciones.","textChars":36,"textLines":1,"bbox":[122,413,472,90]}
+{"kind":"textbox","id":"sh/gn65ojal","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,509,50,32]}
+{"kind":"textbox","id":"sh/hof6xob6","slide":3,"text":"Experiencia TLOC","textPreview":"Experiencia TLOC","textChars":16,"textLines":1,"bbox":[122,509,472,42]}
+{"kind":"textbox","id":"sh/ulonm9sv","slide":3,"text":"Contenido breve sobre la marca.","textPreview":"Contenido breve sobre la marca.","textChars":31,"textLines":1,"bbox":[122,557,472,90]}
+{"kind":"textbox","id":"sh/fmxovet0","slide":3,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[690,221,50,32]}
+{"kind":"textbox","id":"sh/4rq5s3ax","slide":3,"text":"Boxes y promociones","textPreview":"Boxes y promociones","textChars":19,"textLines":1,"bbox":[748,221,462,42]}
+{"kind":"textbox","id":"sh/psz618bi","slide":3,"text":"Espacio para opciones de regalo\ny campañas con material de TLOC.","textPreview":"Espacio para opciones de regalo | y campañas con material de TLOC.","textChars":64,"textLines":2,"bbox":[748,269,462,90]}
+{"kind":"textbox","id":"sh/2p8nqtsr","slide":3,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[690,365,50,32]}
+{"kind":"textbox","id":"sh/3qhozytc","slide":3,"text":"Ubicación y horarios","textPreview":"Ubicación y horarios","textChars":20,"textLines":1,"bbox":[748,365,462,42]}
+{"kind":"textbox","id":"sh/kvm5gzad","slide":3,"text":"Datos de atención y enlace al mapa.","textPreview":"Datos de atención y enlace al mapa.","textChars":35,"textLines":1,"bbox":[748,413,462,90]}
+{"kind":"textbox","id":"sh/5wvmp4by","slide":3,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[690,509,50,32]}
+{"kind":"textbox","id":"sh/lcnmt032","slide":3,"text":"Contacto y redes","textPreview":"Contacto y redes","textChars":16,"textLines":1,"bbox":[748,509,462,42]}
+{"kind":"textbox","id":"sh/0belkvmh","slide":3,"text":"WhatsApp y perfiles de la marca.","textPreview":"WhatsApp y perfiles de la marca.","textChars":32,"textLines":1,"bbox":[748,557,462,90]}
+{"kind":"notes","id":"nt/weccwc","slide":3,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}
+{"kind":"slide","id":"sl/cvjxez","slide":4,"title":"TLOC / PROPUESTA WEB","textShapes":7}
+{"kind":"textbox","id":"sh/a1kretcj","slide":4,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/x4bqp8vu","slide":4,"text":"Diseño y entrega","textPreview":"Diseño y entrega","textChars":16,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/w329g3u9","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/ny98jeds","slide":4,"text":"La identidad de TLOC\nen escritorio y celular","textPreview":"La identidad de TLOC | en escritorio y celular","textChars":44,"textLines":2,"bbox":[64,220,680,130]}
+{"kind":"textbox","id":"sh/mx0ratc7","slide":4,"text":"Conservamos el azul, la tipografía expresiva\ny los recursos de marca de la propuesta actual.","textPreview":"Conservamos el azul, la tipografía expresiva | y los recursos de marca de la propuesta actual.","textChars":92,"textLines":2,"bbox":[64,370,725,90]}
+{"kind":"textbox","id":"sh/90bqlovy","slide":4,"text":"Incluye adaptación móvil, configuración de enlaces,\nrevisión final y puesta en línea de la landing.","textPreview":"Incluye adaptación móvil, configuración de enlaces, | revisión final y puesta en línea de la landing.","textChars":99,"textLines":2,"bbox":[64,486,750,90]}
+{"kind":"textbox","id":"sh/7udsvitw","slide":4,"text":"TLOC entrega o confirma textos, fotos, precios y datos de atención.\nEl alojamiento y sus condiciones se acuerdan antes de iniciar.","textPreview":"TLOC entrega o confirma textos, fotos, precios y datos de atención. | El alojamiento y sus condiciones se acuerdan antes de iniciar.","textChars":130,"textLines":2,"bbox":[64,609,1120,55]}
+{"kind":"image","id":"im/x8zuxozq","slide":4,"name":"","alt":"Referencia visual de la marca TLOC","bbox":[940,242,244,278]}
+{"kind":"notes","id":"nt/cvjxez","slide":4,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}
+{"kind":"slide","id":"sl/9xjxly","slide":5,"title":"TLOC / PROPUESTA WEB","textShapes":12}
+{"kind":"textbox","id":"sh/25cvm5kr","slide":5,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/ps3uhkji","slide":5,"text":"Cronograma: máximo 2 semanas","textPreview":"Cronograma: máximo 2 semanas","textChars":28,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/orudof2x","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/f21cba1g","slide":5,"text":"SEMANA 1","textPreview":"SEMANA 1","textChars":8,"textLines":1,"bbox":[64,217,520,35]}
+{"kind":"textbox","id":"sh/e1svi5kv","slide":5,"text":"Contenido y diseño","textPreview":"Contenido y diseño","textChars":18,"textLines":1,"bbox":[64,266,530,57]}
+{"kind":"textbox","id":"sh/14jud0j6","slide":5,"text":"Días 1 y 2\nRecepción de material, definición del dominio\ny organización del contenido.","textPreview":"Días 1 y 2 | Recepción de material, definición del dominio | y organización del contenido.","textChars":86,"textLines":3,"bbox":[64,345,530,112]}
+{"kind":"textbox","id":"sh/03adkv2l","slide":5,"text":"Días 3 al 7\nDiseño de la landing y primera revisión\ncon TLOC.","textPreview":"Días 3 al 7 | Diseño de la landing y primera revisión | con TLOC.","textChars":61,"textLines":3,"bbox":[64,477,530,112]}
+{"kind":"textbox","id":"sh/zy5wnu1k","slide":5,"text":"SEMANA 2","textPreview":"SEMANA 2","textChars":8,"textLines":1,"bbox":[692,217,520,35]}
+{"kind":"textbox","id":"sh/yxwvupkz","slide":5,"text":"Desarrollo y entrega","textPreview":"Desarrollo y entrega","textChars":20,"textLines":1,"bbox":[692,266,535,57]}
+{"kind":"textbox","id":"sh/wv69kveh","slide":5,"text":"Días 8 al 11\nImplementación, adaptación móvil\ny configuración de enlaces.","textPreview":"Días 8 al 11 | Implementación, adaptación móvil | y configuración de enlaces.","textChars":73,"textLines":3,"bbox":[692,345,530,112]}
+{"kind":"textbox","id":"sh/hwfad0v2","slide":5,"text":"Días 12 al 14\nAjustes finales, pruebas y publicación\ncon la aprobación de TLOC.","textPreview":"Días 12 al 14 | Ajustes finales, pruebas y publicación | con la aprobación de TLOC.","textChars":79,"textLines":3,"bbox":[692,477,530,112]}
+{"kind":"textbox","id":"sh/ut4ri5wb","slide":5,"text":"14 días calendario desde el inicio acordado, con material completo.\nPara cumplir el plazo, coordinamos las revisiones y aprobaciones dentro de esas dos semanas.","textPreview":"14 días calendario desde el inicio acordado, con material completo. | Para cumplir el plazo, coordinamos las revisiones y aprobaciones de...","textChars":160,"textLines":2,"bbox":[64,621,1120,57]}
+{"kind":"notes","id":"nt/9xjxly","slide":5,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}
+{"kind":"slide","id":"sl/zigbgg","slide":6,"title":"TLOC / PROPUESTA WEB","textShapes":8}
+{"kind":"textbox","id":"sh/gri9czq5","slide":6,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/fq9s3u9k","slide":6,"text":"Inversión en la landing","textPreview":"Inversión en la landing","textChars":23,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/upgrap8z","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/to7q1kre","slide":6,"text":"S/ 499","textPreview":"S/ 499","textChars":6,"textLines":1,"bbox":[64,214,750,150]}
+{"kind":"textbox","id":"sh/sny98fq9","slide":6,"text":"Precio final de la landing","textPreview":"Precio final de la landing","textChars":26,"textLines":1,"bbox":[72,378,700,47]}
+{"kind":"textbox","id":"sh/7mp8za9o","slide":6,"text":"60 % de descuento comercial","textPreview":"60 % de descuento comercial","textChars":27,"textLines":1,"bbox":[72,460,780,55]}
+{"kind":"textbox","id":"sh/6lgr6p83","slide":6,"text":"Valor referencial propuesto: S/ 1.247,50\nDescuento aplicado: S/ 748,50","textPreview":"Valor referencial propuesto: S/ 1.247,50 | Descuento aplicado: S/ 748,50","textChars":70,"textLines":2,"bbox":[76,536,880,80]}
+{"kind":"textbox","id":"sh/dkbado7y","slide":6,"text":"Incluye 1 mes de soporte sin costo desde la publicación. Dominio aparte.\nEl valor referencial corresponde a esta propuesta, no a un precio histórico.","textPreview":"Incluye 1 mes de soporte sin costo desde la publicación. Dominio aparte. | El valor referencial corresponde a esta propuesta, no a un pre...","textChars":149,"textLines":2,"bbox":[76,633,1080,48]}
+{"kind":"notes","id":"nt/zigbgg","slide":6,"text":"Condición solicitada: precio final S/ 499 y descuento del 60 %. Base matemática = 499 / 0,40 = S/ 1.247,50. Descuento = S/ 748,50. La referencia es propuesta y no acredita un precio histórico. Confirmar la base comercial antes de difundir la oferta. Dominio separado."}
+{"kind":"slide","id":"sl/54pizq","slide":7,"title":"TLOC / PROPUESTA WEB","textShapes":7}
+{"kind":"textbox","id":"sh/rm14fmh4","slide":7,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/snalory9","slide":7,"text":"Dominio propio para TLOC","textPreview":"Dominio propio para TLOC","textChars":24,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/tojmhwzu","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/epc3q1gf","slide":7,"text":"USD 15 a 20","textPreview":"USD 15 a 20","textChars":11,"textLines":1,"bbox":[64,228,1090,114]}
+{"kind":"textbox","id":"sh/fal4j6h0","slide":7,"text":"Costo anual estimado del dominio","textPreview":"Costo anual estimado del dominio","textChars":32,"textLines":1,"bbox":[70,364,1120,53]}
+{"kind":"textbox","id":"sh/gbulsbyl","slide":7,"text":"Nombre a conversar con TLOC,\nsegún disponibilidad al momento del registro.","textPreview":"Nombre a conversar con TLOC, | según disponibilidad al momento del registro.","textChars":74,"textLines":2,"bbox":[70,459,1100,92]}
+{"kind":"textbox","id":"sh/1c3mlwz6","slide":7,"text":"Pago adicional a la landing. La tarifa final depende de la extensión,\nel proveedor y el precio de renovación. El dominio se renueva cada año.","textPreview":"Pago adicional a la landing. La tarifa final depende de la extensión, | el proveedor y el precio de renovación. El dominio se renueva cad...","textChars":141,"textLines":2,"bbox":[70,594,1100,70]}
+{"kind":"notes","id":"nt/54pizq","slide":7,"text":"Rango estimado de USD 15 a 20 al año indicado por el prestador en la conversación. No se ha consultado disponibilidad ni cotizado un dominio concreto. No incluye alojamiento web."}
+{"kind":"slide","id":"sl/hccufl","slide":8,"title":"TLOC / PROPUESTA WEB","textShapes":10}
+{"kind":"textbox","id":"sh/3uxkrqt8","slide":8,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/ov61kvat","slide":8,"text":"Soporte para mantener la web al día","textPreview":"Soporte para mantener la web al día","textChars":35,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/pwf2t0by","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/ep4jelsb","slide":8,"text":"1.er mes","textPreview":"1.er mes","textChars":8,"textLines":1,"bbox":[64,209,525,72]}
+{"kind":"textbox","id":"sh/fqdknqtw","slide":8,"text":"Sin costo desde la publicación","textPreview":"Sin costo desde la publicación","textChars":30,"textLines":1,"bbox":[64,290,550,44]}
+{"kind":"textbox","id":"sh/grm1gvah","slide":8,"text":"Desde el 2.º mes","textPreview":"Desde el 2.º mes","textChars":16,"textLines":1,"bbox":[700,217,510,40]}
+{"kind":"textbox","id":"sh/1sf2pgb2","slide":8,"text":"S/ 19 al mes","textPreview":"S/ 19 al mes","textChars":12,"textLines":1,"bbox":[700,271,520,78]}
+{"kind":"textbox","id":"sh/yl83q5sv","slide":8,"text":"Cambios pequeños incluidos","textPreview":"Cambios pequeños incluidos","textChars":26,"textLines":1,"bbox":[64,389,700,43]}
+{"kind":"textbox","id":"sh/zmhkzatg","slide":8,"text":"Actualización de horarios o días sin atención.\nCambios de textos, precios y fotografías.\nAdaptación de promociones a las secciones existentes.","textPreview":"Actualización de horarios o días sin atención. | Cambios de textos, precios y fotografías. | Adaptación de promociones a las secciones ex...","textChars":142,"textLines":3,"bbox":[64,453,1130,122]}
+{"kind":"textbox","id":"sh/zy1gjidk","slide":8,"text":"TLOC envía el material y la fecha deseada. Confirmamos el alcance y el plazo de cada cambio.\nNuevas secciones, rediseños, producción de material y funciones adicionales se cotizan aparte.","textPreview":"TLOC envía el material y la fecha deseada. Confirmamos el alcance y el plazo de cada cambio. | Nuevas secciones, rediseños, producción de...","textChars":187,"textLines":2,"bbox":[64,608,1138,70]}
+{"kind":"notes","id":"nt/hccufl","slide":8,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}
+{"kind":"slide","id":"sl/xtfggx","slide":9,"title":"TLOC / PROPUESTA WEB","textShapes":11}
+{"kind":"textbox","id":"sh/i50be1wv","slide":9,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/5sbupwfm","slide":9,"text":"A futuro: un sistema a medida","textPreview":"A futuro: un sistema a medida","textChars":29,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/k7itgbe1","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/v29cjmxk","slide":9,"text":"La landing puede ser el primer paso\npara una solución más completa.","textPreview":"La landing puede ser el primer paso | para una solución más completa.","textChars":67,"textLines":2,"bbox":[64,208,1100,100]}
+{"kind":"textbox","id":"sh/a10bahwz","slide":9,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,359,50,32]}
+{"kind":"textbox","id":"sh/x4rulwfa","slide":9,"text":"Pedidos y operación","textPreview":"Pedidos y operación","textChars":19,"textLines":1,"bbox":[122,359,482,42]}
+{"kind":"textbox","id":"sh/w3itcrep","slide":9,"text":"Gestión de pedidos, productos\ny disponibilidad según la necesidad.","textPreview":"Gestión de pedidos, productos | y disponibilidad según la necesidad.","textChars":66,"textLines":2,"bbox":[122,407,482,90]}
+{"kind":"textbox","id":"sh/nypcfmx8","slide":9,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[685,359,50,32]}
+{"kind":"textbox","id":"sh/mxgb6hwn","slide":9,"text":"Comprobantes y caja","textPreview":"Comprobantes y caja","textChars":19,"textLines":1,"bbox":[743,359,482,42]}
+{"kind":"textbox","id":"sh/8jmtwrux","slide":9,"text":"Evaluación de facturación, boletas\ne impresión de comprobantes.","textPreview":"Evaluación de facturación, boletas | e impresión de comprobantes.","textChars":63,"textLines":2,"bbox":[743,407,482,90]}
+{"kind":"textbox","id":"sh/9kvapwbi","slide":9,"text":"Cada ampliación requiere definir procesos, integraciones y equipos.\nAlcance, costo y cronograma se cotizan en una propuesta independiente.","textPreview":"Cada ampliación requiere definir procesos, integraciones y equipos. | Alcance, costo y cronograma se cotizan en una propuesta independiente.","textChars":138,"textLines":2,"bbox":[64,572,1110,82]}
+{"kind":"notes","id":"nt/xtfggx","slide":9,"text":"Posibilidades futuras solicitadas por el prestador, no incluidas en S/ 499 ni en el soporte mensual. La emisión fiscal e impresión requieren evaluación técnica y de los requisitos aplicables. No se promete una integración o certificación concreta."}
+{"kind":"slide","id":"sl/yzvfgy","slide":10,"title":"TLOC / PROPUESTA WEB","textShapes":13}
+{"kind":"textbox","id":"sh/b6l076dc","slide":10,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,32,650,28]}
+{"kind":"textbox","id":"sh/c7u1gbex","slide":10,"text":"Lo que necesitamos para comenzar","textPreview":"Lo que necesitamos para comenzar","textChars":32,"textLines":1,"bbox":[64,93,1140,100]}
+{"kind":"textbox","id":"sh/x83i9gv2","slide":10,"text":"10","textPreview":"10","textChars":2,"textLines":1,"bbox":[1164,664,50,26]}
+{"kind":"textbox","id":"sh/ytcjilwn","slide":10,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,217,50,32]}
+{"kind":"textbox","id":"sh/zul0bqd8","slide":10,"text":"Confirmación de la propuesta","textPreview":"Confirmación de la propuesta","textChars":28,"textLines":1,"bbox":[122,217,1042,42]}
+{"kind":"textbox","id":"sh/kvu1kvet","slide":10,"text":"Alcance de la landing y condiciones de pago.","textPreview":"Alcance de la landing y condiciones de pago.","textChars":44,"textLines":1,"bbox":[122,265,1042,90]}
+{"kind":"textbox","id":"sh/lwnid0ve","slide":10,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,356,50,32]}
+{"kind":"textbox","id":"sh/mxwjm5wz","slide":10,"text":"Material de TLOC","textPreview":"Material de TLOC","textChars":16,"textLines":1,"bbox":[122,356,1042,42]}
+{"kind":"textbox","id":"sh/7y50fqdk","slide":10,"text":"Logo, fotografías, productos, promociones y datos de atención.","textPreview":"Logo, fotografías, productos, promociones y datos de atención.","textChars":62,"textLines":1,"bbox":[122,404,1042,90]}
+{"kind":"textbox","id":"sh/7mpkzi5g","slide":10,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,495,50,32]}
+{"kind":"textbox","id":"sh/6lw36d4v","slide":10,"text":"Dominio y fecha de inicio","textPreview":"Dominio y fecha de inicio","textChars":25,"textLines":1,"bbox":[122,495,1042,42]}
+{"kind":"textbox","id":"sh/t8721sn6","slide":10,"text":"Revisión de disponibilidad y acuerdo del alojamiento.","textPreview":"Revisión de disponibilidad y acuerdo del alojamiento.","textChars":53,"textLines":1,"bbox":[122,543,1042,90]}
+{"kind":"textbox","id":"sh/snyl8nml","slide":10,"text":"Entrega en un máximo de 2 semanas desde el inicio acordado.","textPreview":"Entrega en un máximo de 2 semanas desde el inicio acordado.","textChars":59,"textLines":1,"bbox":[64,640,1120,36]}
+{"kind":"notes","id":"nt/yzvfgy","slide":10,"text":"Propuesta comercial preparada a partir de las condiciones indicadas por el prestador del servicio. Septiembre de 2026."}

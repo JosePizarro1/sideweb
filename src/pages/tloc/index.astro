@@ -1,5 +1,5 @@
 ---
-import { IconBrandWhatsapp, IconMapPin, IconStarFilled, IconBrandGoogle, IconClock } from '@tabler/icons-astro';
+import { IconBrandWhatsapp, IconMapPin, IconStarFilled, IconStarHalfFilled, IconBrandGoogle, IconClock } from '@tabler/icons-astro';
 
 const whatsappNumber = "932427567";
 const whatsappUrl =
@@ -9,28 +9,32 @@ const mapsUrl =
 
 const favorites = [
   {
-    image: "/tlock/03-menu-box-tloc.webp",
-    name: "Franuji",
-    note: "Suave, frutal y con una sorpresa en el centro.",
-    tag: "TLOC original",
-  },
-  {
-    image: "/tlock/04-menu-cafe-bebidas.webp",
+    image: "/tlock/cookie-classic.png",
     name: "La clásica",
-    note: "Doradita por fuera, suave por dentro y cargada de chocolate.",
+    note: "Doradita, suave por dentro y cargada de chocolate.",
     tag: "Favorita",
+    color: "mint",
   },
   {
-    image: "/tlock/05-menu-croissants-salados.webp",
+    image: "/tlock/cookie-full-chocolate.png",
     name: "Full chocolate",
-    note: "Para quienes creen que nunca existe demasiado chocolate.",
+    note: "Intensa, fudgy y para quienes nunca tienen demasiado chocolate.",
     tag: "Intensa",
+    color: "lavender",
   },
   {
-    image: "/tlock/06-menu-postre-marshmallow.webp",
-    name: "TLOC para compartir",
-    note: "El antojo convertido en una celebración inolvidable.",
+    image: "/tlock/cookie-franuji.png",
+    name: "Franuji",
+    note: "Suave, frutal y con una sorpresa dulce en el centro.",
+    tag: "TLOC original",
+    color: "peach",
+  },
+  {
+    image: "/tlock/cookie-special.png",
+    name: "Edición especial",
+    note: "Una combinación indulgente que aparece para sorprender.",
     tag: "Edición especial",
+    color: "pink",
   },
 ];
 
@@ -59,13 +63,9 @@ const tickerRounds = [0, 1];
     <main>
       <header class="site-header">
         <a class="brand" href="#inicio" aria-label="TLOC Cookies, volver al inicio">
-          <span class="brand-mark">T</span><span>TLOC<span class="brand-dot">.</span>COOKIES</span>
+          <span class="brand-mark" aria-hidden="true">T</span>
+          <span class="brand-wordmark" aria-hidden="true">tloc</span>
         </a>
-        <nav aria-label="Navegación principal">
-          <a href="#favoritas">Favoritas</a>
-          <a href="#experiencia">La experiencia</a>
-          <a href="#visitanos">Visítanos</a>
-        </nav>
         <a class="header-cta" href={whatsappUrl} target="_blank" rel="noreferrer">
           Pedir ahora
           <svg viewBox="0 0 20 20" aria-hidden="true">
@@ -75,18 +75,21 @@ const tickerRounds = [0, 1];
       </header>
 
       <section class="hero" id="inicio">
+        <div class="hero-bg-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 520" fill="none" preserveAspectRatio="none">
+            <path d="M0,0 C420,90 680,30 1020,130 C1240,195 1380,120 1440,110 L1440,520 L0,520 Z" fill="#f0f6fe" opacity="0.85" />
+          </svg>
+        </div>
+
         <div class="hero-copy">
-          <p class="eyebrow"><span></span> Hechas en Tacna, para alegrarte el día</p>
+          <p class="eyebrow"><span></span> Hechas en Tacna · Horneamos felicidad</p>
           <h1>Horneamos<br /><em>felicidad.</em></h1>
           <p class="hero-lead">
             Cookies rellenas, sabores que sorprenden y ese primer mordisco que te hace cerrar los ojos. Bienvenido a TLOC.
           </p>
           <div class="hero-actions">
             <a class="button button-primary" href={whatsappUrl} target="_blank" rel="noreferrer">
-              <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M20.5 11.8a8.5 8.5 0 0 1-12.6 7.4L3.5 20.5l1.2-4.3a8.5 8.5 0 1 1 15.8-4.4Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"></path>
-                <path d="M8.3 7.8c.3-.5.5-.5.8-.5h.4c.2 0 .4.1.5.4l.7 1.8c.1.3 0 .5-.1.7l-.6.8c-.2.2-.1.4 0 .6.5 1 1.2 1.7 2.2 2.2.3.2.5.2.7 0l.9-1c.2-.2.4-.3.7-.2l1.8.8c.3.1.4.3.4.6 0 .4-.2 1.2-.7 1.7-.6.6-1.4.9-2.4.7-1.1-.2-2.6-.8-4.2-2.2-1.8-1.6-2.9-3.6-3-4.8 0-.7.1-1.2.4-1.6Z" fill="currentColor"></path>
-              </svg>
+              <IconBrandWhatsapp size={20} stroke={2} />
               Pedir por WhatsApp
             </a>
             <a class="button button-ghost" href="#favoritas">
@@ -97,11 +100,6 @@ const tickerRounds = [0, 1];
             </a>
           </div>
           <div class="hero-bottom-proof">
-            <div class="trust-row" aria-label="Beneficios de TLOC Cookies">
-              <span>Horneadas cada día</span>
-              <span>Relleno generoso</span>
-              <span>100% espíritu TLOC</span>
-            </div>
             <a class="rating-badge" href={mapsUrl} target="_blank" rel="noreferrer" title="Ver opiniones en Google Maps">
               <span class="rating-google-icon"><IconBrandGoogle size={15} /></span>
               <div class="rating-stars">
@@ -109,7 +107,7 @@ const tickerRounds = [0, 1];
                 <IconStarFilled size={12} />
                 <IconStarFilled size={12} />
                 <IconStarFilled size={12} />
-                <IconStarFilled size={12} />
+                <IconStarHalfFilled size={12} />
               </div>
               <strong>4.3</strong>
               <span>en Google Reviews</span>
@@ -117,17 +115,11 @@ const tickerRounds = [0, 1];
           </div>
         </div>
 
-        <div class="hero-visual" aria-label="Cookies y mascota oficial de TLOC">
+        <div class="hero-visual" aria-label="Cookies TLOC horneadas">
           <div class="hero-photo">
             <img
               src="/tlock/01-hero-principal-menu.webp"
               alt="Box TLOC con cookies, café, bebida caliente y croissant"
-            />
-          </div>
-          <div class="hero-mascot-shot">
-            <img
-              src="/tlock/02-hero-mascota-oficial.webp"
-              alt="Mascota oficial 2D de TLOC"
             />
           </div>
         </div>
@@ -137,7 +129,7 @@ const tickerRounds = [0, 1];
         <div class="ticker-track">
           {tickerRounds.map((round) => (
             <div class="ticker-group" aria-hidden={round === 1}>
-              <span>CRUJIENTES POR FUERA</span><b>✦</b><span>SUAVES POR DENTRO</span><b>✦</b><span>RELLENAS DE FELICIDAD</span><b>✦</b>
+              <span>HORNEADAS CADA DÍA</span><b>✦</b><span>RELLENO GENEROSO</span><b>✦</b><span>100% ESPÍRITU TLOC</span><b>✦</b><span>CRUJIENTES POR FUERA</span><b>✦</b><span>SUAVES POR DENTRO</span><b>✦</b>
             </div>
           ))}
         </div>
@@ -145,20 +137,20 @@ const tickerRounds = [0, 1];
 
       <section class="favorites section" id="favoritas">
         <div class="section-heading">
-          <div>
+          <div class="section-heading-centered">
             <p class="eyebrow"><span></span> Elige tu próximo antojo</p>
-            <h2>Las que hacen<br />volver por otra.</h2>
+            <h2>Conoce nuestros<br /><em>sabores.</em></h2>
           </div>
           <p>
-            Una selección de la familia TLOC. La carta cambia y siempre hay algo nuevo esperándote.
+            Galletas recién horneadas, rellenos generosos y una favorita para cada momento.
           </p>
         </div>
         <div class="favorite-grid">
           {favorites.map((item, index) => (
-            <article class={`favorite-card card-${index + 1}`}>
+            <article class={`favorite-card card-${index + 1} flavor-${item.color}`}>
               <div class="favorite-image">
                 <img src={item.image} alt={item.name} />
-                <span class="card-tag">{item.tag}</span>
+                <div class="favorite-arc" aria-hidden="true"></div>
               </div>
               <div class="favorite-copy">
                 <h3>{item.name}</h3>
@@ -474,79 +466,88 @@ const tickerRounds = [0, 1];
       :root {
         --blue: #1268d5;
         --blue-dark: #084eaa;
-        --cream: #fffce7;
-        --sky: #dceeff;
-        --ink: #112039;
-        --muted: #59647a;
+        --blue-light: #3284eb;
+        --cream: #ffffff;
+        --sky: #eef5fe;
+        --sky-tint: #f6faff;
+        --ink: #0e1a2e;
+        --muted: #4e5b72;
         --pink: #ff9fbd;
         --white: #ffffff;
-        --line: rgba(17, 32, 57, 0.16);
+        --line: rgba(18, 104, 213, 0.12);
         --font-body: "Manrope", "Segoe UI Variable", Arial, sans-serif;
         --font-display: "Archivo Black", "Arial Black", Arial, sans-serif;
       }
 
       * { box-sizing: border-box; }
       html { scroll-behavior: smooth; overflow-x: clip; }
-      body { margin: 0; overflow-x: clip; background: var(--cream); color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; letter-spacing: -.008em; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; }
+      body { margin: 0; overflow-x: clip; background: #ffffff; color: var(--ink); font-family: var(--font-body); font-size: 16px; line-height: 1.6; letter-spacing: -.008em; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; text-rendering: optimizeLegibility; }
       img { display: block; max-width: 100%; width: 100%; height: 100%; object-fit: cover; }
       a { color: inherit; text-decoration: none; }
       svg { width: 1.15em; height: 1.15em; flex: 0 0 auto; }
 
-      .site-header { width: min(1180px, calc(100% - 40px)); height: 78px; margin: 18px auto 0; padding: 0 18px 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border: 1px solid var(--line); border-radius: 22px; background: rgba(255, 252, 231, 0.88); backdrop-filter: blur(16px); position: relative; z-index: 10; }
+      .site-header { width: min(1180px, calc(100% - 40px)); height: 74px; margin: 18px auto 0; padding: 0 18px 0 24px; display: flex; align-items: center; justify-content: space-between; gap: 28px; border: 1px solid var(--line); border-radius: 999px; background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(16px); box-shadow: 0 10px 30px rgba(18, 104, 213, 0.06); position: relative; z-index: 10; }
       .brand { display: flex; align-items: center; gap: 10px; font-weight: 900; letter-spacing: -0.04em; font-size: 1.04rem; }
-      .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: var(--cream); background: var(--blue); transform: rotate(-8deg); font: 900 1.25rem/1 Arial, sans-serif; }
-      .brand-dot { color: var(--blue); }
+      .brand-mark { width: 38px; height: 38px; display: grid; place-items: center; border-radius: 50%; color: white; background: var(--blue); transform: rotate(-8deg); font: 900 1.25rem/1 Arial, sans-serif; box-shadow: 0 4px 12px rgba(18, 104, 213, 0.25); }
+      .brand-wordmark { color: #2857a8; font: 42px/1 var(--font-display); letter-spacing: -.07em; }
       .site-header nav { display: flex; gap: 30px; font-size: 0.9rem; font-weight: 700; }
       .site-header nav a { position: relative; }
       .site-header nav a::after { content: ""; position: absolute; left: 0; right: 100%; bottom: -7px; height: 2px; background: var(--blue); transition: right .25s ease; }
       .site-header nav a:hover::after { right: 0; }
       .header-cta, .button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; border-radius: 999px; font-weight: 800; transition: transform .2s ease, background .2s ease, box-shadow .2s ease; }
-      .header-cta { padding: 13px 18px; color: white; background: var(--blue); font-size: 0.9rem; }
+      .header-cta { padding: 12px 20px; color: white; background: var(--blue); font-size: 0.9rem; box-shadow: 0 6px 18px rgba(18,104,213,.22); }
       .header-cta:hover, .button:hover { transform: translateY(-2px); }
 
-      .hero { width: min(1240px, calc(100% - 40px)); min-height: 700px; margin: 0 auto; padding: 62px 22px 58px; display: grid; grid-template-columns: .92fr 1.08fr; align-items: center; gap: 46px; overflow: visible; }
-      .eyebrow { margin: 0 0 22px; display: flex; align-items: center; gap: 10px; color: var(--blue-dark); font-size: .78rem; line-height: 1; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
+      .hero { width: min(1240px, calc(100% - 40px)); min-height: 670px; margin: 0 auto; padding: 56px 22px 58px; display: grid; grid-template-columns: .95fr 1.05fr; align-items: center; gap: 46px; position: relative; overflow: visible; }
+      .hero-bg-wave { position: absolute; inset: -40px 0 0 0; left: 50%; width: 100vw; transform: translateX(-50%); pointer-events: none; z-index: 0; overflow: hidden; }
+      .hero-bg-wave svg { width: 100%; height: 100%; display: block; }
+      .hero-copy { position: relative; z-index: 1; }
+      .eyebrow { margin: 0 0 20px; display: flex; align-items: center; gap: 10px; color: var(--blue); font-size: .78rem; line-height: 1; font-weight: 900; letter-spacing: .13em; text-transform: uppercase; }
       .eyebrow > span { width: 28px; height: 2px; background: currentColor; }
       .hero h1, .section-heading h2 { margin: 0; font-family: var(--font-display); font-weight: 900; letter-spacing: -.068em; line-height: .9; text-transform: uppercase; }
-      .hero h1 { font-size: clamp(4.15rem, 6.2vw, 6.35rem); }
+      .hero h1 { font-size: clamp(4.15rem, 6.2vw, 6.35rem); color: var(--ink); }
       .hero h1 em { color: var(--blue); font-style: normal; position: relative; }
-      .hero h1 em::after { content: ""; position: absolute; left: 3%; right: 0; bottom: -8px; height: 12px; border-bottom: 4px solid var(--pink); border-radius: 50%; transform: rotate(-2deg); }
-      .hero-lead { max-width: 570px; margin: 34px 0 28px; color: var(--muted); font-size: 1.13rem; line-height: 1.7; }
+      .hero h1 em::after { content: ""; position: absolute; left: 3%; right: 0; bottom: -8px; height: 12px; border-bottom: 4px solid var(--blue); border-radius: 50%; transform: rotate(-2deg); opacity: 0.85; }
+      .hero-lead { max-width: 570px; margin: 30px 0 28px; color: var(--muted); font-size: 1.13rem; line-height: 1.7; }
       .hero-actions { display: flex; flex-wrap: wrap; gap: 12px; }
-      .button { min-height: 54px; padding: 0 22px; border: 1px solid var(--ink); }
-      .button-primary { color: white; background: var(--blue); border-color: var(--blue); box-shadow: 0 10px 25px rgba(18,104,213,.18); }
-      .button-primary:hover { background: var(--blue-dark); box-shadow: 0 14px 30px rgba(18,104,213,.25); }
-      .button-ghost { background: transparent; }
-      .button-ghost:hover { background: white; }
-      .hero-bottom-proof { margin-top: 44px; padding-top: 26px; border-top: 1px solid var(--line); display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 24px; }
-      .trust-row { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; color: #455168; font-size: .82rem; font-weight: 800; }
-      .trust-row span::before { content: "●"; margin-right: 8px; color: var(--blue); font-size: .68rem; }
+      .button { min-height: 54px; padding: 0 24px; border: 1.5px solid transparent; }
+      .button-primary { color: white; background: var(--blue); border-color: var(--blue); box-shadow: 0 10px 25px rgba(18,104,213,.22); }
+      .button-primary:hover { background: var(--blue-dark); border-color: var(--blue-dark); box-shadow: 0 14px 30px rgba(18,104,213,.3); }
+      .button-ghost { color: var(--blue); background: #ffffff; border-color: rgba(18,104,213,.35); box-shadow: 0 4px 14px rgba(18,104,213,.06); }
+      .button-ghost:hover { background: #f0f7ff; border-color: var(--blue); }
+      .hero-bottom-proof { margin-top: 36px; padding-top: 22px; border-top: 1px solid var(--line); display: flex; align-items: center; }
 
-      .hero-visual { min-height: 570px; position: relative; isolation: isolate; }
-      .hero-photo { width: 100%; height: 550px; position: absolute; right: 0; top: 8px; overflow: hidden; border: 7px solid white; border-radius: 34px; box-shadow: 0 30px 70px rgba(17,32,57,.16); background: #f8e8dc; }
-      .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.17), transparent 42%, rgba(8,78,170,.08)); pointer-events: none; }
+      .hero-visual { min-height: 550px; position: relative; isolation: isolate; z-index: 1; }
+      .hero-photo { width: 100%; height: 530px; position: absolute; right: 0; top: 8px; overflow: hidden; border: 8px solid white; border-radius: 36px; box-shadow: 0 25px 65px rgba(18,104,213,.15); background: #f4f8fe; }
+      .hero-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,.15), transparent 45%, rgba(18,104,213,.08)); pointer-events: none; }
       .hero-photo img { object-fit: cover; object-position: center 57%; transition: transform .9s cubic-bezier(.2,.75,.2,1); }
-      .hero-visual:hover .hero-photo img { transform: scale(1.045); }
-      .hero-mascot-shot { width: 150px; height: 150px; position: absolute; left: -24px; top: -20px; z-index: 4; overflow: hidden; border: 6px solid white; border-radius: 50%; box-shadow: 0 16px 38px rgba(17,32,57,.18); animation: float 6.5s ease-in-out infinite; }
-      .hero-mascot-shot img { object-fit: cover; }
+      .hero-visual:hover .hero-photo img { transform: scale(1.04); }
 
-      .ticker { overflow: hidden; color: white; background: var(--blue); border-block: 1px solid rgba(17,32,57,.55); }
-      .ticker-track { width: max-content; display: flex; align-items: center; animation: ticker 26s linear infinite; font: 900 .82rem/1 var(--font-display); letter-spacing: .04em; will-change: transform; }
-      .ticker-group { width: 100vw; flex: none; padding: 14px 34px; display: flex; align-items: center; justify-content: space-around; gap: clamp(20px, 3.2vw, 58px); white-space: nowrap; }
-      .ticker b { color: var(--pink); font-size: 1.2rem; }
+      .ticker { position: relative; z-index: 2; height: 56px; overflow: hidden; color: white; background: var(--blue); border-block: 1px solid rgba(18, 104, 213, 0.2); box-shadow: 0 4px 20px rgba(18, 104, 213, 0.12); display: flex; align-items: center; }
+      .ticker-track { height: 100%; width: max-content; display: flex; align-items: center; animation: ticker 28s linear infinite; font: 900 .86rem/1 var(--font-display); letter-spacing: .06em; will-change: transform; }
+      .ticker-group { height: 100%; width: max-content; min-width: 100vw; flex: none; padding: 0 34px; display: flex; align-items: center; justify-content: space-around; gap: clamp(24px, 3.5vw, 64px); white-space: nowrap; }
+      .ticker-group span { display: inline-flex; align-items: center; line-height: 1; }
+      .ticker b { color: #ffffff; font-size: .88rem; opacity: 0.9; display: inline-flex; align-items: center; justify-content: center; line-height: 1; }
 
       .section { width: min(1180px, calc(100% - 40px)); margin: 0 auto; padding: 90px 0; }
       .favorites.section { padding-top: 86px; padding-bottom: 82px; }
       .section-heading { margin-bottom: 38px; display: grid; grid-template-columns: 1.35fr .65fr; align-items: end; gap: 46px; }
+      .section-heading-centered { text-align: center; }
+      .section-heading-centered .eyebrow { justify-content: center; }
       .section-heading h2 { max-width: 720px; font-size: clamp(2.9rem, 4.25vw, 4.45rem); }
+      .section-heading h2 em { color: var(--blue); font-style: normal; }
       .section-heading > p { max-width: 360px; margin: 0 0 6px; color: var(--muted); line-height: 1.7; }
       .favorite-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; }
-      .favorite-card { min-width: 0; border: 1px solid var(--line); border-radius: 22px; overflow: hidden; background: white; transition: transform .28s ease, box-shadow .28s ease; }
-      .favorite-card:hover { transform: translateY(-8px); box-shadow: 0 22px 55px rgba(17,32,57,.12); }
-      .favorite-image { aspect-ratio: 1.02; position: relative; overflow: hidden; background: var(--sky); }
-      .favorite-image img { object-fit: cover; transition: transform .5s ease; }
-      .favorite-card:hover .favorite-image img { transform: scale(1.04); }
-      .card-tag { position: absolute; top: 14px; left: 14px; padding: 8px 11px; border-radius: 999px; color: var(--ink); background: rgba(255,252,231,.92); backdrop-filter: blur(10px); font-size: .67rem; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+      .favorite-card { min-width: 0; overflow: visible; border: 1px solid var(--line); border-radius: 22px; background: white; box-shadow: 0 10px 25px rgba(17,32,57,.04); transition: transform .32s ease, box-shadow .32s ease; }
+      .favorite-card:hover { transform: translateY(-8px); box-shadow: 0 22px 55px rgba(17,32,57,.14); }
+      .favorite-image { aspect-ratio: 1 / .92; position: relative; margin: 0; overflow: visible; border-radius: 21px 21px 0 0; isolation: isolate; }
+      .favorite-image::before { content: ""; position: absolute; inset: 22% 9% 0; z-index: -1; border-radius: 4px; background: #d4fbc9; }
+      .flavor-lavender .favorite-image::before { background: #c8c6fa; }
+      .flavor-peach .favorite-image::before { background: #f9dfbf; }
+      .flavor-pink .favorite-image::before { background: #f8c8d8; }
+      .favorite-image img { width: 82%; height: 82%; position: absolute; z-index: 2; left: 9%; top: 1%; object-fit: contain; filter: drop-shadow(0 12px 10px rgba(17,32,57,.15)); transition: transform .45s cubic-bezier(.2,.75,.2,1), filter .45s ease; }
+      .favorite-card:hover .favorite-image img { transform: scale(1.1) translateY(-4px); filter: drop-shadow(0 18px 14px rgba(17,32,57,.2)); }
+      .favorite-arc { width: 64%; aspect-ratio: 1; position: absolute; left: 18%; bottom: 3%; z-index: 1; border: 10px solid white; border-bottom: 0; border-radius: 50% 50% 0 0; pointer-events: none; }
       .favorite-copy { padding: 19px 20px 20px; }
       .favorite-copy h3 { margin: 0; font: 900 1.2rem/1.12 var(--font-display); letter-spacing: -.035em; }
       .favorite-copy p { min-height: 58px; margin: 10px 0 16px; color: var(--muted); font-size: .82rem; line-height: 1.55; }
@@ -624,10 +625,6 @@ const tickerRounds = [0, 1];
       .visit-actions { margin-top: 38px; display: flex; flex-wrap: wrap; align-items: center; gap: 22px; }
       .button-cream { color: var(--ink); background: var(--cream); border-color: var(--cream); }
       .text-link { padding-bottom: 3px; border-bottom: 1px solid rgba(255,255,255,.5); font-size: .78rem; font-weight: 900; }
-      .favorite-card.card-1 .favorite-image img { object-position: center 38%; }
-      .favorite-card.card-2 .favorite-image img { object-position: center 34%; }
-      .favorite-card.card-3 .favorite-image img { object-position: center 47%; }
-      .favorite-card.card-4 .favorite-image img { object-position: center 42%; }
       .gallery-community img { object-position: center 32%; }
       .gallery-product img { object-position: center 34%; }
       .how-grid article:last-child .how-media img { object-position: center 34%; }
@@ -705,23 +702,23 @@ const tickerRounds = [0, 1];
         main { width: 100%; overflow: clip; }
         .site-header { width: calc(100% - 20px); height: 60px; margin-top: 8px; padding: 0 8px 0 10px; gap: 8px; border-radius: 16px; position: sticky; top: max(8px, env(safe-area-inset-top)); box-shadow: 0 8px 24px rgba(17,32,57,.08); }
         .brand { min-width: 0; gap: 7px; font-size: .78rem; letter-spacing: -.045em; }
+        .brand-wordmark { font-size: 35px; }
         .brand-mark { width: 32px; height: 32px; font-size: 1.05rem; }
         .header-cta { min-height: 42px; padding: 0 13px; font-size: .72rem; white-space: nowrap; }
         .header-cta svg { display: none; }
-        .hero { width: calc(100% - 24px); padding: 24px 10px 28px; display: flex; flex-direction: column; gap: 0; box-sizing: border-box; }
+        .hero { width: calc(100% - 24px); padding: 14px 6px 20px; display: flex; flex-direction: column; gap: 0; box-sizing: border-box; }
+        .hero-bg-wave { display: none; }
         .hero-copy { display: contents; }
-        .hero-copy .eyebrow { order: 1; margin-bottom: 12px; font-size: .67rem; letter-spacing: .1em; line-height: 1.35; }
-        .hero h1 { order: 2; font-size: clamp(2.35rem, 11vw, 3.1rem); line-height: .98; letter-spacing: -.04em; }
+        .hero-copy .eyebrow { order: 1; margin-bottom: 8px; font-size: .67rem; letter-spacing: .1em; line-height: 1.3; }
+        .hero h1 { order: 2; font-size: clamp(2.35rem, 11vw, 3.1rem); line-height: .96; letter-spacing: -.04em; }
         .hero h1 em::after { bottom: -4px; height: 8px; border-bottom-width: 3px; }
-        .hero-lead { order: 3; max-width: 100%; margin: 14px 0 16px; font-size: .92rem; line-height: 1.5; }
-        .hero-visual { order: 4; margin: 4px 0 20px; width: 100%; min-height: 0; aspect-ratio: 4 / 3.3; position: relative; }
-        .hero-photo { width: 100%; height: 100%; top: 0; left: 50%; border-width: 4px; border-radius: 20px; transform: translateX(-50%); }
+        .hero-lead { order: 3; max-width: 100%; margin: 10px 0 14px; font-size: .92rem; line-height: 1.5; color: var(--muted); }
+        .hero-visual { order: 4; margin: 4px 0 16px; width: 100%; aspect-ratio: 16 / 13; position: relative; }
+        .hero-photo { width: 100%; height: 100%; position: relative; top: 0; left: 0; transform: none; border-width: 5px; border-radius: 22px; box-shadow: 0 12px 30px rgba(18,104,213,.12); }
         .hero-photo img { object-position: center 58%; }
-        .hero-mascot-shot { width: 72px; height: 72px; left: 6px; top: -14px; border-width: 3px; }
-        .hero-actions { order: 5; flex-direction: column; width: 100%; gap: 10px; }
+        .hero-actions { order: 5; display: flex; flex-direction: column; width: 100%; gap: 10px; margin-bottom: 14px; }
         .button { width: 100%; min-height: 48px; padding-inline: 16px; font-size: .88rem; }
-        .hero-bottom-proof { order: 6; margin-top: 18px; padding-top: 14px; display: flex; flex-direction: column; align-items: center; gap: 10px; width: 100%; }
-        .trust-row { margin-top: 0; padding-top: 0; border-top: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 12px; font-size: .72rem; text-align: center; }
+        .hero-bottom-proof { order: 6; margin-top: 0; padding-top: 14px; border-top: 1px solid var(--line); display: flex; justify-content: center; width: 100%; }
         .rating-badge { width: fit-content; max-width: 100%; margin: 0 auto; justify-content: center; padding: 7px 14px; font-size: .76rem; box-sizing: border-box; }
         .section { width: calc(100% - 24px); padding: 48px 0; }
         .favorites.section { padding-top: 48px; padding-bottom: 46px; }
@@ -776,9 +773,9 @@ const tickerRounds = [0, 1];
         .visit-visual { min-height: 260px; }
         .visit-visual::before { width: 210px; height: 210px; }
         .visit-visual img { width: min(290px, 88%); }
-        .pin-label { min-width: 160px; left: 10px; bottom: 10px; padding: 10px 12px; }
-        .ticker-track { animation-duration: 24s; }
-        .ticker-group { width: max-content; min-width: 190vw; padding: 12px 18px; gap: 22px; font-size: .68rem; }
+        .ticker { height: 46px; }
+        .ticker-track { animation-duration: 24s; font-size: .74rem; }
+        .ticker-group { width: max-content; min-width: 190vw; padding: 0 16px; gap: 20px; }
         .social-section { width: calc(100% - 20px); margin: 14px auto 48px; padding: 24px 14px 18px; gap: 20px; border-radius: 22px; }
         .social-intro h2 { font-size: clamp(2.35rem, 11vw, 2.9rem); }
         .social-copy { margin: 16px 0 18px; font-size: .84rem; }

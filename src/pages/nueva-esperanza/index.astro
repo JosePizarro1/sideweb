@@ -1,0 +1,91 @@
+---
+import { ArrowUpRight, ArrowRight, ArrowLeft, MapPin, TreePine, Route, House, Phone, Menu, X, HeartHandshake, Ruler, CalendarDays, Mail } from 'lucide-astro';
+import { IconBrandWhatsapp } from '@tabler/icons-astro';
+import ContactForm from '../../components/nueva-esperanza/ContactForm.astro';
+import '../../styles/nueva-esperanza.css';
+const wa = 'https://wa.me/51938927163';
+const projects = [
+ { name:'Villa Florencia 2', image:'florencia', family:'florencia', tag:'Nueva etapa', location:'Zona urbana · Innova Schools', price:'30,000', copy:'Más espacio para imaginar la vida que quieres. Conoce la nueva etapa de Villa Florencia y encuentra tu lugar en Tacna.' },
+ { name:'Villa Florencia', image:'florencia', family:'florencia', tag:'Lotes residenciales', location:'Zona urbana · Innova Schools', price:'22,000', copy:'Un entorno residencial para comenzar tu hogar, cerca de lo que necesitas para el día a día.' },
+ { name:'Residencial Humboldt', image:'residencial-humboldt', family:'humboldt', tag:'Habilitación urbana completa', location:'Zona estratégica · Tacna', price:'43,000', copy:'Lotes con título de propiedad independiente y habilitación urbana completa para dar el siguiente paso.' },
+ { name:'Villa Humboldt', image:'villa-humboldt', family:'humboldt', tag:'Lotes residenciales', location:'Av. Manuel A. Odría y Av. Collpa', price:'29,000', copy:'Un proyecto conectado con importantes vías de Tacna, pensado para construir tu próximo hogar.' },
+];
+---
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width"/>
+  <title>Nueva Esperanza · Tu futuro empieza en un lugar propio</title>
+  <meta name="description" content="Encuentra tu lote en Tacna con Nueva Esperanza. Explora Villa Florencia y Humboldt, conoce nuestros proyectos y agenda una visita."/>
+  <link rel="icon" href="/nueva-esperanza/logo.png"/>
+  <link rel="preload" href="/fonts/manrope-800.ttf" as="font" type="font/ttf" crossorigin/>
+  <link rel="preload" href="/nueva-esperanza/figtree.woff2" as="font" type="font/woff2" crossorigin/>
+  <meta name="theme-color" content="#901b3c"/>
+</head>
+<body>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+<div class="topbar"><span><MapPin size={14}/> Un nuevo comienzo, aquí en Tacna.</span><a href="tel:+51938927163"><IconBrandWhatsapp size={17}/> Conversemos: <b>938 927 163</b></a></div>
+<header class="header">
+  <a class="header-brand" href="#inicio" aria-label="Nueva Esperanza, inicio"><span class="header-brand-icon" aria-hidden="true"><img src="/nueva-esperanza/logo.png" alt="" width="1600" height="900"/></span><span class="header-brand-name">NUEVA ESPERANZA<small>PROYECTOS INMOBILIARIOS</small></span></a>
+  <nav id="navigation" aria-label="Navegación principal"><a href="#inicio" class="active">Inicio</a><a href="#proyectos">Proyectos</a><a href="#nosotros">Nosotros</a><a href="#beneficios">Beneficios</a></nav>
+  <a class="button header-cta" href="#contacto">Conversemos <ArrowUpRight size={18}/></a>
+  <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="navigation"><Menu class="menu-icon"/><X class="close-icon"/></button>
+</header>
+<main id="contenido">
+  <section class="hero" id="inicio">
+    <img class="hero-image" src="/nueva-esperanza/florencia.webp" alt="Visualización del ingreso de Villa Florencia, Tacna" fetchpriority="high" width="1672" height="941"/>
+    <div class="hero-shade"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <p class="hero-location"><MapPin size={18}/> TACNA, PERÚ <span>Lotes residenciales</span></p>
+        <h1>Tu futuro empieza<br/>en un lugar<br/><em>propio.</em></h1>
+        <p class="hero-copy">Un espacio para tus planes. Un hogar para tu familia.<br class="desktop"/> Una nueva esperanza para lo que viene.</p>
+        <div class="hero-facts"><span><Ruler size={22}/> Lotes de <b>90 m²</b></span><span><House size={22}/> <b>4 proyectos</b> para elegir</span></div>
+        <a class="button gold hero-button" href="#proyectos">Descubre nuestros proyectos <ArrowRight size={21}/></a>
+        <div class="hero-caption"><span></span> VILLA FLORENCIA <small>Imagen referencial del proyecto</small></div>
+      </div>
+      <ContactForm id="hero-form" compact/>
+    </div>
+    <a class="scroll-cue" href="#proyectos" aria-label="Bajar a proyectos">↓</a>
+  </section>
+  <section class="projects section" id="proyectos" aria-labelledby="projects-heading">
+    <div class="projects-heading-row" data-reveal>
+      <div class="layer-heading"><span class="ghost-heading" aria-hidden="true">PROYECTOS</span><h2 id="projects-heading">¡Descubre <em>tu lugar ideal!</em></h2></div>
+      <div class="filters" role="group" aria-label="Filtrar proyectos"><button class="active" data-filter="all" aria-pressed="true">Todos</button><button data-filter="florencia" aria-pressed="false">Florencia</button><button data-filter="humboldt" aria-pressed="false">Humboldt</button></div>
+    </div>
+    <div class="project-carousel" data-reveal>
+      <div class="project-track" id="project-track" tabindex="0" role="region" aria-label="Carrusel de proyectos, usa las flechas para explorar">
+        {projects.map((p,i)=><article class="project-card" data-family={p.family}>
+          <button class="project-open" type="button" data-open={`project-${i}`} aria-label={`Explorar ${p.name}`}>
+            <div class="project-picture"><img src={`/nueva-esperanza/${p.image}.webp`} alt={`Visualización de ${p.name}`} loading="lazy" width="1672" height="941"/><span class="project-tag">{p.tag}</span><div class="project-info"><span class="project-overline">Proyecto</span><h3>{p.name}</h3><p><MapPin size={20}/> TACNA <span>· 90 m²</span></p></div><span class="image-caption">Imagen referencial</span></div>
+            <div class="project-bottom"><span class="project-price">Desde<strong>US$ {p.price}</strong></span><span class="project-link">Explorar proyecto <ArrowRight size={21}/></span></div>
+          </button>
+        </article>)}
+      </div>
+      <div class="carousel-footer"><p id="project-count" role="status">4 proyectos para comenzar tu nueva historia.</p><div class="carousel-controls"><button type="button" data-slide="prev" aria-label="Ver proyectos anteriores" aria-controls="project-track" disabled><ArrowLeft size={21}/></button><button type="button" data-slide="next" aria-label="Ver siguientes proyectos" aria-controls="project-track"><ArrowRight size={21}/></button></div></div>
+    </div>
+  </section>
+  <section class="about section" id="nosotros">
+    <img class="brand-watermark" src="/nueva-esperanza/logo.png" alt="" aria-hidden="true" loading="lazy"/>
+    <div class="about-photo" data-reveal><img src="/nueva-esperanza/asesoria.webp" alt="Imagen de presentación del equipo en la web de Nueva Esperanza" loading="lazy" width="800" height="800"/><div class="photo-note"><HeartHandshake size={26}/><span>Personas acompañando<br/><b>nuevos comienzos.</b></span></div></div>
+    <div class="about-copy" data-reveal><p class="eyebrow">BIENVENIDO A NUEVA ESPERANZA</p><h2><em>Tu sueño de un hogar,</em><br/>con alguien que te<br class="desktop"/> acompañe de verdad.</h2><p>Elegir un lote es imaginar todo lo que viene después. Por eso, te ayudamos a conocer tus opciones, visitar los proyectos y dar el siguiente paso con información clara.</p><div class="trust-points"><div><span class="trust-icon"><House size={27}/></span><p><strong>4 proyectos</strong>Lugares para tu futuro</p></div><div><span class="trust-icon"><MapPin size={27}/></span><p><strong>En Tacna</strong>Cerca de tu nueva vida</p></div><div><span class="trust-icon"><HeartHandshake size={27}/></span><p><strong>De persona a persona</strong>Atención cercana</p></div></div><a class="about-link" href="#contacto">Conoce nuestras opciones con un asesor <ArrowRight size={20}/></a></div>
+  </section>
+  <section class="benefits section" id="beneficios">
+    <div class="layer-heading centered" data-reveal><span class="ghost-heading" aria-hidden="true">TU NUEVA VIDA</span><h2>Un lote es el comienzo.<br/><em>Lo que viene, lo imaginas tú.</em></h2></div>
+    <div class="benefit-grid">{[{icon:TreePine,title:'Momentos al aire libre',text:'Conoce las áreas verdes de nuestros proyectos y los espacios para compartir en familia.'},{icon:Route,title:'Conectado con tu día a día',text:'Explora los accesos y las vías que conectan tu próximo hogar con la ciudad.'},{icon:House,title:'Tu casa, a tu manera',text:'Imagina los espacios que necesitas y empieza a darle forma a tu hogar en un lote propio.'}].map((b,i)=><article class="benefit" data-reveal style={`--reveal-delay:${i*80}ms`}><span class="benefit-icon"><b.icon size={33} strokeWidth={1.6}/></span><h3>{b.title}</h3><p>{b.text}</p></article>)}</div>
+  </section>
+  <section class="visit-banner" data-reveal><div><span class="banner-icon"><CalendarDays size={31}/></span><div><h2>¿Y si lo conoces en persona?</h2><p>Recorre el proyecto, imagina tu hogar y resuelve tus dudas.</p></div></div><a class="button" href="#contacto">Quiero agendar una visita <ArrowRight size={20}/></a></section>
+  <section class="contact section" id="contacto">
+    <div class="contact-copy" data-reveal><p class="eyebrow wine">HABLEMOS DE TU PRÓXIMO PASO</p><h2>Tu nueva historia<br/>merece <em>un buen<br/>comienzo.</em></h2><p>Cuéntanos qué estás buscando.<br/>Estamos aquí para ayudarte a encontrar tu lugar.</p><div class="contact-photo"><img src="/nueva-esperanza/comunidad.webp" alt="Encuentro de la comunidad en Residencial Humboldt, publicado por Nueva Esperanza" loading="lazy" width="1100" height="761"/><span>Construyendo comunidad en Tacna <HeartHandshake size={19}/></span></div></div>
+    <div data-reveal><ContactForm id="contact-form"/></div>
+  </section>
+  <section class="location section"><div><span class="location-icon"><MapPin size={28}/></span><div><h3>Nos vemos en Tacna</h3><p>Centro poblado Leguía, Pueblo Libre<br/>Mz. 09, Lt. 04 · Tacna, Perú</p><a href="https://www.google.com/maps/search/?api=1&query=Centro+poblado+Leguia+Pueblo+Libre+Mz+09+Lt+04+Tacna" target="_blank" rel="noopener noreferrer">Cómo llegar <ArrowUpRight size={16}/></a></div></div><div><span class="location-icon"><CalendarDays size={28}/></span><div><h3>Te esperamos</h3><p>Lunes a viernes · 9:00 a. m. – 6:00 p. m.<br/>Sábados · 9:00 a. m. – 1:00 p. m.</p></div></div><a class="location-phone" href="tel:+51938927163"><Phone size={24}/><span>Conversemos<strong>938 927 163</strong></span></a></section>
+</main>
+<footer><div class="footer-main"><a class="brand" href="#inicio"><img src="/nueva-esperanza/logo.png" alt="Nueva Esperanza" loading="lazy" width="190" height="86"/></a><p>Un lugar propio.<br/><strong>Una nueva esperanza.</strong></p><div class="footer-contact"><a href="mailto:esperanzasacs@gmail.com"><Mail size={17}/> esperanzasacs@gmail.com</a><a href="tel:+51938927163"><Phone size={17}/> 938 927 163</a></div><a href="#inicio" class="back-top" aria-label="Volver al inicio">↑</a></div><div class="footer-links"><a href="#proyectos">Proyectos</a><a href="#nosotros">Nosotros</a><a href="#contacto">Contacto</a><button type="button" data-open="privacy-dialog">Privacidad de la consulta</button><button type="button" data-open="information-dialog">Información del sitio</button></div><p class="footer-disclaimer">Las imágenes de los proyectos son referenciales. Precios y áreas tomados de la web de Nueva Esperanza; confirma disponibilidad, características y condiciones vigentes con un asesor.</p><div class="footer-bottom"><span>© {new Date().getFullYear()} Nueva Esperanza · Proyectos Inmobiliarios</span><span>Hecho para un nuevo comienzo. · Tacna, Perú</span></div></footer>
+<a class="whatsapp" href={`${wa}?text=${encodeURIComponent('Hola, quisiera información sobre sus proyectos en Tacna.')}`} target="_blank" rel="noopener noreferrer" aria-label="Consultar por WhatsApp"><IconBrandWhatsapp size={29}/><span>¿Conversamos?</span></a>
+<dialog id="privacy-dialog" class="info-dialog" aria-labelledby="privacy-title"><button type="button" class="dialog-close" data-close aria-label="Cerrar información de privacidad"><X size={22}/></button><p class="eyebrow wine">TU CONSULTA, CON CLARIDAD</p><h2 id="privacy-title">Privacidad de<br/>esta consulta</h2><p>Este formulario prepara un mensaje con tu nombre, el proyecto elegido y los datos de contacto que decidas completar.</p><h3>¿Qué ocurre con tus datos?</h3><p>Esta maqueta no guarda el formulario en una base de datos ni lo envía automáticamente. Al pulsar «Hablar con un asesor», se abre WhatsApp con los datos incluidos en el mensaje. Tú decides si lo envías al número de Nueva Esperanza: <b>938 927 163</b>.</p><h3>¿Para qué se utilizaría la consulta?</h3><p>Para pedir información sobre un proyecto o coordinar una visita. No necesitas introducir información sensible. El uso de WhatsApp está sujeto a las condiciones y políticas de ese servicio.</p><h3>Contacto sobre tu consulta</h3><p>Puedes escribir a <a href="mailto:esperanzasacs@gmail.com">esperanzasacs@gmail.com</a>. Esta explicación describe el funcionamiento de la maqueta y no sustituye la política oficial de tratamiento de datos de la inmobiliaria.</p><button type="button" class="button" data-close>Volver al formulario <ArrowRight size={18}/></button></dialog>
+<dialog id="information-dialog" class="info-dialog" aria-labelledby="information-title"><button type="button" class="dialog-close" data-close aria-label="Cerrar información del sitio"><X size={22}/></button><p class="eyebrow wine">SOBRE ESTA PÁGINA</p><h2 id="information-title">Información del sitio</h2><p>Esta es una propuesta de diseño para Nueva Esperanza. El logo, los materiales y los datos de los proyectos se han tomado de su web.</p><p>Las imágenes son referenciales. Los precios, áreas, características y la disponibilidad deben confirmarse directamente con la inmobiliaria antes de tomar una decisión.</p><p>La consulta por WhatsApp no realiza una reserva, una compra ni un pago.</p><a href="https://inmobiliarianuevaesperanza.com/proyectos/" target="_blank" rel="noopener noreferrer" class="button">Consultar la web de origen <ArrowUpRight size={18}/></a></dialog>
+{projects.map((p,i)=><dialog class="project-dialog" id={`project-${i}`} aria-labelledby={`project-title-${i}`}><button type="button" class="dialog-close" data-close aria-label={`Cerrar ${p.name}`}><X size={22}/></button><div class="project-dialog-image"><img src={`/nueva-esperanza/${p.image}.webp`} alt={`Visualización de ${p.name}`} loading="lazy" width="1672" height="941"/><span>Imagen referencial</span></div><div class="project-dialog-copy"><p class="eyebrow wine">TU PRÓXIMO LUGAR EN TACNA</p><h2 id={`project-title-${i}`}>{p.name}</h2><p class="detail-location"><MapPin size={18}/>{p.location}</p><p>{p.copy}</p><div class="detail-facts"><span>Lotes de <strong>90 m²</strong></span><span>Desde <strong>US$ {p.price}</strong></span></div><a href="#contacto" class="button" data-project={p.name}>Quiero conocer este proyecto <ArrowRight size={19}/></a><p class="detail-note">Consulta disponibilidad y condiciones vigentes con un asesor.</p></div></dialog>)}
+<script src="../../scripts/nueva-esperanza.ts"></script>
+</body>
+</html>

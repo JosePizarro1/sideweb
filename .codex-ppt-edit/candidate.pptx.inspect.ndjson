@@ -1,0 +1,143 @@
+{"kind":"deck","id":"pr/79guo5","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"TLOC / PROPUESTA WEB","textShapes":6}
+{"kind":"textbox","id":"sh/fu94fe98","slide":1,"name":"Rectángulo 7","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/547294r6","slide":1,"name":"Rectángulo 1","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/7qp4be9c","slide":1,"name":"Rectángulo 3","text":"Tloc","textPreview":"Tloc","textChars":4,"textLines":1,"bbox":[64,128,630,96]}
+{"kind":"textbox","id":"sh/65g3298r","slide":1,"name":"Rectángulo 4","text":"Propuesta de landing page","textPreview":"Propuesta de landing page","textChars":25,"textLines":1,"bbox":[64,285,650,88]}
+{"kind":"textbox","id":"sh/ts7md4r2","slide":1,"name":"Rectángulo 5","text":"Una solución para ganar visibilidad,\nordenar la marca y facilitar el contacto.","textPreview":"Una solución para ganar visibilidad, | ordenar la marca y facilitar el contacto.","textChars":78,"textLines":2,"bbox":[69,466.5,620,82]}
+{"kind":"textbox","id":"sh/sryl4zqx","slide":1,"name":"Rectángulo 6","text":"Septiembre de 2026","textPreview":"Septiembre de 2026","textChars":18,"textLines":1,"bbox":[68,642,580,26]}
+{"kind":"shape","id":"sh/wn6dc7eh","slide":1,"name":"Decoración azul superior 1","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/hofulsf2","slide":1,"name":"Decoración azul inferior 1","bbox":[-150,620,260,260]}
+{"kind":"image","id":"im/7mp0jixo","slide":1,"name":"Imagen 9","bbox":[738,0,542,720]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"Portada de una propuesta de landing para TLOC. Imagen proveniente de los recursos de marca disponibles en public/tlock."}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"TLOC / PROPUESTA WEB","textShapes":8}
+{"kind":"textbox","id":"sh/ove9o7yd","slide":2,"name":"Rectángulo 9","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/9072xkry","slide":2,"name":"Rectángulo 1","text":"Una presencia que trabaje por TLOC","textPreview":"Una presencia que trabaje por TLOC","textChars":34,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/ozy1ofad","slide":2,"name":"Rectángulo 2","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/b29kza94","slide":2,"name":"Rectángulo 3","text":"LA OPORTUNIDAD","textPreview":"LA OPORTUNIDAD","textChars":14,"textLines":1,"bbox":[64,189,460,24]}
+{"kind":"textbox","id":"sh/a10jqpsj","slide":2,"name":"Rectángulo 4","text":"TLOC ya tiene un producto\nque merece verse mejor.","textPreview":"TLOC ya tiene un producto | que merece verse mejor.","textChars":49,"textLines":2,"bbox":[64,226,620,105]}
+{"kind":"textbox","id":"sh/x4r21kru","slide":2,"name":"Rectángulo 5","text":"Una landing clara convierte la atención de redes\nen una marca más visible, confiable y fácil de contactar.","textPreview":"Una landing clara convierte la atención de redes | en una marca más visible, confiable y fácil de contactar.","textChars":106,"textLines":2,"bbox":[64,382,650,88]}
+{"kind":"textbox","id":"sh/w3i1sfa9","slide":2,"name":"Rectángulo 6","text":"La competencia ya comunica en digital.\nTLOC puede dar el siguiente paso.","textPreview":"La competencia ya comunica en digital. | TLOC puede dar el siguiente paso.","textChars":72,"textLines":2,"bbox":[64,500,620,78]}
+{"kind":"textbox","id":"sh/q5wjelsz","slide":2,"name":"Rectángulo 8","text":"Producto + marca + contacto","textPreview":"Producto + marca + contacto","textChars":27,"textLines":1,"bbox":[830,616,370,25]}
+{"kind":"shape","id":"sh/r65knqtk","slide":2,"name":"Rectángulo 7","bbox":[76,147.17,47.55,4.8]}
+{"kind":"shape","id":"sh/9wnqhczy","slide":2,"name":"Decoración azul superior 2","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/mtwrmxg7","slide":2,"name":"Decoración azul inferior 2","bbox":[-150,620,260,260]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"TLOC / PROPUESTA WEB","textShapes":28}
+{"kind":"textbox","id":"sh/x8nml0ra","slide":3,"name":"Rectángulo 15","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/cza94vmx","slide":3,"name":"Rectángulo 1","text":"La propuesta se ve bien en cualquier pantalla","textPreview":"La propuesta se ve bien en cualquier pantalla","textChars":45,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/d0jax03i","slide":3,"name":"Rectángulo 2","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/298ryl4v","slide":3,"name":"Rectángulo 3","text":"EXPERIENCIA WEB Y MÓVIL","textPreview":"EXPERIENCIA WEB Y MÓVIL","textChars":23,"textLines":1,"bbox":[64,177,460,24]}
+{"kind":"textbox","id":"sh/3ah8rqlg","slide":3,"name":"Rectángulo 4","text":"Una misma marca.\nDos formas de verla.","textPreview":"Una misma marca. | Dos formas de verla.","textChars":37,"textLines":2,"bbox":[64,215,390,103]}
+{"kind":"textbox","id":"sh/obq90bml","slide":3,"name":"Rectángulo 5","text":"Presentamos la landing en escritorio y celular\npara que TLOC se vea profesional donde descubren la marca.","textPreview":"Presentamos la landing en escritorio y celular | para que TLOC se vea profesional donde descubren la marca.","textChars":105,"textLines":2,"bbox":[64,366,445,86]}
+{"kind":"shape","id":"sh/pcjqtg36","slide":3,"name":"Rectángulo redondeado 6","bbox":[552,190,500,297]}
+{"kind":"textbox","id":"sh/n6ls3alk","slide":3,"name":"Rectángulo 8","text":"VERSIÓN WEB","textPreview":"VERSIÓN WEB","textChars":11,"textLines":1,"bbox":[575,463,150,22]}
+{"kind":"textbox","id":"sh/943mhgre","slide":3,"name":"Rectángulo 11","text":"MÓVIL","textPreview":"MÓVIL","textChars":5,"textLines":1,"bbox":[1080,492,120,22]}
+{"kind":"shape","id":"sh/83ulovat","slide":3,"name":"Rectángulo redondeado 12","bbox":[64,574,1160,58]}
+{"kind":"textbox","id":"sh/v6l4jq94","slide":3,"name":"Rectángulo 13","text":"Aquí dejaré el enlace del prototipo para que lo revises con TLOC:","textPreview":"Aquí dejaré el enlace del prototipo para que lo revises con TLOC:","textChars":65,"textLines":1,"bbox":[88,591,620,24]}
+{"kind":"textbox","id":"sh/a5c3ql8z","slide":3,"name":"Rectángulo 14","text":"https://sideweb-mu.vercel.app/tloc","textPreview":"https://sideweb-mu.vercel.app/tloc","textChars":34,"textLines":1,"bbox":[842,590,342,26]}
+{"kind":"shape","id":"sh/i9w3u58v","slide":3,"name":"Decoración azul superior 3","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/e10f2twf","slide":3,"name":"Decoración azul inferior 3","bbox":[-150,620,260,260]}
+{"kind":"shape","id":"sh/f29gbyx0","slide":3,"name":"Fondo editable de reconstrucción","bbox":[0,0,1280,720]}
+{"kind":"textbox","id":"sh/03ix43e5","slide":3,"text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,310,26]}
+{"kind":"textbox","id":"sh/14ryd8fq","slide":3,"text":"Una presencia que trabaja por TLOC","textPreview":"Una presencia que trabaja por TLOC","textChars":34,"textLines":1,"bbox":[64,83,1080,70]}
+{"kind":"shape","id":"sh/6d0fytg3","slide":3,"name":"Acento azul","bbox":[64,170,42,0]}
+{"kind":"textbox","id":"sh/re9g7yxo","slide":3,"text":"LA EXPERIENCIA","textPreview":"LA EXPERIENCIA","textChars":14,"textLines":1,"bbox":[64,194,300,25]}
+{"kind":"textbox","id":"sh/sfix03y9","slide":3,"text":"Una landing clara, profesional y responsive para que TLOC se vea bien en cualquier pantalla.","textPreview":"Una landing clara, profesional y responsive para que TLOC se vea bien en cualquier pantalla.","textChars":92,"textLines":1,"bbox":[64,235,430,110]}
+{"kind":"shape","id":"sh/tgry9ofu","slide":3,"name":"Beneficio 01","bbox":[70,382,44,44]}
+{"kind":"textbox","id":"sh/a9kfadwn","slide":3,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[70,393,44,22]}
+{"kind":"textbox","id":"sh/batgjixs","slide":3,"text":"VISIBILIDAD","textPreview":"VISIBILIDAD","textChars":11,"textLines":1,"bbox":[136,384,270,24]}
+{"kind":"textbox","id":"sh/l4fi9cza","slide":3,"text":"TLOC presente 24/7","textPreview":"TLOC presente 24/7","textChars":18,"textLines":1,"bbox":[136,410,300,25]}
+{"kind":"shape","id":"sh/k3m1g7yp","slide":3,"name":"Beneficio 02","bbox":[70,458,44,44]}
+{"kind":"textbox","id":"sh/z2d07mh4","slide":3,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[70,469,44,22]}
+{"kind":"textbox","id":"sh/y14jehgj","slide":3,"text":"CONFIANZA","textPreview":"CONFIANZA","textChars":9,"textLines":1,"bbox":[136,460,270,24]}
+{"kind":"textbox","id":"sh/x0vi5czy","slide":3,"text":"Imagen profesional","textPreview":"Imagen profesional","textChars":18,"textLines":1,"bbox":[136,486,300,25]}
+{"kind":"shape","id":"sh/czmhc7id","slide":3,"name":"Beneficio 03","bbox":[70,534,44,44]}
+{"kind":"textbox","id":"sh/byd032h8","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[70,545,44,22]}
+{"kind":"textbox","id":"sh/ax4zax0n","slide":3,"text":"CONVERSIÓN","textPreview":"CONVERSIÓN","textChars":10,"textLines":1,"bbox":[136,536,270,24]}
+{"kind":"textbox","id":"sh/hwzihwzi","slide":3,"text":"Contacto directo con tus clientes","textPreview":"Contacto directo con tus clientes","textChars":33,"textLines":1,"bbox":[136,562,300,25]}
+{"kind":"shape","id":"sh/wv61obyx","slide":3,"name":"Marco editable versión web","bbox":[550,190,535,310]}
+{"kind":"textbox","id":"sh/po3ilcvm","slide":3,"text":"VERSIÓN WEB","textPreview":"VERSIÓN WEB","textChars":11,"textLines":1,"bbox":[575,475,180,22]}
+{"kind":"shape","id":"sh/21szqxcb","slide":3,"name":"Marco editable versión móvil","bbox":[1090,215,150,320]}
+{"kind":"textbox","id":"sh/cruhwrud","slide":3,"text":"MÓVIL","textPreview":"MÓVIL","textChars":5,"textLines":1,"bbox":[1110,540,100,22]}
+{"kind":"shape","id":"sh/ds3ipcvy","slide":3,"name":"Enlace editable del prototipo","bbox":[64,610,1080,54]}
+{"kind":"textbox","id":"sh/qpczuhc7","slide":3,"text":"Prototipo disponible para revisión","textPreview":"Prototipo disponible para revisión","textChars":34,"textLines":1,"bbox":[88,625,360,22]}
+{"kind":"textbox","id":"sh/rql0nmds","slide":3,"text":"https://sideweb-mu.vercel.app/tloc","textPreview":"https://sideweb-mu.vercel.app/tloc","textChars":34,"textLines":1,"bbox":[790,624,330,24]}
+{"kind":"textbox","id":"sh/0ve10ru9","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"image","id":"im/vmlojqd0","slide":3,"name":"Imagen 7","bbox":[565.9,201,475.81,251]}
+{"kind":"image","id":"im/8ju58bep","slide":3,"name":"Imagen 17","bbox":[1066.67,189,149.33,296]}
+{"kind":"image","id":"im/z2pov6l0","slide":3,"name":"","alt":"Captura real de la landing web de TLOC","bbox":[564,204,507,268]}
+{"kind":"image","id":"im/k3yp4bml","slide":3,"name":"","alt":"Captura real de la versión móvil de TLOC","bbox":[1098,222,134,302]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"TLOC / PROPUESTA WEB","textShapes":11}
+{"kind":"textbox","id":"sh/jadsz2xk","slide":4,"name":"Rectángulo 12","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/1cj2d8b6","slide":4,"name":"Rectángulo 1","text":"Qué recibe TLOC","textPreview":"Qué recibe TLOC","textChars":15,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/0ba143al","slide":4,"name":"Rectángulo 2","text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/rm1k7yt4","slide":4,"name":"Rectángulo 3","text":"UNA LANDING COMPLETA","textPreview":"UNA LANDING COMPLETA","textChars":20,"textLines":1,"bbox":[64,178,460,24]}
+{"kind":"textbox","id":"sh/doj29oba","slide":4,"name":"Rectángulo 5","text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[540,230,50,24]}
+{"kind":"textbox","id":"sh/sna103ap","slide":4,"name":"Rectángulo 6","text":"Portada que presenta la marca","textPreview":"Portada que presenta la marca","textChars":29,"textLines":1,"bbox":[594,228,560,34]}
+{"kind":"textbox","id":"sh/3ihk3et8","slide":4,"name":"Rectángulo 7","text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[540,329,50,24]}
+{"kind":"textbox","id":"sh/ih8ju9sn","slide":4,"name":"Rectángulo 8","text":"Sabores, boxes y promociones","textPreview":"Sabores, boxes y promociones","textChars":28,"textLines":1,"bbox":[594,327,560,34]}
+{"kind":"textbox","id":"sh/kbm987y5","slide":4,"name":"Rectángulo 9","text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[540,428,50,24]}
+{"kind":"textbox","id":"sh/5cva1cfq","slide":4,"name":"Rectángulo 10","text":"WhatsApp, redes, ubicación y horarios","textPreview":"WhatsApp, redes, ubicación y horarios","textChars":37,"textLines":1,"bbox":[594,426,600,34]}
+{"kind":"textbox","id":"sh/i94r6xgz","slide":4,"name":"Rectángulo 11","text":"Diseño adaptable a laptop y celular, con contenido que TLOC podrá actualizar mediante soporte.","textPreview":"Diseño adaptable a laptop y celular, con contenido que TLOC podrá actualizar mediante soporte.","textChars":94,"textLines":1,"bbox":[540,529,625,67]}
+{"kind":"shape","id":"sh/x8vaxsfe","slide":4,"name":"Decoración azul superior 4","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/a5kr2xg3","slide":4,"name":"Decoración azul inferior 4","bbox":[-150,620,260,260]}
+{"kind":"image","id":"im/7ad43q1c","slide":4,"name":"Imagen 16","bbox":[64,224,415,375]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"TLOC / PROPUESTA WEB","textShapes":14}
+{"kind":"textbox","id":"sh/sb6xsvu9","slide":5,"name":"Rectángulo 17","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/dgbulwnm","slide":5,"name":"Rectángulo 1","text":"Tiempo e inversión","textPreview":"Tiempo e inversión","textChars":18,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/cf2tcr61","slide":5,"name":"Rectángulo 2","text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/z2tcnm5s","slide":5,"name":"Rectángulo 3","text":"MÁXIMO 2 SEMANAS","textPreview":"MÁXIMO 2 SEMANAS","textChars":16,"textLines":1,"bbox":[64,180,460,24]}
+{"kind":"shape","id":"sh/yhkbe1o7","slide":5,"name":"Rectángulo redondeado 4","bbox":[64,221,550,302]}
+{"kind":"textbox","id":"sh/l4bupwny","slide":5,"name":"Rectángulo 5","text":"SEMANA 1","textPreview":"SEMANA 1","textChars":8,"textLines":1,"bbox":[94,250,220,28]}
+{"kind":"textbox","id":"sh/032tgr6d","slide":5,"name":"Rectángulo 6","text":"Contenido y diseño","textPreview":"Contenido y diseño","textChars":18,"textLines":1,"bbox":[94,291,470,48]}
+{"kind":"textbox","id":"sh/n6dcr65o","slide":5,"name":"Rectángulo 7","text":"SEMANA 2","textPreview":"SEMANA 2","textChars":8,"textLines":1,"bbox":[94,407,220,28]}
+{"kind":"textbox","id":"sh/m5kbi1oj","slide":5,"name":"Rectángulo 8","text":"Desarrollo y entrega","textPreview":"Desarrollo y entrega","textChars":20,"textLines":1,"bbox":[94,448,470,48]}
+{"kind":"shape","id":"sh/x4vedgvm","slide":5,"name":"Rectángulo redondeado 10","bbox":[916,221,300,302]}
+{"kind":"textbox","id":"sh/ahkvi1cb","slide":5,"name":"Rectángulo 11","text":"S/ 499","textPreview":"S/ 499","textChars":6,"textLines":1,"bbox":[944,258,255,94]}
+{"kind":"textbox","id":"sh/v2twb6dw","slide":5,"name":"Rectángulo 12","text":"Landing page","textPreview":"Landing page","textChars":12,"textLines":1,"bbox":[946,360,220,27]}
+{"kind":"textbox","id":"sh/k7mxovud","slide":5,"name":"Rectángulo 13","text":"★★★★★★","textPreview":"★★★★★★","textChars":6,"textLines":1,"bbox":[946,414,230,28]}
+{"kind":"textbox","id":"sh/58vehgvy","slide":5,"name":"Rectángulo 14","text":"60 % de descuento","textPreview":"60 % de descuento","textChars":17,"textLines":1,"bbox":[946,456,240,27]}
+{"kind":"textbox","id":"sh/i54fmlc7","slide":5,"name":"Rectángulo 15","text":"Más visibilidad.\nMás confianza para la marca.","textPreview":"Más visibilidad. | Más confianza para la marca.","textChars":45,"textLines":2,"bbox":[64,584,800,56]}
+{"kind":"textbox","id":"sh/j6dwfqds","slide":5,"name":"Rectángulo 16","text":"Precio final de la landing. El dominio y el soporte mensual se detallan en la siguiente propuesta.","textPreview":"Precio final de la landing. El dominio y el soporte mensual se detallan en la siguiente propuesta.","textChars":98,"textLines":1,"bbox":[64,645,1000,24]}
+{"kind":"shape","id":"sh/hgrmpwj2","slide":5,"name":"Decoración azul superior 5","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/gfi5grih","slide":5,"name":"Decoración azul inferior 5","bbox":[-150,620,260,260]}
+{"kind":"image","id":"im/uhkvq14z","slide":5,"name":"Imagen 26","bbox":[640,221,248,302]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"TLOC / PROPUESTA WEB","textShapes":12}
+{"kind":"textbox","id":"sh/47mt0b6x","slide":6,"name":"Rectángulo 14","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/yhg7epsj","slide":6,"name":"Rectángulo 1","text":"Dominio y soporte","textPreview":"Dominio y soporte","textChars":17,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/zi98nu94","slide":6,"name":"Rectángulo 2","text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/87ipkzal","slide":6,"name":"Rectángulo 3","text":"COSTOS CLAROS","textPreview":"COSTOS CLAROS","textChars":13,"textLines":1,"bbox":[64,180,460,24]}
+{"kind":"textbox","id":"sh/ml07i9sv","slide":6,"name":"Rectángulo 5","text":"USD 15 a 20","textPreview":"USD 15 a 20","textChars":11,"textLines":1,"bbox":[435,235,440,68]}
+{"kind":"textbox","id":"sh/7m98ru9g","slide":6,"name":"Rectángulo 6","text":"Dominio anual estimado","textPreview":"Dominio anual estimado","textChars":22,"textLines":1,"bbox":[438,311,390,30]}
+{"kind":"textbox","id":"sh/oryp8fah","slide":6,"name":"Rectángulo 7","text":"Nombre a conversar\nsegún disponibilidad.","textPreview":"Nombre a conversar | según disponibilidad.","textChars":40,"textLines":2,"bbox":[438,355,390,65]}
+{"kind":"shape","id":"sh/pc76hkr2","slide":6,"name":"Rectángulo redondeado 8","bbox":[850,226,366,342]}
+{"kind":"textbox","id":"sh/h4bupgn6","slide":6,"name":"Rectángulo 9","text":"S/ 19","textPreview":"S/ 19","textChars":5,"textLines":1,"bbox":[885,262,285,74]}
+{"kind":"textbox","id":"sh/w32twb6l","slide":6,"name":"Rectángulo 10","text":"al mes","textPreview":"al mes","textChars":6,"textLines":1,"bbox":[888,339,220,32]}
+{"kind":"textbox","id":"sh/v2tcn650","slide":6,"name":"Rectángulo 11","text":"Soporte para cambios pequeños","textPreview":"Soporte para cambios pequeños","textChars":29,"textLines":1,"bbox":[888,398,285,54]}
+{"kind":"textbox","id":"sh/u1kbu1ov","slide":6,"name":"Rectángulo 12","text":"Horarios, textos, precios, fotos y promociones.\nCon material de TLOC.\nCada cambio se coordina con su plazo.","textPreview":"Horarios, textos, precios, fotos y promociones. | Con material de TLOC. | Cada cambio se coordina con su plazo.","textChars":107,"textLines":3,"bbox":[888,472,285,82]}
+{"kind":"textbox","id":"sh/5svutgni","slide":6,"name":"Rectángulo 13","text":"El dominio se paga aparte. El soporte comienza cuando se publique la landing.","textPreview":"El dominio se paga aparte. El soporte comienza cuando se publique la landing.","textChars":77,"textLines":1,"bbox":[64,620,1080,29]}
+{"kind":"shape","id":"sh/i54bylor","slide":6,"name":"Decoración azul superior 6","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/twfux0ne","slide":6,"name":"Decoración azul inferior 6","bbox":[-150,620,260,260]}
+{"kind":"image","id":"im/kvatojut","slide":6,"name":"Imagen 18","bbox":[64,226,314,342]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"TLOC / PROPUESTA WEB","textShapes":9}
+{"kind":"textbox","id":"sh/xcz2l03q","slide":7,"name":"Rectángulo 11","text":"TLOC / PROPUESTA WEB","textPreview":"TLOC / PROPUESTA WEB","textChars":20,"textLines":1,"bbox":[64,31,640,26]}
+{"kind":"textbox","id":"sh/cb2tkvap","slide":7,"name":"Rectángulo 1","text":"El siguiente paso","textPreview":"El siguiente paso","textChars":17,"textLines":1,"bbox":[64,86,1140,70]}
+{"kind":"textbox","id":"sh/dcbud0ra","slide":7,"name":"Rectángulo 2","text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1170,666,45,22]}
+{"kind":"textbox","id":"sh/ydkbm5sv","slide":7,"name":"Rectángulo 3","text":"UNA BASE PARA CRECER","textPreview":"UNA BASE PARA CRECER","textChars":20,"textLines":1,"bbox":[64,180,460,24]}
+{"kind":"textbox","id":"sh/zedcfa9g","slide":7,"name":"Rectángulo 4","text":"Primero hacemos visible la marca.\nDespués ampliamos la operación.","textPreview":"Primero hacemos visible la marca. | Después ampliamos la operación.","textChars":65,"textLines":2,"bbox":[64,220,660,96]}
+{"kind":"textbox","id":"sh/kzmdova1","slide":7,"name":"Rectángulo 5","text":"La landing puede evolucionar a un sistema de pedidos,\nfacturación, boletas e impresión según la necesidad de TLOC.","textPreview":"La landing puede evolucionar a un sistema de pedidos, | facturación, boletas e impresión según la necesidad de TLOC.","textChars":114,"textLines":2,"bbox":[64,353,700,74]}
+{"kind":"shape","id":"sh/eh0ba1sr","slide":7,"name":"Rectángulo redondeado 7","bbox":[64,506,1142,84]}
+{"kind":"textbox","id":"sh/fi9c369c","slide":7,"name":"Rectángulo 8","text":"Link del prototipo","textPreview":"Link del prototipo","textChars":18,"textLines":1,"bbox":[93,528,260,28]}
+{"kind":"textbox","id":"sh/baxkjqlk","slide":7,"name":"Rectángulo 9","text":"[ PEGAR LINK AQUÍ ]","textPreview":"[ PEGAR LINK AQUÍ ]","textChars":19,"textLines":1,"bbox":[620,527,530,30]}
+{"kind":"textbox","id":"sh/a9ojq5kz","slide":7,"name":"Rectángulo 10","text":"Propuesta inicial: S/ 499 · Plazo: 2 semanas · Soporte: S/ 19 al mes","textPreview":"Propuesta inicial: S/ 499 · Plazo: 2 semanas · Soporte: S/ 19 al mes","textChars":68,"textLines":1,"bbox":[64,641,1120,26]}
+{"kind":"shape","id":"sh/n6x0fqlo","slide":7,"name":"Decoración azul superior 7","bbox":[1120,-175,360,360]}
+{"kind":"shape","id":"sh/25ojml43","slide":7,"name":"Decoración azul inferior 7","bbox":[-150,620,260,260]}
+{"kind":"image","id":"im/byxwryh8","slide":7,"name":"Imagen 17","bbox":[855,191,350,274]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"Propuesta comercial de TLOC. Septiembre de 2026. Confirmar contenidos, disponibilidad y condiciones antes de publicar."}
