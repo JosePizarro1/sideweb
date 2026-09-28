@@ -1,0 +1,1258 @@
+---
+import '../../styles/inmobiliarias.css';
+import {
+  Building2,
+  Compass,
+  Eye,
+  Layers,
+  ShieldCheck,
+  TrendingUp,
+  Users,
+  CheckCircle2,
+  ArrowRight,
+  Sparkles,
+  Maximize2,
+  ChevronDown,
+  Phone,
+  Calculator,
+  Zap,
+  Check,
+  ExternalLink,
+  FileSpreadsheet,
+  Play,
+  RotateCcw,
+  Building,
+  Search,
+  Plus,
+  Minus,
+  ChevronLeft,
+  ChevronRight,
+  MousePointerClick,
+  Workflow,
+  BarChart3,
+  MonitorSmartphone
+} from 'lucide-astro';
+import { IconBrandWhatsapp } from '@tabler/icons-astro';
+
+const waNumber = '51945770325';
+const waLink = `https://wa.me/${waNumber}`;
+
+const webProjects = [
+  {
+    name: 'Shebrad',
+    type: 'Portal inmobiliario & captación',
+    description: 'Una experiencia orientada a presentar proyectos, generar confianza y convertir visitas en oportunidades comerciales.',
+    image: '/inmobiliarias/showcase/shebrad-home.png',
+    accent: '#f7bd00'
+  },
+  {
+    name: 'Beca Inmobiliaria',
+    type: 'Marca & proyectos residenciales',
+    description: 'Dirección visual premium para diferenciar cada proyecto y acompañar al comprador desde la inspiración hasta la cotización.',
+    image: '/inmobiliarias/showcase/beca-home.png',
+    accent: '#7fbd70'
+  },
+  {
+    name: 'Nueva Esperanza',
+    type: 'Web comercial & generación de leads',
+    description: 'Propuesta digital para presentar el valor del proyecto, ordenar la oferta y conectar cada consulta con el equipo comercial.',
+    image: '/inmobiliarias/showcase/nueva-esperanza.png',
+    accent: '#d5a52b'
+  }
+];
+
+const lotsData = [
+  { 
+    id: 'A-14', 
+    area: '140 m²', 
+    front: '8.0 m', 
+    depth: '17.5 m', 
+    price: 42000, 
+    pricePerM2: 300, 
+    status: 'disponible', 
+    category: 'vista', 
+    orientation: 'Norte (Sol de tarde)', 
+    zone: 'Sector Mirador', 
+    initial: 8400, 
+    quota: 933, 
+    desc: 'Ubicación privilegiada frente al parque central y cerca del ingreso principal.' 
+  },
+  { 
+    id: 'B-08', 
+    area: '160 m²', 
+    front: '10.0 m', 
+    depth: '16.0 m', 
+    price: 48000, 
+    pricePerM2: 300, 
+    status: 'reservado', 
+    category: 'esquina', 
+    orientation: 'Nor-Oriente', 
+    zone: 'Sector Club House', 
+    initial: 9600, 
+    quota: 1066, 
+    desc: 'Lote esquina con doble frente. Permite proyecto arquitectónico con doble acceso vehicular.' 
+  },
+  { 
+    id: 'C-21', 
+    area: '120 m²', 
+    front: '7.5 m', 
+    depth: '16.0 m', 
+    price: 36000, 
+    pricePerM2: 300, 
+    status: 'vendido', 
+    category: 'regular', 
+    orientation: 'Sur', 
+    zone: 'Avenida Los Pinos', 
+    initial: 7200, 
+    quota: 800, 
+    desc: 'Lote estándar residencial de topografía 100% plana. Vendido en etapa de preventa.' 
+  },
+  { 
+    id: 'D-05', 
+    area: '180 m²', 
+    front: '10.0 m', 
+    depth: '18.0 m', 
+    price: 54000, 
+    pricePerM2: 300, 
+    status: 'disponible', 
+    category: 'esquina', 
+    orientation: 'Nor-Poniente', 
+    zone: 'Paseo de los Ceibos', 
+    initial: 10800, 
+    quota: 1200, 
+    desc: 'Metraje amplio para vivienda de 2 niveles más rooftop con piscina privada.' 
+  },
+  { 
+    id: 'E-12', 
+    area: '200 m²', 
+    front: '10.0 m', 
+    depth: '20.0 m', 
+    price: 62000, 
+    pricePerM2: 310, 
+    status: 'disponible', 
+    category: 'vista', 
+    orientation: 'Frente al Lago', 
+    zone: 'Malecón Privado', 
+    initial: 12400, 
+    quota: 1377, 
+    desc: 'Lote insignia del proyecto frente al espejo de agua principal con retiro frontal ajardinado.' 
+  },
+  { 
+    id: 'F-03', 
+    area: '135 m²', 
+    front: '7.5 m', 
+    depth: '18.0 m', 
+    price: 40500, 
+    pricePerM2: 300, 
+    status: 'disponible', 
+    category: 'regular', 
+    orientation: 'Oriente', 
+    zone: 'Pórtico Principal', 
+    initial: 8100, 
+    quota: 900, 
+    desc: 'Excelente conectividad inmediata con el pórtico de seguridad y áreas comerciales.' 
+  }
+];
+
+const crmUnits = [
+  { num: 'L-101', status: 'disponible', area: '120m²', price: '$38,000' },
+  { num: 'L-102', status: 'reservado', area: '140m²', price: '$44,000', advisor: 'Carlos M.' },
+  { num: 'L-103', status: 'vendido', area: '120m²', price: '$38,000' },
+  { num: 'L-104', status: 'disponible', area: '160m²', price: '$51,000' },
+  { num: 'L-105', status: 'disponible', area: '135m²', price: '$42,500' },
+  { num: 'L-106', status: 'vendido', area: '150m²', price: '$48,000' },
+  { num: 'L-107', status: 'reservado', area: '180m²', price: '$58,000', advisor: 'Andrea S.' },
+  { num: 'L-108', status: 'disponible', area: '200m²', price: '$65,000' },
+  { num: 'L-109', status: 'disponible', area: '120m²', price: '$38,000' },
+  { num: 'L-110', status: 'vendido', area: '140m²', price: '$44,000' },
+  { num: 'L-111', status: 'disponible', area: '130m²', price: '$41,000' },
+  { num: 'L-112', status: 'disponible', area: '160m²', price: '$52,000' }
+];
+---
+
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Soluciones Digitales para Inmobiliarias · Web, Master Plan, 360° y CRM</title>
+    <meta name="description" content="Páginas web inmobiliarias, master plans interactivos, recorridos 360° y CRM de leads para diferenciar proyectos y fortalecer su proceso comercial." />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta property="og:title" content="Soluciones Digitales para Inmobiliarias · Jose Pizarro" />
+    <meta property="og:description" content="Web, Master Plan interactivo, experiencias 360° y CRM de leads conectados para vender mejor cada proyecto." />
+    <meta property="og:image" content="/inmobiliarias/hero/hero-residencial-v2.jpg" />
+  </head>
+  <body class="inmo-clean-theme arch-grid-bg">
+    <main>
+      <!-- Hero editorial con imagen propia -->
+      <section class="clean-hero" id="experiencias">
+        <img class="hero-visual" src="/inmobiliarias/hero/hero-residencial-v2.jpg" alt="Interior contemporáneo de un proyecto residencial frente a la ciudad" width="1792" height="1024" loading="eager" fetchpriority="high" />
+        <div class="hero-shade"></div>
+        <div class="hero-shell">
+          <div class="hero-brand"><strong>José Pizarro</strong><span>Asesor tecnológico</span></div>
+          <div class="hero-editorial-copy">
+            <h1 class="inmo-display">Tecnología que<br/><em>vende proyectos.</em></h1>
+            <p>Web inmobiliaria, master plans, experiencias 360° y CRM conectados.</p>
+            <div class="hero-editorial-actions">
+              <a href="#masterplan">Explorar soluciones <ArrowRight size={17} /></a>
+              <a href={`${waLink}?text=${encodeURIComponent('Hola Jose, vi tus soluciones digitales para inmobiliarias y quiero conversar sobre mi proyecto.')}`} target="_blank" rel="noopener noreferrer"><IconBrandWhatsapp size={18} /> Conversemos</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="portfolio-showcase" aria-labelledby="portfolio-showcase-title">
+        <div class="portfolio-showcase-head">
+          <span class="clean-kicker">EXPERIENCIA APLICADA</span>
+          <h2 class="inmo-display" id="portfolio-showcase-title">Proyectos web que ya están en línea.</h2>
+          <p>Diseño, presencia digital y captación pensados para presentar cada desarrollo con mayor claridad.</p>
+        </div>
+        <div class="showcase-carousel" aria-label="Proyectos web inmobiliarios realizados">
+          <div class="showcase-track" id="showcase-track">
+            {webProjects.map((project, index) => (
+              <article class:list={["showcase-slide", { active: index === 0 }]} data-showcase-slide aria-hidden={index === 0 ? 'false' : 'true'}>
+                <img src={project.image} alt={`Vista del proyecto web ${project.name}`} loading="lazy" width="1600" height="900" />
+                <div class="showcase-shade"></div>
+                <div class="showcase-project"><i style={`--project-accent:${project.accent}`}></i>{project.name} <span>{project.type}</span></div>
+              </article>
+            ))}
+          </div>
+          <div class="showcase-controls">
+            <div class="showcase-dots" role="tablist" aria-label="Seleccionar proyecto">
+              {webProjects.map((project, index) => (
+                <button class:list={["showcase-dot", { active: index === 0 }]} data-showcase-dot={index} type="button" aria-label={`Mostrar ${project.name}`}></button>
+              ))}
+            </div>
+            <div class="showcase-arrows">
+              <button type="button" id="showcase-prev" aria-label="Proyecto anterior"><ChevronLeft size={20} /></button>
+              <button type="button" id="showcase-next" aria-label="Proyecto siguiente"><ChevronRight size={20} /></button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VALOR ESTRATÉGICO & ACOMPAÑAMIENTO TECNOLÓGICO -->
+      <section class="value-section" aria-labelledby="value-title">
+        <div class="value-panel">
+          <div class="value-heading">
+            <div>
+              <span class="value-kicker-badge inmo-mono">
+                <ShieldCheck size={14} /> ECOSISTEMA INTEGRAL DE VENTAS
+              </span>
+              <h2 class="inmo-display" id="value-title">Una experiencia digital que trabaja con tu equipo comercial.</h2>
+              <p>Presentación visual, exploración interactiva y captura de prospectos en un solo flujo continuo.</p>
+            </div>
+
+            <div class="value-advisor-card">
+              <div class="value-advisor-avatar">
+                <Users size={18} />
+              </div>
+              <div class="value-advisor-text">
+                <strong>Partner tecnológico continuo</strong>
+                <p>Acompañamos a tu gerencia y equipo comercial de punta a punta.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="value-grid">
+            <article class="value-card-item">
+              <div>
+                <div class="value-card-top">
+                  <span class="value-icon is-green"><TrendingUp size={20} /></span>
+                  <span class="value-tag inmo-mono">CAPTACIÓN</span>
+                </div>
+                <h3>Más prospectos</h3>
+                <p>Convierte campañas de Meta, web y WhatsApp en oportunidades ordenadas al instante.</p>
+              </div>
+              <div class="value-card-feature">
+                <Check size={13} /> <span>Trazabilidad en tiempo real</span>
+              </div>
+            </article>
+
+            <article class="value-card-item">
+              <div>
+                <div class="value-card-top">
+                  <span class="value-icon is-amber"><Sparkles size={20} /></span>
+                  <span class="value-tag inmo-mono">PERCEPCIÓN</span>
+                </div>
+                <h3>Marca de alto valor</h3>
+                <p>Recorridos 360° y visuales de alta gama que transmiten solvencia y aceleran cierres.</p>
+              </div>
+              <div class="value-card-feature">
+                <Check size={13} /> <span>Mayor confianza de compra</span>
+              </div>
+            </article>
+
+            <article class="value-card-item">
+              <div>
+                <div class="value-card-top">
+                  <span class="value-icon is-blue"><Workflow size={20} /></span>
+                  <span class="value-tag inmo-mono">OPERACIÓN</span>
+                </div>
+                <h3>Control total</h3>
+                <p>Inventario de lotes, asesores y CRM sincronizados sin demoras ni ventas cruzadas.</p>
+              </div>
+              <div class="value-card-feature">
+                <Check size={13} /> <span>Cero oportunidades frías</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- BARRA DE TRANSICIÓN & NAVEGACIÓN DEL ECOSISTEMA -->
+      <div class="ecosystem-divider-bar">
+        <div class="ecosystem-divider-inner">
+          <div class="divider-kicker-wrap">
+            <span class="divider-pulse"></span>
+            <span class="divider-kicker inmo-mono">HERRAMIENTAS OPERATIVAS DEL DESARROLLO</span>
+          </div>
+          <div class="divider-nav-pills inmo-mono">
+            <a href="#masterplan" class="divider-pill">
+              <span class="pill-num">01</span>
+              <div class="pill-text">
+                <strong>Master Plan Activo</strong>
+                <small>Disponibilidad y lotificación</small>
+              </div>
+              <ArrowRight size={14} />
+            </a>
+            <a href="#visor360" class="divider-pill">
+              <span class="pill-num">02</span>
+              <div class="pill-text">
+                <strong>Recorridos 360°</strong>
+                <small>Visor espacial inmersivo</small>
+              </div>
+              <ArrowRight size={14} />
+            </a>
+            <a href="#crm" class="divider-pill">
+              <span class="pill-num">03</span>
+              <div class="pill-text">
+                <strong>CRM Inmobiliario</strong>
+                <small>Consola de oportunidades</small>
+              </div>
+              <ArrowRight size={14} />
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECCIÓN 01: MASTER PLAN INTERACTIVO -->
+      <section class="clean-section" id="masterplan">
+        <div class="clean-section-head">
+          <span class="clean-kicker">DEL PLANO A LA DECISIÓN DE COMPRA</span>
+          <h2 class="clean-section-title inmo-display">Convierte un plano estático en una herramienta activa de ventas.</h2>
+          <p class="clean-section-sub">
+            Tus compradores pueden explorar la lotificación, comparar ubicaciones y consultar disponibilidad. Tu equipo obtiene una forma más clara de presentar el proyecto y conducir cada consulta hacia una oportunidad real.
+          </p>
+        </div>
+
+        <div class="mp-console">
+          <div class="mp-col-main">
+            <!-- Visor del Plano -->
+            <div class="mp-stage">
+              <div class="mp-hud-top">
+                <div class="mp-status-pills inmo-mono">
+                  <div class="mp-pill"><span class="pill-dot green"></span> Disponibles (48)</div>
+                  <div class="mp-pill"><span class="pill-dot amber"></span> Reservados (12)</div>
+                  <div class="mp-pill"><span class="pill-dot gray"></span> Vendidos (24)</div>
+                </div>
+
+                <div class="mp-tools">
+                  <button class="mp-tool-btn" id="btn-zoom-in" title="Acercar plano"><Plus size={16} /></button>
+                  <button class="mp-tool-btn" id="btn-zoom-out" title="Alejar plano"><Minus size={16} /></button>
+                  <button class="mp-tool-btn" id="btn-zoom-reset" title="Restablecer"><RotateCcw size={14} /></button>
+                </div>
+              </div>
+
+              <div class="mp-viewport" id="mp-viewport">
+                <img src="/inmobiliarias/masterplan-realista-v2.jpg" alt="Master plan de una urbanización residencial de lotes" class="mp-image" id="mp-image" />
+
+                <svg class="mp-svg" viewBox="0 0 1000 562" preserveAspectRatio="none">
+                  <polygon points="257,105 289,108 286,187 254,184" class="mp-lot-poly is-selected" data-lot-id="A-14" />
+                  <text x="272" y="149" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">A14</text>
+
+                  <polygon points="435,128 471,132 467,218 431,214" class="mp-lot-poly is-reserved" data-lot-id="B-08" />
+                  <text x="451" y="176" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">B08</text>
+
+                  <polygon points="618,152 653,156 649,239 614,235" class="mp-lot-poly is-sold" data-lot-id="C-21" />
+                  <text x="634" y="198" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">C21</text>
+
+                  <polygon points="187,240 222,244 218,323 183,319" class="mp-lot-poly" data-lot-id="D-05" />
+                  <text x="202" y="284" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">D05</text>
+
+                  <polygon points="560,284 600,289 596,371 556,366" class="mp-lot-poly" data-lot-id="E-12" />
+                  <text x="578" y="331" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">E12</text>
+
+                  <polygon points="774,188 811,192 807,281 770,277" class="mp-lot-poly" data-lot-id="F-03" />
+                  <text x="790" y="237" font-size="10" font-family="'JetBrains Mono', monospace" font-weight="700" fill="#fff" text-anchor="middle" pointer-events="none">F03</text>
+                </svg>
+              </div>
+
+              <!-- Filtros Inferiores -->
+              <div class="mp-bottom-bar inmo-mono">
+                <button class="mp-filter-btn active" data-filter="all">Todos los lotes</button>
+                <button class="mp-filter-btn" data-filter="disponible">Solo Disponibles</button>
+                <button class="mp-filter-btn" data-filter="vista">Frente al Parque</button>
+                <button class="mp-filter-btn" data-filter="esquina">Lotes Esquina</button>
+              </div>
+            </div>
+
+            <!-- Infraestructura & Servicios del Proyecto (Amenities) -->
+            <div class="mp-amenities-bar" aria-label="Infraestructura y equipamiento del desarrollo">
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-water" title="Agua potable y red de desagüe">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="5" x2="3" y2="9" />
+                    <path d="M3 7h5a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h5" />
+                    <line x1="8" y1="5" x2="8" y2="9" />
+                    <line x1="14" y1="13" x2="14" y2="17" />
+                    <line x1="19" y1="13" x2="19" y2="17" />
+                  </svg>
+                </div>
+                <span>Agua y desagüe</span>
+              </div>
+
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-drainage" title="Drenaje pluvial">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="3" width="18" height="18" rx="3" />
+                    <circle cx="12" cy="12" r="5" />
+                    <line x1="12" y1="3" x2="12" y2="7" />
+                    <line x1="12" y1="17" x2="12" y2="21" />
+                    <line x1="3" y1="12" x2="7" y2="12" />
+                    <line x1="17" y1="12" x2="21" y2="12" />
+                  </svg>
+                </div>
+                <span>Calle con drenajes</span>
+              </div>
+
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-play" title="Áreas recreativas y juegos infantiles">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M5 9l5-5 5 5" />
+                    <path d="M6 9v11" />
+                    <path d="M14 9v11" />
+                    <line x1="6" y1="13" x2="14" y2="13" />
+                    <line x1="6" y1="17" x2="14" y2="17" />
+                    <path d="M14 11c3 0 4 3 4 5s1 4 3 4" />
+                  </svg>
+                </div>
+                <span>Juegos infantiles</span>
+              </div>
+
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-gate" title="Pórtico de acceso y seguridad">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 20V5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v15" />
+                    <path d="M17 20V5a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v15" />
+                    <line x1="7" y1="9" x2="17" y2="9" />
+                    <line x1="7" y1="16" x2="17" y2="16" />
+                    <line x1="10" y1="6" x2="10" y2="18" />
+                    <line x1="12" y1="4" x2="12" y2="18" />
+                    <line x1="14" y1="6" x2="14" y2="18" />
+                  </svg>
+                </div>
+                <span>Pórtico de Ingreso</span>
+              </div>
+
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-roads" title="Vías asfaltadas y veredas">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="6" width="18" height="12" rx="2" />
+                    <line x1="3" y1="9" x2="21" y2="9" stroke-dasharray="1 1" />
+                    <line x1="3" y1="15" x2="21" y2="15" stroke-dasharray="1 1" />
+                    <line x1="6" y1="12" x2="9" y2="12" />
+                    <line x1="11" y1="12" x2="14" y2="12" />
+                    <line x1="16" y1="12" x2="19" y2="12" />
+                  </svg>
+                </div>
+                <span>Vías y veredas</span>
+              </div>
+
+              <div class="mp-amenities-item">
+                <div class="mp-amenity-icon is-nature" title="Áreas verdes y paisajismo">
+                  <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M12 3a6 6 0 0 0-5.5 3.6A5 5 0 0 0 7 16h10a5 5 0 0 0 .5-9.4A6 6 0 0 0 12 3z" />
+                    <line x1="12" y1="16" x2="12" y2="21" />
+                    <line x1="5" y1="21" x2="19" y2="21" />
+                  </svg>
+                </div>
+                <span>Áreas verdes</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Ficha Técnica Lateral Limpia -->
+          <div class="mp-inspector">
+            <div style="display:flex; justify-content:space-between; align-items:baseline;">
+              <div>
+                <span class="clean-kicker" style="margin-bottom:2px; font-size:10px;">LOTE SELECCIONADO</span>
+                <h3 class="inmo-display" id="lot-title" style="font-size:22px; margin:0; color:var(--inmo-ink);">Lote A-14</h3>
+              </div>
+              <span class="badge-clean-status disponible" id="lot-status">Disponible</span>
+            </div>
+
+            <p style="font-size:13px; color:var(--inmo-ink-secondary); margin:0;" id="lot-desc">
+              Ubicación privilegiada frente al parque central y cerca del ingreso principal.
+            </p>
+
+            <div class="spec-grid-clean">
+              <div class="spec-box-clean">
+                <div class="spec-box-clean-label">Área de Terreno</div>
+                <div class="spec-box-clean-val" id="lot-area">140 m²</div>
+              </div>
+              <div class="spec-box-clean-label-wrap spec-box-clean">
+                <div class="spec-box-clean-label">Precio Lista</div>
+                <div class="spec-box-clean-val" style="color:var(--inmo-blue);" id="lot-price">US$ 42,000</div>
+              </div>
+              <div class="spec-box-clean">
+                <div class="spec-box-clean-label">Linderos</div>
+                <div class="spec-box-clean-val" id="lot-dims">8.0m x 17.5m</div>
+              </div>
+              <div class="spec-box-clean">
+                <div class="spec-box-clean-label">Precio por m²</div>
+                <div class="spec-box-clean-val" id="lot-m2">US$ 300 /m²</div>
+              </div>
+              <div class="spec-box-clean">
+                <div class="spec-box-clean-label">Inicial (20%)</div>
+                <div class="spec-box-clean-val" id="lot-initial">US$ 8,400</div>
+              </div>
+              <div class="spec-box-clean">
+                <div class="spec-box-clean-label">Cuota 36 meses</div>
+                <div class="spec-box-clean-val" id="lot-quota">US$ 933 /mes</div>
+              </div>
+            </div>
+
+            <div style="background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:8px; padding:12px; font-size:12px; display:flex; flex-direction:column; gap:4px;">
+              <div style="display:flex; justify-content:space-between; color:var(--inmo-ink-secondary);">
+                <span>Sector:</span> <strong style="color:var(--inmo-ink);" id="lot-zone">Sector Mirador</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; color:var(--inmo-ink-secondary);">
+                <span>Orientación solar:</span> <strong style="color:var(--inmo-ink);" id="lot-orientation">Norte (Sol de tarde)</strong>
+              </div>
+              <div style="display:flex; justify-content:space-between; color:var(--inmo-ink-secondary);">
+                <span>Estado legal:</span> <strong style="color:var(--inmo-emerald);">Título Independiente</strong>
+              </div>
+            </div>
+
+            <a href="#" id="lot-cta-wa" target="_blank" rel="noopener noreferrer" class="btn-solid-ink" style="justify-content:center; padding:12px; font-size:13px;">
+              <IconBrandWhatsapp size={17} /> Separar este Lote por WhatsApp
+            </a>
+          </div>
+        </div>
+
+        <div class="live-demo-block">
+          <div class="live-demo-intro">
+            <span class="clean-kicker">EXPERIENCIA INTEGRADA</span>
+            <h3 class="inmo-display">Explora un visor de terrenos 2D en vivo.</h3>
+            <p>Una experiencia de referencia para mostrar etapas, manzanas, lotes y disponibilidad directamente desde la web del proyecto.</p>
+            <ul>
+              <li><CheckCircle2 size={17} /> Selección visual de lotes</li>
+              <li><CheckCircle2 size={17} /> Consulta de características y disponibilidad</li>
+              <li><CheckCircle2 size={17} /> Compatible con escritorio y pantallas de venta</li>
+            </ul>
+          </div>
+          <a class="solution-link-card masterplan-live" href="https://stmktvisorterrenowebprod.z20.web.core.windows.net/#/villa-real" target="_blank" rel="noopener noreferrer" aria-label="Abrir visor interactivo de terrenos 2D">
+            <div class="solution-card-grid" aria-hidden="true"></div>
+            <div class="solution-card-content">
+              <span class="live-demo-icon"><MousePointerClick size={30} /></span>
+              <strong>Explora el plano y elige una ubicación</strong>
+              <span class="btn-live-demo">Abrir visor 2D <ExternalLink size={17} /></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 02: VISOR 360° INTEGRADO -->
+      <section class="clean-section" id="visor360">
+        <div class="immersive-layout">
+          <div class="immersive-copy">
+            <span class="clean-kicker">RECORRIDO INMERSIVO</span>
+            <h2 class="clean-section-title inmo-display">Haz que el cliente conozca el proyecto antes de visitarlo.</h2>
+            <p class="clean-section-sub">Integramos fotografía aérea, tomas con dron y recorridos 360° para que compradores de cualquier ciudad puedan explorar el entorno, las áreas comunes y el avance del proyecto.</p>
+            <div class="immersive-points">
+              <div><span>01</span><p><strong>Vista aérea con dron</strong>Explica ubicación, accesos y escala del desarrollo.</p></div>
+              <div><span>02</span><p><strong>Recorrido 360°</strong>Permite explorar el proyecto desde cualquier dispositivo.</p></div>
+              <div><span>03</span><p><strong>Puntos interactivos</strong>Destaca áreas, avances y atributos comerciales.</p></div>
+            </div>
+          </div>
+          <a class="solution-link-card tour-live" href="https://stmktvisor360webprod.z20.web.core.windows.net/villa-real/index.html" target="_blank" rel="noopener noreferrer" aria-label="Abrir recorrido virtual 360 grados">
+            <div class="solution-card-orbit" aria-hidden="true"></div>
+            <div class="solution-card-content">
+              <span class="live-demo-icon"><Compass size={30} /></span>
+              <strong>Recorre el proyecto en 360°</strong>
+              <span class="btn-live-demo">Abrir recorrido <ExternalLink size={17} /></span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 03: CRM & SISTEMA DE INVENTARIO -->
+      <section class="clean-section" id="crm">
+        <div class="clean-section-head">
+          <span class="clean-kicker">DE LA CAMPAÑA A LA RESERVA</span>
+          <h2 class="clean-section-title inmo-display">Convierte cada consulta en una próxima acción.</h2>
+          <p class="clean-section-sub">
+            Un CRM inmobiliario adaptado a tu proceso: reúne prospectos de pauta digital, formularios y WhatsApp, asigna responsables y evita que una oportunidad se enfríe por falta de seguimiento.
+          </p>
+        </div>
+
+        <div class="crm-hero-visual-card" aria-label="Visualización de la convergencia de canales en un solo CRM">
+          <div class="crm-visual-header">
+            <div class="crm-visual-header-title">
+              <span class="clean-kicker" style="margin: 0; font-size: 11px;">ARQUITECTURA DE INTEGRACIÓN</span>
+              <h3>Todos tus canales convergen en una sola consola operativa</h3>
+            </div>
+            <div class="crm-visual-tags inmo-mono">
+              <span>Meta Ads</span>
+              <span>WhatsApp</span>
+              <span>Landing Web</span>
+              <span>Excel Import</span>
+            </div>
+          </div>
+          <div class="crm-visual-frame">
+            <img 
+              src="/inmobiliarias/crm-unificado.jpg" 
+              alt="Centralización de leads de Meta Ads, WhatsApp, Formularios Web y Excel en un solo CRM inmobiliario" 
+              loading="lazy" 
+              width="1376" 
+              height="768" 
+            />
+          </div>
+        </div>
+
+        <div class="crm-promise-grid">
+          <div class="crm-channel-map" aria-label="Canales comerciales conectados a un solo CRM">
+            <div class="crm-channel-side crm-channel-inputs">
+              <span class="crm-map-label">CAPTACIÓN</span>
+              <article><i class="is-meta"><TrendingUp size={16} /></i><div><strong>Meta Ads</strong><small>Campañas y formularios</small></div></article>
+              <article><i class="is-google"><Search size={16} /></i><div><strong>Google Ads</strong><small>Búsquedas con intención</small></div></article>
+              <article><i class="is-web"><MonitorSmartphone size={16} /></i><div><strong>Página web</strong><small>Landing y cotizaciones</small></div></article>
+              <article><i class="is-whatsapp"><IconBrandWhatsapp size={17} /></i><div><strong>WhatsApp</strong><small>Consultas y conversaciones</small></div></article>
+              <article><i class="is-excel"><FileSpreadsheet size={16} /></i><div><strong>Excel</strong><small>Importación de contactos</small></div></article>
+            </div>
+
+            <div class="crm-map-flow"><span></span><ArrowRight size={18} /></div>
+
+            <div class="crm-central-hub">
+              <span class="crm-hub-pulse"></span>
+              <i><Users size={26} /></i>
+              <small>UNA SOLA FUENTE DE VERDAD</small>
+              <strong>CRM inmobiliario</strong>
+              <p>Contacto, proyecto, unidad, historial y responsable.</p>
+              <div><span>326 contactos</span><span>18 oportunidades</span></div>
+            </div>
+
+            <div class="crm-map-flow"><span></span><ArrowRight size={18} /></div>
+
+            <div class="crm-channel-side crm-channel-results">
+              <span class="crm-map-label">CONVERSIÓN</span>
+              <article><i>01</i><div><strong>Lead asignado</strong><small>Responsable y prioridad</small></div></article>
+              <article><i>02</i><div><strong>Próxima acción</strong><small>Tarea y recordatorio</small></div></article>
+              <article><i>03</i><div><strong>Visita agendada</strong><small>Confirmación automática</small></div></article>
+              <article><i>04</i><div><strong>Reserva</strong><small>Unidad sincronizada</small></div></article>
+            </div>
+          </div>
+
+          <div class="crm-product-preview" aria-label="Vista demostrativa de un CRM inmobiliario">
+            <div class="crm-preview-bar">
+              <div><i></i><i></i><i></i></div>
+              <span>CRM INMOBILIARIO · ACTIVIDAD EN VIVO</span>
+              <b><span class="pill-dot green"></span> Sincronizado</b>
+            </div>
+            <div class="crm-preview-body">
+              <aside>
+                <span class="is-current">Oportunidades <b>18</b></span>
+                <span>Contactos <b>326</b></span>
+                <span>Conversaciones <b>07</b></span>
+                <span>Automatizaciones <b>04</b></span>
+              </aside>
+              <div class="crm-preview-list">
+                <small>PRIORIDAD DE HOY</small>
+                <article class="is-active">
+                  <i>FQ</i><div><strong>Fernando Quispe</strong><span>Interés: Lote A-14</span></div><em>12 min</em>
+                </article>
+                <article>
+                  <i>PA</i><div><strong>Patricia Alarcón</strong><span>Visita confirmada</span></div><em>10:30</em>
+                </article>
+                <article>
+                  <i>FB</i><div><strong>Familia Benavides</strong><span>Cotización enviada</span></div><em>Ayer</em>
+                </article>
+              </div>
+              <div class="crm-preview-detail">
+                <div class="crm-lead-top"><i>FQ</i><div><strong>Fernando Quispe</strong><span>Lead desde Meta Ads · Chiclayo</span></div></div>
+                <div class="crm-lead-tags"><span>Calificado</span><span>US$ 42,000</span></div>
+                <div class="crm-next-action">
+                  <small>PRÓXIMA ACCIÓN</small>
+                  <strong>Enviar disponibilidad y agendar llamada</strong>
+                  <span>Hoy · 4:30 p. m. · Carlos M.</span>
+                </div>
+                <div class="crm-auto-note"><Zap size={15} /><span><strong>Automatización activa</strong> Si no responde en 24 h, enviar seguimiento por WhatsApp.</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="crm-flow" aria-label="Proceso comercial conectado">
+          <div><span><MonitorSmartphone size={19} /></span><strong>Campañas & Web</strong><small>Meta, Google y formularios</small></div>
+          <i>→</i>
+          <div><span><Users size={19} /></span><strong>Lead calificado</strong><small>Origen e interés identificado</small></div>
+          <i>→</i>
+          <div><span><Workflow size={19} /></span><strong>Seguimiento</strong><small>Asesor, tarea y próxima acción</small></div>
+          <i>→</i>
+          <div><span><Building2 size={19} /></span><strong>Reserva</strong><small>Unidad e inventario sincronizados</small></div>
+        </div>
+
+        <div class="crm-summary">
+          <article><span>Leads nuevos</span><strong>38</strong><small>Esta semana</small></article>
+          <article><span>Por atender</span><strong>07</strong><small>Requieren una acción</small></article>
+          <article><span>Visitas agendadas</span><strong>12</strong><small>Próximos 7 días</small></article>
+          <article><span>Conversión comercial</span><strong>18%</strong><small>Panel demostrativo</small></article>
+        </div>
+
+        <div class="clean-crm-shell">
+          <div class="clean-crm-header">
+            <div style="display:flex; gap:6px;">
+              <button class="clean-crm-tab" data-tab="matrix">
+                <Layers size={14} style="display:inline; margin-right:4px;" /> Matriz de Inventario
+              </button>
+              <button class="clean-crm-tab active" data-tab="kanban">
+                <TrendingUp size={14} style="display:inline; margin-right:4px;" /> Pipeline Comercial
+              </button>
+              <button class="clean-crm-tab" data-tab="proforma">
+                <FileSpreadsheet size={14} style="display:inline; margin-right:4px;" /> Emisión de Proforma PDF
+              </button>
+            </div>
+
+            <div style="display:flex; align-items:center; gap:12px;">
+              <input type="text" placeholder="Buscar lead o unidad..." class="crm-search-box" id="crm-search" />
+              <div class="inmo-mono" style="font-size:11.5px; color:var(--inmo-emerald); font-weight:700; display:flex; align-items:center; gap:6px;">
+                <span class="pill-dot green"></span> SYNC ACTIVO
+              </div>
+            </div>
+          </div>
+
+          <div style="padding:24px;">
+            <!-- VISTA 1: MATRIZ DE INVENTARIO -->
+            <div id="crm-tab-matrix" style="display:none;">
+              <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:16px; flex-wrap:wrap; gap:10px;">
+                <div>
+                  <h4 class="inmo-display" style="font-size:16px; margin:0 0 2px; color:var(--inmo-ink);">Etapa 01: Condominio Los Pinos</h4>
+                  <span style="font-size:12px; color:var(--inmo-ink-muted);">Haz clic en cualquier lote disponible para registrar una reserva de prueba.</span>
+                </div>
+                <div class="inmo-mono" style="display:flex; gap:14px; font-size:12px;">
+                  <span style="color:var(--inmo-emerald); font-weight:700;">● 7 Disponibles</span>
+                  <span style="color:var(--inmo-amber); font-weight:700;">● 2 Reservados</span>
+                  <span style="color:var(--inmo-ink-muted); font-weight:700;">● 3 Vendidos</span>
+                </div>
+              </div>
+
+              <div style="display:grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap:10px;" id="crm-grid">
+                {crmUnits.map(unit => (
+                  <div class={`clean-unit-card is-${unit.status}`} data-num={unit.num} data-status={unit.status}>
+                    <div style="display:flex; justify-content:space-between; align-items:baseline;">
+                      <span class="inmo-mono" style="font-weight:800; font-size:14px; color:var(--inmo-ink);">{unit.num}</span>
+                      <span class="inmo-mono" style="font-size:10px; color:var(--inmo-ink-muted);">{unit.area}</span>
+                    </div>
+                    <div class="inmo-mono" style="font-size:13px; font-weight:700; color:var(--inmo-blue); margin-top:4px;">
+                      {unit.price}
+                    </div>
+                    <div style="margin-top:6px; font-size:10px; font-weight:700; text-transform:uppercase;">
+                      {unit.status === 'disponible' && <span style="color:var(--inmo-emerald);">Disponible</span>}
+                      {unit.status === 'reservado' && <span style="color:var(--inmo-amber);">Hold (48h)</span>}
+                      {unit.status === 'vendido' && <span style="color:var(--inmo-ink-muted);">Vendido</span>}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <!-- VISTA 2: KANBAN -->
+            <div id="crm-tab-kanban">
+              <div class="crm-pipeline-grid">
+                <div style="background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:10px; padding:14px;">
+                  <div class="inmo-mono" style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--inmo-blue); margin-bottom:12px;">
+                    <span>LEADS META ADS</span> <span>3</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:8px;">
+                    <div style="background:#fff; border:1px solid var(--inmo-line); padding:10px; border-radius:6px; font-size:12px;">
+                      <strong style="color:var(--inmo-ink);">Fernando Quispe</strong>
+                      <div style="color:var(--inmo-ink-secondary); font-size:11px;">Interés: Lote A-14 ($42,000)</div>
+                      <div class="inmo-mono" style="color:var(--inmo-emerald); font-size:10px; margin-top:4px;">Entró hace 14 min</div>
+                    </div>
+                    <div style="background:#fff; border:1px solid var(--inmo-line); padding:10px; border-radius:6px; font-size:12px;">
+                      <strong style="color:var(--inmo-ink);">Dr. Marcelo Valdivia</strong>
+                      <div style="color:var(--inmo-ink-secondary); font-size:11px;">Interés: Lote E-12 ($62,000)</div>
+                      <div class="inmo-mono" style="color:var(--inmo-emerald); font-size:10px; margin-top:4px;">Entró hace 52 min</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:10px; padding:14px;">
+                  <div class="inmo-mono" style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--inmo-amber); margin-bottom:12px;">
+                    <span>VISITA AGENDADA</span> <span>2</span>
+                  </div>
+                  <div style="display:flex; flex-direction:column; gap:8px;">
+                    <div style="background:#fff; border:1px solid var(--inmo-line); padding:10px; border-radius:6px; font-size:12px;">
+                      <strong style="color:var(--inmo-ink);">Ing. Patricia Alarcón</strong>
+                      <div style="color:var(--inmo-ink-secondary); font-size:11px;">Sábado 10:30 AM con asesor Carlos</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div style="background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:10px; padding:14px;">
+                  <div class="inmo-mono" style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:#6366f1; margin-bottom:12px;">
+                    <span>COTIZACIÓN ENVIADA</span> <span>4</span>
+                  </div>
+                  <div style="background:#fff; border:1px solid var(--inmo-line); padding:10px; border-radius:6px; font-size:12px;">
+                    <strong style="color:var(--inmo-ink);">Familia Benavides</strong>
+                    <div style="color:var(--inmo-ink-secondary); font-size:11px;">Plan 36 cuotas · Lote B-08</div>
+                  </div>
+                </div>
+
+                <div style="background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:10px; padding:14px;">
+                  <div class="inmo-mono" style="display:flex; justify-content:space-between; font-size:11.5px; font-weight:700; color:var(--inmo-emerald); margin-bottom:12px;">
+                    <span>MINUTA FIRMADA</span> <span>US$ 142k</span>
+                  </div>
+                  <div style="background:rgba(5, 150, 105, 0.08); border:1px solid rgba(5, 150, 105, 0.25); padding:10px; border-radius:6px; font-size:12px;">
+                    <strong style="color:var(--inmo-emerald);">Lote E-12 Vendido</strong>
+                    <div style="color:var(--inmo-ink-secondary); font-size:11px;">Reserva bancarizada hoy 🎉</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- VISTA 3: PROFORMA PDF -->
+            <div id="crm-tab-proforma" style="display:none; padding:10px;">
+              <div style="max-width:540px; margin:0 auto; background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); border-radius:12px; padding:24px;">
+                <div style="display:flex; justify-content:space-between; align-items:center; border-bottom:1px solid var(--inmo-line); padding-bottom:12px; margin-bottom:14px;">
+                  <div>
+                    <span class="clean-kicker" style="margin:0; font-size:10px;">DOCUMENTO OFICIAL</span>
+                    <h5 class="inmo-display" style="font-size:17px; margin:2px 0 0; color:var(--inmo-ink);">Proforma Comercial Inmobiliaria</h5>
+                  </div>
+                  <span class="inmo-mono" style="font-size:11px; background:#fff; border:1px solid var(--inmo-line); padding:4px 8px; border-radius:4px; font-weight:700;">PROFORMA #2026-094</span>
+                </div>
+                <div style="font-size:13px; line-height:1.7; color:var(--inmo-ink-secondary);">
+                  <div><strong>Proyecto:</strong> Condominio Los Pinos · Unidad L-104 (160 m²)</div>
+                  <div><strong>Precio Lista:</strong> US$ 51,000.00</div>
+                  <div><strong>Cuota Inicial (30%):</strong> US$ 15,300.00 a la firma de contrato</div>
+                  <div><strong>Financiamiento Directo:</strong> 36 cuotas fijas de <strong style="color:var(--inmo-ink);">US$ 991.66 /mes</strong> sin intereses bancarios.</div>
+                </div>
+                <button class="btn-solid-ink" style="width:100%; justify-content:center; margin-top:18px; font-size:13px;">
+                  Descargar Proforma en PDF con Logo
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 04: FAQ ESTRATÉGICO & ASESORÍA -->
+      <section class="clean-section" id="faq">
+        <div class="clean-section-head">
+          <span class="clean-kicker">RESOLUCIÓN DE DUDAS OPERATIVAS & TÉCNICAS</span>
+          <h2 class="clean-section-title inmo-display">Preguntas Frecuentes de Desarrolladoras Inmobiliarias</h2>
+          <p class="clean-section-sub">
+            Claridad sobre metodología, tiempos, corresponsabilidad y seguridad para llevar tu desarrollo inmobiliario al siguiente nivel.
+          </p>
+        </div>
+
+        <div class="faq-wrap">
+          <!-- FAQ 1: ASESOR TECNOLÓGICO -->
+          <div class="faq-box open">
+            <button class="faq-btn" type="button">
+              <span>¿Trabajas como un simple proveedor puntual o como asesor tecnológico del proyecto?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                <strong>Actúo como tu asesor y partner tecnológico estratégico</strong>. No me limito a maquetar una web estática o entregar archivos y desaparecer. Me involucro directamente con la gerencia comercial y marketing para entender el modelo de venta del desarrollo, diagnosticar dónde se enfrían los prospectos y construir soluciones a la medida (Master Plan interactivo, Visores 360°, automatizaciones y CRM). Mi objetivo es acompañar al equipo para elevar el estándar técnico y comercial de la empresa al siguiente nivel.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 2: TIEMPOS DE ENTREGA -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Cuánto tiempo toma la entrega y de qué depende la duración del proyecto?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                <strong>El tiempo varía según el alcance acordado y la disponibilidad de los materiales del proyecto:</strong>
+              </p>
+              <ul>
+                <li><strong>Módulo de lanzamiento ágil (Landing comercial + Captación WhatsApp y Meta Ads):</strong> 7 a 12 días hábiles.</li>
+                <li><strong>Ecosistema integral (Master Plan interactivo + Visor 360° + CRM comercial):</strong> Habitualmente entre 15 y 30 días hábiles.</li>
+              </ul>
+              <p>
+                Trabajamos con metodología ágil por sprints y entregas parciales funcionales: tu equipo de ventas no tiene que esperar al final del proyecto para empezar a captar prospectos y cotizar con las primeras herramientas activas.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 3: CORRESPONSABILIDAD Y COMPROMISO -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Qué necesita aportar la inmobiliaria y cuál es el alcance de tu compromiso?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                Es un proceso de corresponsabilidad donde cada parte aporta su especialidad para garantizar el éxito comercial:
+              </p>
+              <ul>
+                <li><strong>La inmobiliaria aporta:</strong> Planos de lotificación (CAD/DWG o PDF vectorial), lista de precios y disponibilidad inicial, material visual (renders y recorridos si ya cuentan con ellos) y designar un punto de contacto del equipo de ventas para validar la lógica comercial.</li>
+                <li><strong>Mi compromiso directo:</strong> Dirección y arquitectura técnica, digitalización y programación del Master Plan interactivo, optimización de velocidad de carga, integración segura de canales de captación, capacitación práctica a los asesores y soporte continuo post-lanzamiento.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FAQ 4: REUNIONES VIRTUALES Y PRESENCIALES -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Cómo se coordinan las reuniones y el seguimiento con el equipo directivo y comercial?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                Operamos con una dinámica híbrida, ejecutiva y enfocada en resultados:
+              </p>
+              <ul>
+                <li><strong>Sesiones virtuales periódicas:</strong> Reuniones breves con pantalla compartida para revisar avances técnicos en vivo, validar flujos de cotización y ajustar requerimientos sobre la marcha.</li>
+                <li><strong>Reuniones presenciales de alineación y capacitación:</strong> Coordinadas con la gerencia y el equipo comercial (en oficinas o caseta física de ventas según ubicación). En ellas capacitamos a los asesores en el uso diario, validamos la experiencia en pantallas o tablets y aseguramos una adopción tecnológica total.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FAQ 5: SEGURIDAD Y PROPIEDAD DE DATOS -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Qué garantías existen sobre la seguridad de los datos comerciales y la propiedad del sistema?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                <strong>Soberanía, control y privacidad absoluta para tu empresa</strong>:
+              </p>
+              <ul>
+                <li>Toda la base de datos de prospectos, cotizaciones y estados de reserva es <strong>100% propiedad de tu inmobiliaria</strong>.</li>
+                <li>Se implementan bases de datos seguras en la nube (PostgreSQL / Supabase) con conexiones encriptadas SSL/TLS, autenticación controlada y copias de seguridad automáticas.</li>
+                <li>Cero <em>vendor lock-in</em>: no dependes de plataformas propietarias opacas ni licencias cautivas. El código es estándar, documentado y transferible si tu equipo interno decide administrarlo en el futuro.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- FAQ 6: INTEGRACIONES CON CRM Y EXCEL -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Se puede conectar con el CRM o las herramientas que ya utilizamos actualmente?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                <strong>Sí, la compatibilidad es total</strong>. Nos integramos vía Webhooks y APIs con herramientas como HubSpot, Salesforce, Zoho, Google Sheets o tablas de Excel. Cuando un asesor marca un lote o departamento como reservado en tu sistema central, el Master Plan web puede reflejarlo en tiempo real. Y si la inmobiliaria aún no cuenta con un CRM estructurado, dejamos configurada nuestra consola operativa lista para ordenar leads de Meta Ads, web y WhatsApp.
+              </p>
+            </div>
+          </div>
+
+          <!-- FAQ 7: PANTALLAS TÁCTILES Y CASETAS FÍSICAS -->
+          <div class="faq-box">
+            <button class="faq-btn" type="button">
+              <span>¿Funciona en pantallas táctiles, tótems y tablets para casetas de venta físicas?</span>
+              <ChevronDown class="faq-ico" size={18} />
+            </button>
+            <div class="faq-body">
+              <p>
+                Absolutamente. Toda la plataforma está desarrollada con arquitectura responsive y soporte multitáctil nativo. Funciona de manera ultrarrápida en smartphones de clientes, tablets de asesores de campo y tótems o pantallas gigantes en salas de venta y ferias inmobiliarias.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 06: CONTACTO DIRECTO -->
+      <section class="clean-section" id="contacto">
+        <div class="clean-card" style="padding:clamp(32px, 5vw, 64px); text-align:center; max-width:820px; margin:0 auto;">
+          <span class="clean-kicker">HABLEMOS DE TU PROYECTO</span>
+          <h2 class="inmo-display" style="font-size:clamp(30px, 4vw, 48px); margin:12px 0 16px; color:var(--inmo-ink);">
+            ¿Listo para modernizar la venta de tu desarrollo inmobiliario?
+          </h2>
+          <p style="color:var(--inmo-ink-secondary); font-size:16px; max-width:600px; margin:0 auto 30px; line-height:1.65;">
+            Conversemos sobre tu proyecto (lotes, casas o departamentos) y coordinemos una demostración técnica con tus propios planos y renders.
+          </p>
+
+          <a href={`${waLink}?text=${encodeURIComponent('Hola Jose, tengo un proyecto inmobiliario y quiero coordinar una demo técnica de Master Plan y CRM.')}`} target="_blank" rel="noopener noreferrer" class="btn-solid-ink" style="font-size:15px; padding:15px 32px;">
+            <IconBrandWhatsapp size={20} /> Conversar Directamente por WhatsApp
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Modal para simular reserva de unidad en el CRM -->
+    <div class="modal-overlay" id="crm-modal">
+      <div class="modal-sheet">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:14px;">
+          <div>
+            <span class="clean-kicker" style="margin:0; font-size:10px;">OPERACIÓN COMERCIAL</span>
+            <h4 class="inmo-display" style="font-size:18px; margin:2px 0 0; color:var(--inmo-ink);" id="modal-unit-title">Reservar Unidad</h4>
+          </div>
+          <button id="modal-close" style="background:transparent; border:none; color:var(--inmo-ink-muted); cursor:pointer; font-size:18px;">✕</button>
+        </div>
+
+        <p style="font-size:13px; color:var(--inmo-ink-secondary); margin-bottom:18px;">
+          Se aplicará un bloqueo de <strong>48 horas</strong> en el inventario para evitar ventas cruzadas mientras el cliente formaliza la reserva.
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:12px; margin-bottom:20px;">
+          <div>
+            <label style="font-size:12px; font-weight:600; color:var(--inmo-ink-secondary); display:block; margin-bottom:4px;">Nombre del Cliente</label>
+            <input type="text" id="modal-client" placeholder="Ej. Carlos Mendoza" style="width:100%; background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); padding:8px 12px; border-radius:6px; color:var(--inmo-ink); font-size:13px; outline:none;" />
+          </div>
+
+          <div>
+            <label style="font-size:12px; font-weight:600; color:var(--inmo-ink-secondary); display:block; margin-bottom:4px;">Asesor Asignado</label>
+            <select id="modal-advisor" style="width:100%; background:var(--inmo-paper-subtle); border:1px solid var(--inmo-line); padding:8px 12px; border-radius:6px; color:var(--inmo-ink); font-size:13px; outline:none;">
+              <option value="Carlos M.">Carlos M. (Ventas Sede Central)</option>
+              <option value="Andrea S.">Andrea S. (Ventas Sala Campo)</option>
+              <option value="Diego R.">Diego R. (Inversiones)</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="display:flex; gap:10px;">
+          <button class="btn-solid-ink" style="flex:1; justify-content:center; font-size:13px;" id="modal-confirm">
+            Confirmar Bloqueo 48h
+          </button>
+          <button class="btn-outline" style="font-size:13px;" id="modal-cancel">
+            Cancelar
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Minimalista -->
+    <footer style="padding:34px clamp(20px, 5vw, 64px); border-top:1px solid var(--inmo-line); display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; font-size:12.5px; color:var(--inmo-ink-muted);">
+      <div>
+        <strong style="color:var(--inmo-ink);">Jose Pizarro</strong> · Arquitectura de Software & Soluciones PropTech
+      </div>
+    </footer>
+
+    <!-- Botón Flotante de WhatsApp para Conversión Directa -->
+    <a 
+      href={`${waLink}?text=${encodeURIComponent('Hola Jose, vi tu propuesta de tecnología inmobiliaria y quiero coordinar una asesoría para mi proyecto.')}`}
+      target="_blank" 
+      rel="noopener noreferrer" 
+      class="floating-whatsapp-btn"
+      aria-label="Contactar por WhatsApp al +51 945 770 325"
+    >
+      <span class="floating-whatsapp-pulse"></span>
+      <div class="floating-whatsapp-icon">
+        <IconBrandWhatsapp size={26} />
+      </div>
+      <span class="floating-whatsapp-label">
+        <strong>Asesoría WhatsApp</strong>
+        <small>+51 945 770 325</small>
+      </span>
+    </a>
+
+    <!-- Script de Interactividad -->
+    <script is:inline define:vars={{ lotsData, waNumber }}>
+      // 1. SHOWCASE CAROUSEL
+      const showcase = document.querySelector('.showcase-carousel');
+      const showcaseSlides = [...document.querySelectorAll('[data-showcase-slide]')];
+      const showcaseDots = [...document.querySelectorAll('[data-showcase-dot]')];
+      const showcasePrev = document.getElementById('showcase-prev');
+      const showcaseNext = document.getElementById('showcase-next');
+      let showcaseIndex = 0;
+      let showcaseTimer = null;
+
+      function showProject(index) {
+        showcaseIndex = (index + showcaseSlides.length) % showcaseSlides.length;
+        showcaseSlides.forEach((slide, i) => {
+          const active = i === showcaseIndex;
+          slide.classList.toggle('active', active);
+          slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+        });
+        showcaseDots.forEach((dot, i) => dot.classList.toggle('active', i === showcaseIndex));
+      }
+
+      function startShowcase() {
+        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+        clearInterval(showcaseTimer);
+        showcaseTimer = setInterval(() => showProject(showcaseIndex + 1), 6500);
+      }
+
+      showcasePrev?.addEventListener('click', () => { showProject(showcaseIndex - 1); startShowcase(); });
+      showcaseNext?.addEventListener('click', () => { showProject(showcaseIndex + 1); startShowcase(); });
+      showcaseDots.forEach((dot, index) => dot.addEventListener('click', () => { showProject(index); startShowcase(); }));
+      showcase?.addEventListener('mouseenter', () => clearInterval(showcaseTimer));
+      showcase?.addEventListener('mouseleave', startShowcase);
+      startShowcase();
+
+      // 2. MASTER PLAN LOGIC
+      const lotTitle = document.getElementById('lot-title');
+      const lotStatus = document.getElementById('lot-status');
+      const lotDesc = document.getElementById('lot-desc');
+      const lotArea = document.getElementById('lot-area');
+      const lotPrice = document.getElementById('lot-price');
+      const lotDims = document.getElementById('lot-dims');
+      const lotM2 = document.getElementById('lot-m2');
+      const lotInitial = document.getElementById('lot-initial');
+      const lotQuota = document.getElementById('lot-quota');
+      const lotZone = document.getElementById('lot-zone');
+      const lotOrientation = document.getElementById('lot-orientation');
+      const lotCtaWa = document.getElementById('lot-cta-wa');
+      const lotPolygons = document.querySelectorAll('.mp-lot-poly');
+      const filterBtns = document.querySelectorAll('.mp-filter-btn');
+      const mpImg = document.getElementById('mp-image');
+      const btnZoomIn = document.getElementById('btn-zoom-in');
+      const btnZoomOut = document.getElementById('btn-zoom-out');
+      const btnZoomReset = document.getElementById('btn-zoom-reset');
+
+      let currentZoom = 1;
+      function setZoom(z) {
+        currentZoom = Math.min(Math.max(z, 1), 1.6);
+        mpImg.style.transform = `scale(${currentZoom})`;
+      }
+
+      btnZoomIn.addEventListener('click', () => setZoom(currentZoom + 0.15));
+      btnZoomOut.addEventListener('click', () => setZoom(currentZoom - 0.15));
+      btnZoomReset.addEventListener('click', () => setZoom(1));
+
+      function updateSelectedLot(lot) {
+        if (!lot) return;
+        lotTitle.textContent = `Lote ${lot.id}`;
+        lotStatus.textContent = lot.status.toUpperCase();
+        lotStatus.className = `badge-clean-status ${lot.status}`;
+        lotDesc.textContent = lot.desc;
+        lotArea.textContent = lot.area;
+        lotPrice.textContent = `US$ ${lot.price.toLocaleString()}`;
+        lotDims.textContent = `${lot.front} x ${lot.depth}`;
+        lotM2.textContent = `US$ ${lot.pricePerM2} /m²`;
+        lotInitial.textContent = `US$ ${lot.initial.toLocaleString()}`;
+        lotQuota.textContent = `US$ ${lot.quota.toLocaleString()} /mes`;
+        lotZone.textContent = lot.zone;
+        lotOrientation.textContent = lot.orientation;
+
+        lotPolygons.forEach(p => {
+          if (p.getAttribute('data-lot-id') === lot.id) {
+            p.classList.add('is-selected');
+          } else {
+            p.classList.remove('is-selected');
+          }
+        });
+
+        const msg = encodeURIComponent(`Hola Jose, me interesa reservar o recibir información del Lote ${lot.id} (${lot.area}, US$ ${lot.price}) del Master Plan.`);
+        lotCtaWa.href = `https://wa.me/${waNumber}?text=${msg}`;
+        lotCtaWa.innerHTML = lot.status === 'vendido' 
+          ? 'Lote Vendido (Consultar Similares)' 
+          : '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right:6px;"><path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21"/></svg> Separar este Lote por WhatsApp';
+      }
+
+      updateSelectedLot(lotsData[0]);
+
+      lotPolygons.forEach(poly => {
+        poly.addEventListener('click', () => {
+          const lotId = poly.getAttribute('data-lot-id');
+          const lot = lotsData.find(l => l.id === lotId);
+          if (lot) updateSelectedLot(lot);
+        });
+      });
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const parent = btn.parentElement;
+          parent.querySelectorAll('.mp-filter-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          const filter = btn.getAttribute('data-filter');
+
+          lotPolygons.forEach(p => {
+            const lotId = p.getAttribute('data-lot-id');
+            const lot = lotsData.find(l => l.id === lotId);
+            if (!lot) return;
+
+            let visible = true;
+            if (filter === 'disponible' && lot.status !== 'disponible') visible = false;
+            if (filter === 'vista' && lot.category !== 'vista') visible = false;
+            if (filter === 'esquina' && lot.category !== 'esquina') visible = false;
+
+            p.style.display = visible ? 'inline' : 'none';
+          });
+        });
+      });
+
+      // 2. CRM TABS & MODAL
+      const crmTabs = document.querySelectorAll('.clean-crm-tab');
+      const tabMatrix = document.getElementById('crm-tab-matrix');
+      const tabKanban = document.getElementById('crm-tab-kanban');
+      const tabProforma = document.getElementById('crm-tab-proforma');
+      const crmSearch = document.getElementById('crm-search');
+
+      crmTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          crmTabs.forEach(t => t.classList.remove('active'));
+          tab.classList.add('active');
+          const target = tab.getAttribute('data-tab');
+          tabMatrix.style.display = target === 'matrix' ? 'block' : 'none';
+          tabKanban.style.display = target === 'kanban' ? 'block' : 'none';
+          tabProforma.style.display = target === 'proforma' ? 'block' : 'none';
+        });
+      });
+
+      crmSearch.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        document.querySelectorAll('.clean-unit-card').forEach(card => {
+          const num = card.getAttribute('data-num').toLowerCase();
+          card.style.display = num.includes(query) ? 'block' : 'none';
+        });
+      });
+
+      const modal = document.getElementById('crm-modal');
+      const modalTitle = document.getElementById('modal-unit-title');
+      const modalConfirm = document.getElementById('modal-confirm');
+      const modalCancel = document.getElementById('modal-cancel');
+      const modalClose = document.getElementById('modal-close');
+      let activeCard = null;
+
+      document.querySelectorAll('.clean-unit-card').forEach(card => {
+        card.addEventListener('click', () => {
+          const status = card.getAttribute('data-status');
+          const num = card.getAttribute('data-num');
+          if (status === 'disponible') {
+            activeCard = card;
+            modalTitle.textContent = `Bloquear Unidad ${num}`;
+            modal.classList.add('is-active');
+          }
+        });
+      });
+
+      function closeModal() {
+        modal.classList.remove('is-active');
+        activeCard = null;
+      }
+      modalCancel.addEventListener('click', closeModal);
+      modalClose.addEventListener('click', closeModal);
+
+      modalConfirm.addEventListener('click', () => {
+        if (activeCard) {
+          activeCard.setAttribute('data-status', 'reservado');
+          activeCard.className = 'clean-unit-card is-reserved';
+          const sub = activeCard.querySelector('div:last-child');
+          if (sub) sub.innerHTML = '<span style="color:var(--inmo-amber);">Hold (Tú · 48h)</span>';
+        }
+        closeModal();
+      });
+
+      // 3. FAQ
+      document.querySelectorAll('.faq-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const box = btn.parentElement;
+          const wasOpen = box.classList.contains('open');
+          document.querySelectorAll('.faq-box').forEach(b => b.classList.remove('open'));
+          if (!wasOpen) box.classList.add('open');
+        });
+      });
+    </script>
+  </body>
+</html>
